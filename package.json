@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "fcc-manchester-home",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Home of Manchesters Official FreeCodeCamp Meetup",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "FCC Manchester <fccmcr@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.39",
     "gatsby-image": "^2.2.6",
@@ -35,9 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/FCC-Mcr/main-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/FCC-Mcr/main-site/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
