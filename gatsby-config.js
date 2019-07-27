@@ -3,6 +3,7 @@ const siteMetadata = require('./config/siteMetadata.js');
 module.exports = {
   siteMetadata,
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
