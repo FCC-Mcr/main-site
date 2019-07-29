@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const BlogPage = ({ data }) => (
   <Layout>
@@ -11,7 +11,6 @@ const BlogPage = ({ data }) => (
     <p>
       Welcome to the FCC Blog, writtten and curated by members of the community
     </p>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
