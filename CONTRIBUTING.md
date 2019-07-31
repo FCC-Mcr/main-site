@@ -31,3 +31,28 @@ We also recommend improvement for commits that improve a current implementation 
 A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., feat(parser): add ability to parse arrays.
 
 For some examples see [here](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#examples)
+
+## Blog
+
+To add one of your blog posts to the FCC MCR we have made it as simple as possible. Go into `content > blog` and you will see some already existing blog posts (these are good because it will give you an idea of how your blog post should be formatted). Firstly you will probably notice the naming convention, to keep eveything ordered and easy to find we are using the naming convention of `YYYY-MM-DD-blog-post-name`, which is very similar to how Jekyl suggests to format your folders.
+
+We have put everything into folders because we want to make it easy for you to add images and any other media. Instead of having to search for an images folder you just pop everything in your blog post directory and link everything relative to your current directory.
+
+Now within your folder you'll need to create your `index.md` file, this will be where you write your post. Before you start creating your post we need to add some frontmatter. Find an example frontmatter below
+
+```md
+---
+title: An Example Post Title
+date: 2019-09-17
+author: Adam Collier
+featuredImage: ./featured-image.png (optional but encouraged)
+---
+```
+
+And after that you are ready to write/add your first blog post!
+
+## Learning Resources
+
+To add learning resources (which we hope you do), go into `content > learning resources` and there you will find a few different sections. You simply add your resource to one of the existing markdown files following the same formatting. Before you make a pull request please check that your link is working and make sure there are no spelling errors. If you see a spelling error while editing don't hesitate to fix it, it helps everyone in the community.
+
+If you feel there should be another learning section created feel free to create your own and make a pul request. We will then either pull it straight in or discuss if it already fits into an existing space.
