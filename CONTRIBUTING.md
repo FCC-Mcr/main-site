@@ -31,6 +31,7 @@ We also recommend improvement for commits that improve a current implementation 
 A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., feat(parser): add ability to parse arrays.
 
 For some examples see [here](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#examples)
+<<<<<<< HEAD
 
 ## Blog
 
@@ -56,3 +57,5 @@ And after that you are ready to write/add your first blog post!
 To add learning resources (which we hope you do), go into `content > learning resources` and there you will find a few different sections. You simply add your resource to one of the existing markdown files following the same formatting. Before you make a pull request please check that your link is working and make sure there are no spelling errors. If you see a spelling error while editing don't hesitate to fix it, it helps everyone in the community.
 
 If you feel there should be another learning section created feel free to create your own and make a pul request. We will then either pull it straight in or discuss if it already fits into an existing space.
+=======
+>>>>>>> 8fd66396164197aa0da0b3908519e6e9a7eca908
