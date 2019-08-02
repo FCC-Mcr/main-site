@@ -1,4 +1,4 @@
-const siteMetadata = require('./config/siteMetadata.js');
+const siteMetadata = require("./config/siteMetadata.js")
 
 module.exports = {
   siteMetadata,
@@ -12,6 +12,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
