@@ -1,0 +1,21 @@
+/// Generates a media query based on the key passed in the first argument. An optional second
+/// @include respond-to('xs') {...}
+/// @include respond-to('md') {...}
+/// @include respond-to('md', 'max') {...}
+@mixin responds-to($breakpoint, $size: 'min') {
+  @if map-get($breakpoints-map, $breakpoint ) {
+    @if($size == 'min'){
+      @media (min-width: $breakpoints-map) {
+        @content;
+      }
+    } @elseif ($size == 'max'){
+      @media (max-width: $breakpoints-map) {
+        @content;
+      }
+    } @else {
+      @warn 'arguments "min" or "max" accepted as second argument - argument "min" is default';  
+    }
+  } @else {
+    @warn '`#{$breakpoint}` doesn\'t exist in the breakpoints map.';
+  }
+}
