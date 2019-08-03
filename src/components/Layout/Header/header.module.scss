@@ -2,21 +2,51 @@
  *  this is just for testing purposes to ensure scss and css modules
  *  are initialised correctly feel free to alter or remove this file.
  */
-.header {
-    background: #4D844F;
-    margin-bottom: 1.45rem;
-}
 
-.container {
-    margin: 0 auto;
-    max-width: 960;
-    padding: 1.45rem 1.0875rem;
-    h1 {
+@import '../../../styles/config/colour.scss';
+
+$header-height: 50px;
+$nav-hidden-until: 600px;
+$nav-spacing: 30px;
+
+.header {
+    display: none;
+    @media(min-width: $nav-hidden-until) {
+        display: flex;
+    }
+    align-items: center;
+    background: $white;
+    color: $accent;
+    height: $header-height;
+    justify-content: space-between;
+    padding: 0 2em;
+    position: relative;
+
+    h2 {
+        line-height: inherit;
         margin: 0;
+        padding-bottom: 4px;
     }
     .title {
-        color: white;
+        color: $accent;
+        font-size: 20px; // TODO: replace with configuration values
         text-decoration: none;
-    }  
+    }
 }
 
+nav {
+    display: inline-block;
+    font-size: 16px; // TODO: replace with configuration values
+
+    a {
+        color: $accent;
+        margin-right: $nav-spacing;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    :last-child {
+        margin-right: 0;
+    }
+}
