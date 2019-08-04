@@ -3,13 +3,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Image from "gatsby-image"
+import { rhythm } from "../utils/typography"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title
 
   return (
-    <Layout>
+    <Layout blog>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -20,7 +21,13 @@ export default ({ data }) => {
           {post.frontmatter.date} - {`${post.timeToRead} min read`}
         </p>
         {post.frontmatter.featuredImage && (
-          <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
+          <Image
+            style={{
+              marginBottom: rhythm(1),
+              borderRadius: "1%",
+            }}
+            sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+          />
         )}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
