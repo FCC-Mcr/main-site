@@ -11,7 +11,7 @@
       @media (min-width: #{$value}) {
         @content;
       }
-    } @elseif ($size == 'max'){
+    } @else if ($size == 'max'){
       @media (max-width: #{$value}) {
         @content;
       }
