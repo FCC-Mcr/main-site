@@ -1,2 +1,20 @@
+@font-face {
+  font-family: "PublicSans-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/PublicSans-Medium.woff2") format("woff2");
+}
 
-$font-family: sans-serif;
+@font-face {
+  font-family: "PublicSans-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/PublicSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PublicSans-ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/PublicSans-ExtraBold.woff2") format("woff2");
+}
