@@ -2,14 +2,17 @@
 /// @include respond-to('xs') {...}
 /// @include respond-to('md') {...}
 /// @include respond-to('md', 'max') {...}
+@import '../config/breakpoints.scss';
+
 @mixin responds-to($breakpoint, $size: 'min') {
-  @if map-get($breakpoints-map, $breakpoint ) {
+  $value: map-get($breakpoint-map, $breakpoint);
+  @if $value {
     @if($size == 'min'){
-      @media (min-width: $breakpoints-map) {
+      @media (min-width: #{$value}) {
         @content;
       }
     } @elseif ($size == 'max'){
-      @media (max-width: $breakpoints-map) {
+      @media (max-width: #{$value}) {
         @content;
       }
     } @else {

@@ -3,15 +3,15 @@
  *  are initialised correctly feel free to alter or remove this file.
  */
 
+@import '../../../styles/utility/responds-to.scss';
 @import '../../../styles/config/colour.scss';
 
 $header-height: 50px;
-$nav-hidden-until: 600px;
 $nav-spacing: 30px;
 
 .header {
     display: none;
-    @media(min-width: $nav-hidden-until) {
+    @include responds-to('xs'){
         display: flex;
     }
     align-items: center;
