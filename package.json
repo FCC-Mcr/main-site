@@ -24,8 +24,11 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.2.8",
+    "husky": "^3.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
@@ -44,6 +47,11 @@
     "now-build": "npm run build",
     "test": "jest",
     "test-watch": "npm test -- --watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "repository": {
     "type": "git",
