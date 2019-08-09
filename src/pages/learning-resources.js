@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const LearningResourcesPage = ({ data }) => (
-  <Layout>
+  <Layout blog>
     <SEO title="Learning Resources" />
     <h1>Hi people</h1>
     <p>Welcome to the FCC Learning Resources Page</p>
