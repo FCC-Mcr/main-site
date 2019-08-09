@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const BlogPage = ({ data }) => (
-  <Layout>
+  <Layout blog>
     <SEO title="Blog" />
     <h1>Blog</h1>
     <p>
