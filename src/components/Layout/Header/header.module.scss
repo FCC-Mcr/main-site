@@ -3,50 +3,50 @@
  *  are initialised correctly feel free to alter or remove this file.
  */
 
-@import '../../../styles/utility/responds-to.scss';
-@import '../../../styles/config/colour.scss';
+@import "../../../styles/utility/responds-to.scss";
+@import "../../../styles/config/colour.scss";
 
 $header-height: 50px;
 $nav-spacing: 30px;
 
 .header {
-    display: none;
-    @include responds-to('xs'){
-        display: flex;
-    }
-    align-items: center;
-    background: $white;
-    color: $accent;
-    height: $header-height;
-    justify-content: space-between;
-    padding: 0 2em;
-    position: relative;
+  display: none;
+  @include responds-to("xs") {
+    display: flex;
+  }
+  align-items: center;
+  background: $white;
+  color: $accent;
+  height: $header-height;
+  justify-content: space-between;
+  padding: 0 2em;
+  position: relative;
 
-    h2 {
-        line-height: inherit;
-        margin: 0;
-        padding-bottom: 4px;
-    }
-    .title {
-        color: $accent;
-        font-size: 20px; // TODO: replace with configuration values
-        text-decoration: none;
-    }
+  h2 {
+    line-height: inherit;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+  .title {
+    color: $accent;
+    font-size: 20px; // TODO: replace with configuration values
+    text-decoration: none;
+  }
 }
 
 nav {
-    display: inline-block;
-    font-size: 16px; // TODO: replace with configuration values
+  display: inline-block;
+  font-size: 16px; // TODO: replace with configuration values
 
-    a {
-        color: $accent;
-        margin-right: $nav-spacing;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+  a {
+    color: $accent;
+    margin-right: $nav-spacing;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
-    :last-child {
-        margin-right: 0;
-    }
+  }
+  :last-child {
+    margin-right: 0;
+  }
 }
