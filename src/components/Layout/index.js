@@ -32,7 +32,8 @@ const Layout = ({ blog, children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: blog ? `720px` : `960px`,
+          padding: `2.499rem 1rem`,
+          maxWidth: blog ? `640px` : `960px`,
         }}
       >
         <main>{children}</main>
