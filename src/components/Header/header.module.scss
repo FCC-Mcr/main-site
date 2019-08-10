@@ -1,0 +1,41 @@
+@import "../../styles/utility/responds-to.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  background-image: url(../../icons/header.svg);
+  background-size: cover;
+  background-position: 0 -100px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -2.499rem;
+  padding-top: 60px;
+  color: #fff;
+
+  @include responds-to("md", "max") {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @include responds-to("xs", "max") {
+    background-position: 0 -20px;
+  }
+
+  h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  > div {
+    max-width: 740px;
+
+    > p {
+      margin-bottom: 2.2rem;
+    }
+  }
+}
