@@ -5,7 +5,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-svg`,
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          exclude: /\header\.svg$/,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
