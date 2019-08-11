@@ -6,7 +6,7 @@
   height: 550px;
   background-image: url(../../icons/header.svg);
   background-size: cover;
-  background-position: 0 -100px;
+  background-position: 0 -60px;
   background-repeat: no-repeat;
   width: 100vw;
   position: relative;
@@ -15,7 +15,7 @@
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: -2.499rem;
-  padding-top: 60px;
+  padding-top: 80px;
   color: #fff;
 
   @include responds-to("md", "max") {
@@ -32,10 +32,12 @@
   }
 
   > div {
-    max-width: 740px;
+    max-width: 800px;
+    width: 100%;
 
     > p {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
     }
   }
 }
