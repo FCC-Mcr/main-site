@@ -109,7 +109,7 @@ exports.sourceNodes = async ({ actions }) => {
       location: meetup.location,
       start: meetup.start.dateTime,
       end: meetup.end.dateTime,
-      calendarId: meetup.iCalUID,
+      iCalUID: meetup.iCalUID,
     }
 
     // Get content digest of node. (Required field)
