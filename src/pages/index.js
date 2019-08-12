@@ -27,7 +27,7 @@ export const query = graphql`
           location
           start
           end
-          calendarId
+          iCalUID
         }
       }
     }
