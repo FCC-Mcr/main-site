@@ -1,6 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styles from "./nextcard.module.scss"
+
+import downloadCalendarFile from "../../utils/downloadCalendarFile"
 
 import Clock from "../../icons/clock.svg"
 import Location from "../../icons/location.svg"
@@ -17,13 +19,12 @@ const index = () => {
             location
             start
             end
-            calendarId
+            iCalUID
           }
         }
       }
     }
   `)
-  console.log(data)
 
   const date = new Date(data.allMeetup.edges[0].node.start)
 
@@ -47,30 +48,13 @@ const index = () => {
           The Hive
         </p>
       </div>
-      <Link to="/">Add to calendar</Link>
+      <button
+        onClick={() => downloadCalendarFile(data.allMeetup.edges[0].node)}
+      >
+        Add to calendar
+      </button>
     </div>
   )
 }
 
 export default index
-
-export const query = graphql`
-  query {
-    FreeCodeCamp: allMeetup(
-      filter: { title: { regex: "/FreeCodeCamp/" } }
-      limit: 1
-    ) {
-      edges {
-        node {
-          id
-          title
-          description
-          location
-          start
-          end
-          calendarId
-        }
-      }
-    }
-  }
-`
