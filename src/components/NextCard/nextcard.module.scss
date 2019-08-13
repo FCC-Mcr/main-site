@@ -17,8 +17,9 @@
 
   button {
     display: block;
+    border-radius: 30px;
     text-decoration: none;
-    background: #be4b4b;
+    background: $action;
     border: none;
     bottom: 0;
     color: $white;
