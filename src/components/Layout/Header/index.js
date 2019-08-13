@@ -2,7 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-// import Image from '../../Image/'
+// icons
+import Logo from "../../../icons/logo.svg"
+
 import styles from "./header.module.scss"
 
 const MainNav = () => (
@@ -21,6 +23,9 @@ const Header = ({ siteTitle }) => (
     <h2>
       <Link to="/" className={styles.title}>
         {/* need to bring in icon */}
+        <span className={styles.logo}>
+          <Logo />
+        </span>
         {siteTitle}
       </Link>
     </h2>
