@@ -15,9 +15,10 @@
     max-width: 400px;
   }
 
-  a {
-    background: $action;
-    border-radius: 30px;
+  button {
+    display: block;
+    text-decoration: none;
+    background: #be4b4b;
     border: none;
     bottom: 0;
     color: $white;
