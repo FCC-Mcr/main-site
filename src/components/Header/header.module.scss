@@ -1,22 +1,23 @@
 @import "../../styles/utility/responds-to.scss";
+@import "../../styles/config/colour.scss";
 
 .header {
-  display: flex;
-  justify-content: center;
-  height: 550px;
   background-image: url(../../icons/header.svg);
-  background-size: cover;
   background-position: 0 -60px;
   background-repeat: no-repeat;
-  width: 100vw;
-  position: relative;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  height: 550px;
+  justify-content: center;
   left: 50%;
-  right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: -2.499rem;
   padding-top: 80px;
-  color: #fff;
+  position: relative;
+  right: 50%;
+  width: 100vw;
 
   @include responds-to("md", "max") {
     padding-left: 1rem;

@@ -5,6 +5,7 @@
 
 @import "../../../styles/utility/responds-to.scss";
 @import "../../../styles/config/colour.scss";
+@import "../../../styles/config/globals.scss";
 
 $header-height: 50px;
 $nav-spacing: 30px;
@@ -21,6 +22,7 @@ $nav-spacing: 30px;
   justify-content: space-between;
   padding: 0 2em;
   position: relative;
+  z-index: map-get($layers, "highest");
 
   h2 {
     line-height: inherit;

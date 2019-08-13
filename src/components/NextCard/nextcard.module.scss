@@ -1,38 +1,32 @@
 @import "../../styles/utility/responds-to.scss";
+@import "../../styles/config/colour.scss";
 
-.card {
+.next-card {
   align-items: center;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
-  color: #000;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  font-family: "PublicSans-Bold";
+  justify-content: center;
   margin-left: auto;
   max-width: 480px;
-  padding: 2rem;
   position: relative;
 
   @include responds-to("xs", "max") {
-    max-width: 400px;
     margin: 0 auto;
+    max-width: 400px;
   }
 
   a {
-    display: block;
-    text-decoration: none;
-    background: #be4b4b;
-    border: none;
-    font-size: 1.02rem;
-    color: #fff;
+    background: $action;
     border-radius: 30px;
+    border: none;
+    bottom: 0;
+    color: $white;
+    display: block;
+    font-size: 1.02rem;
     padding: 12px 30px;
     position: absolute;
-    bottom: 0;
+    text-decoration: none;
     transform: translateY(50%);
-    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.3);
   }
 
   div {
@@ -53,7 +47,7 @@
   }
 
   > p {
-    color: #afafaf;
+    color: $grey;
     margin-bottom: 0.8rem;
   }
 
