@@ -7,15 +7,17 @@ import SEO from "../components/SEO"
 const LearningResourcesPage = ({ data }) => (
   <Layout blog>
     <SEO title="Learning Resources" />
-    <h1>Hi people</h1>
-    <p>Welcome to the FCC Learning Resources Page</p>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-          <h3>{node.frontmatter.title}</h3>
-        </Link>
-      </div>
-    ))}
+    <article className="main">
+      <h1>Hi people</h1>
+      <p>Welcome to the FCC Learning Resources Page</p>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <h3>{node.frontmatter.title}</h3>
+          </Link>
+        </div>
+      ))}
+    </article>
   </Layout>
 )
 
