@@ -8,17 +8,19 @@ import SEO from "../components/SEO"
 const BlogPage = ({ data }) => (
   <Layout blog>
     <SEO title="Blog" />
-    <h1>Blog</h1>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div className={styles.blogPost} key={node.id}>
-        <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-          <h3>{node.frontmatter.title}</h3>
-        </Link>
-        <p>{node.excerpt}</p>
-        <small>Written by {node.frontmatter.author}</small>
-        <small>{node.timeToRead} min read</small>
-      </div>
-    ))}
+    <article className="main">
+      <h1>Blog</h1>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div className={styles.blogPost} key={node.id}>
+          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <h3>{node.frontmatter.title}</h3>
+          </Link>
+          <p>{node.excerpt}</p>
+          <small>Written by {node.frontmatter.author}</small>
+          <small>{node.timeToRead} min read</small>
+        </div>
+      ))}
+    </article>
   </Layout>
 )
 
