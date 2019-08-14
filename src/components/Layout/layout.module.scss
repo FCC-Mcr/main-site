@@ -1,0 +1,13 @@
+@import "../../styles/utility/responds-to.scss";
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 960px minmax(0, 1fr);
+  @include responds-to("md", "max") {
+    grid-template-columns: minmax(0, 1fr) 1fr minmax(0, 1fr);
+  }
+}
+
+.blog {
+  grid-template-columns: minmax(0, 1fr) 640px minmax(0, 1fr);
+}
