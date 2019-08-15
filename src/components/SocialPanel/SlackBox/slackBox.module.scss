@@ -1,0 +1,11 @@
+@import "../../../styles/config/colour.scss";
+
+.wrap {
+  background: linear-gradient(360deg, #4a164b 0%, #6a166c 100%);
+  color: $white;
+
+  a {
+    display: inline-block;
+    background: white;
+  }
+}
