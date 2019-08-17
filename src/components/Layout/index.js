@@ -15,7 +15,6 @@ import styles from "./layout.module.scss"
 import "./layout.scss"
 
 const Layout = ({ blog, children }) => {
-  console.log(blog)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
