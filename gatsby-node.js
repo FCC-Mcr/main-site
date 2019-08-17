@@ -87,8 +87,6 @@ exports.sourceNodes = async ({ actions }) => {
   // await for results
   const res = await fetchMeetups()
 
-  console.log(res)
-
   // map into these results and create nodes
   res.data.items.map((meetup, i) => {
     // Create your node object
