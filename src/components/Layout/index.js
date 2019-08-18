@@ -28,9 +28,7 @@ const Layout = ({ blog, children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className={`${styles.layout} ${blog ? styles.blog : ""}`}>
-        {children}
-      </main>
+      <main className={styles.layout}>{children}</main>
     </>
   )
 }
