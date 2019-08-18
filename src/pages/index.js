@@ -6,11 +6,14 @@ import Layout from "../components/Layout/"
 import SEO from "../components/SEO/"
 
 import Header from "../components/Header"
+import Organisers from "../components/Organisers"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header />
+    <h1 className="center pl-1 pt-3">Organisers</h1>
+    <Organisers />
   </Layout>
 )
 

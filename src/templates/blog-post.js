@@ -10,12 +10,12 @@ export default ({ data }) => {
   const siteTitle = post.frontmatter.title
 
   return (
-    <Layout blog>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article className="main">
+      <article className="main blog">
         <div>
           <h1>{siteTitle}</h1>
           <p>

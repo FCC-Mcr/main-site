@@ -6,9 +6,9 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const BlogPage = ({ data }) => (
-  <Layout blog>
+  <Layout>
     <SEO title="Blog" />
-    <article className="main">
+    <article className="main blog">
       <h1>Blog</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className={styles.blogPost} key={node.id}>

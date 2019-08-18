@@ -5,9 +5,9 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 const LearningResourcesPage = ({ data }) => (
-  <Layout blog>
+  <Layout>
     <SEO title="Learning Resources" />
-    <article className="main">
+    <article className="main blog">
       <h1>Hi people</h1>
       <p>Welcome to the FCC Learning Resources Page</p>
       {data.allMarkdownRemark.edges.map(({ node }) => (
