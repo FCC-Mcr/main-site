@@ -1,12 +1,7 @@
 @import "../../styles/utility/responds-to.scss";
 
 .carousel {
-  padding: 80px 40px 40px;
-
-  // @include responds-to("xs", "max") {
-  //   padding-top: 240px;
-  // }
-
+  padding: 0px 40px 40px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
