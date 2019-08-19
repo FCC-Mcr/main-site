@@ -15,7 +15,6 @@ import styles from "./layout.module.scss"
 import "./layout.scss"
 
 const Layout = ({ blog, children }) => {
-  console.log(blog)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,9 +28,7 @@ const Layout = ({ blog, children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className={`${styles.layout} ${blog ? styles.blog : ""}`}>
-        {children}
-      </main>
+      <main className={styles.layout}>{children}</main>
     </>
   )
 }
