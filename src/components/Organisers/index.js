@@ -36,50 +36,53 @@ const index = () => {
   console.log(data)
 
   return (
-    <Carousel>
-      <Card height={3} className={styles.organiser}>
-        <div className={styles.grid}>
-          <Img fixed={data.james.childImageSharp.fixed} />
-          <div>
-            <h3>James Davenport</h3>
-            <a href="https://twitter.com/CollierAdam">@collieradam</a>
+    <>
+      <h1 className="center pl-1 pt-3">Organisers</h1>
+      <Carousel>
+        <Card height={3} className={styles.organiser}>
+          <div className={styles.grid}>
+            <Img fixed={data.james.childImageSharp.fixed} />
+            <div>
+              <h3>James Davenport</h3>
+              <a href="https://twitter.com/CollierAdam">@collieradam</a>
+            </div>
+            <p>
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.”
+            </p>
           </div>
-          <p>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.”
-          </p>
-        </div>
-      </Card>
-      <Card height={3} className={styles.organiser}>
-        <div className={styles.grid}>
-          <Img fixed={data.james.childImageSharp.fixed} />
-          <div>
-            <h3>James Davenport</h3>
-            <a href="https://twitter.com/CollierAdam">@collieradam</a>
+        </Card>
+        <Card height={3} className={styles.organiser}>
+          <div className={styles.grid}>
+            <Img fixed={data.james.childImageSharp.fixed} />
+            <div>
+              <h3>James Davenport</h3>
+              <a href="https://twitter.com/CollierAdam">@collieradam</a>
+            </div>
+            <p>
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.”
+            </p>
           </div>
-          <p>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.”
-          </p>
-        </div>
-      </Card>
-      <Card height={3} className={styles.organiser}>
-        <div className={styles.grid}>
-          <Img fixed={data.james.childImageSharp.fixed} />
-          <div>
-            <h3>James Davenport</h3>
-            <a href="https://twitter.com/CollierAdam">@collieradam</a>
+        </Card>
+        <Card height={3} className={styles.organiser}>
+          <div className={styles.grid}>
+            <Img fixed={data.james.childImageSharp.fixed} />
+            <div>
+              <h3>James Davenport</h3>
+              <a href="https://twitter.com/CollierAdam">@collieradam</a>
+            </div>
+            <p>
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.”
+            </p>
           </div>
-          <p>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.”
-          </p>
-        </div>
-      </Card>
-    </Carousel>
+        </Card>
+      </Carousel>
+    </>
   )
 }
 
