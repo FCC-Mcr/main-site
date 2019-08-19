@@ -1,0 +1,49 @@
+@import "../../styles/config/colour.scss";
+@import "../../styles/utility/responds-to.scss";
+
+.location {
+  grid-column: 1/9;
+  width: 100%;
+
+  div {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: 2rem;
+    @include responds-to("xs", "max") {
+      border-radius: 0;
+      height: 550px;
+    }
+  }
+}
+
+.selector {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  padding-left: 2rem;
+  @include responds-to("xs", "max") {
+    padding-left: 1rem;
+  }
+  li {
+    margin: 0;
+    margin-right: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 0.77rem;
+  }
+  img {
+    margin-bottom: 0;
+    vertical-align: text-bottom;
+    margin-right: 10px;
+    width: 17px;
+  }
+}
+
+.active {
+  color: $accent;
+}
