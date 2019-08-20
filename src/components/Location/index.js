@@ -37,11 +37,12 @@ const index = props => {
 
   return (
     <div className={styles.location}>
-      <h1 className="pl-1">Location</h1>
-      <div className="u-shadow--3">
+      <h1 className={`${styles.title}`}>Location</h1>
+      <div className={`${styles.map} u-shadow--3`}>
         <ul className={`${styles.selector} px-1 py-1 u-shadow--2`}>
-          {locations.map(({ location, param }) => (
+          {locations.map(({ location, param }, index) => (
             <li
+              key={index}
               onClick={e => {
                 setMapParams(param)
                 setActive(location)
@@ -57,13 +58,17 @@ const index = props => {
             </li>
           ))}
         </ul>
-        <iframe
-          title="google maps"
-          src={`https://www.google.com/maps/embed?${mapParams}`}
-          frameborder="0"
-          style={{ border: 0, width: `100%`, height: `calc(100% - 65px)` }}
-          allowfullscreen
-        ></iframe>
+        <div className={styles.wrap}>
+          <iframe
+            title="google maps"
+            src={`https://www.google.com/maps/embed?${mapParams}`}
+            frameBorder="0"
+            style={{
+              border: 0,
+            }}
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   )
