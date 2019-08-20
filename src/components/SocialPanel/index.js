@@ -6,10 +6,10 @@ import SlackBox from "./SlackBox"
 import styles from "./socialPanel.module.scss"
 
 const SocialPanel = () => (
-  <div>
-    Social
+  <div className={`${styles.socialPanel} ml-1`}>
+    <h1 className={styles.title}>Social</h1>
     <SlackBox />
-    <TwitterBar />
+    <TwitterBar className={styles.twitter} />
   </div>
 )
 
