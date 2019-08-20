@@ -7,17 +7,19 @@ import SEO from "../components/SEO/"
 
 import Header from "../components/Header"
 import Organisers from "../components/Organisers"
-import Grid from "../components/Grid"
+import Flex from "../components/Flex"
 import Location from "../components/Location"
+import SocialPanel from "../components/SocialPanel"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header />
     <Organisers />
-    <Grid>
+    <Flex>
       <Location />
-    </Grid>
+      <SocialPanel />
+    </Flex>
   </Layout>
 )
 
