@@ -12,10 +12,6 @@
   border-radius: 15px;
   overflow: hidden;
   height: 100%;
-  // @include responds-to("sm", "max") {
-  //   height: 550px;
-  //   margin-bottom: 3rem;
-  // }
   @media (max-width: 767px) {
     height: 550px;
     margin-bottom: 3rem;
