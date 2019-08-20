@@ -1,9 +1,15 @@
+@import "../../styles/utility/responds-to.scss";
 .organiser {
   scroll-snap-align: center;
   width: 350px;
   margin-right: 15px;
   display: inline-block;
   vertical-align: top;
+
+  @include responds-to("xxs", "max") {
+    width: calc(100vw - 30px);
+    margin-right: 10px;
+  }
 
   &:last-child {
     margin-right: 0;
