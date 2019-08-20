@@ -39,7 +39,7 @@ const index = () => {
     <>
       <h1 className="center pl-1 pt-3">Organisers</h1>
       <Carousel>
-        <Card height={3} className={styles.organiser}>
+        <Card height={3} className={`${styles.organiser} p-1`}>
           <div className={styles.grid}>
             <Img fixed={data.james.childImageSharp.fixed} />
             <div>
@@ -53,7 +53,7 @@ const index = () => {
             </p>
           </div>
         </Card>
-        <Card height={3} className={styles.organiser}>
+        <Card height={3} className={`${styles.organiser} p-1`}>
           <div className={styles.grid}>
             <Img fixed={data.james.childImageSharp.fixed} />
             <div>
@@ -67,7 +67,7 @@ const index = () => {
             </p>
           </div>
         </Card>
-        <Card height={3} className={styles.organiser}>
+        <Card height={3} className={`${styles.organiser} p-1`}>
           <div className={styles.grid}>
             <Img fixed={data.james.childImageSharp.fixed} />
             <div>
