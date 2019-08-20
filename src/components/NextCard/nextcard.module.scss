@@ -1,0 +1,60 @@
+@import "../../styles/utility/responds-to.scss";
+@import "../../styles/config/colour.scss";
+
+.next-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  max-width: 480px;
+  position: relative;
+
+  @include responds-to("xs", "max") {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  button {
+    display: block;
+    border-radius: 30px;
+    text-decoration: none;
+    background: $action;
+    border: none;
+    bottom: 0;
+    color: $white;
+    display: block;
+    font-size: 1.02rem;
+    padding: 12px 30px;
+    position: absolute;
+    text-decoration: none;
+    transform: translateY(50%);
+  }
+
+  div {
+    display: flex;
+
+    p {
+      margin: 0 1rem 1rem 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.02rem;
+  }
+
+  > p {
+    color: $grey;
+    margin-bottom: 0.8rem;
+  }
+
+  img {
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+}

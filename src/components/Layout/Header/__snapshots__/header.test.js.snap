@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="header  u-shadow--2"
+>
+  <h2>
+    <a
+      aria-current="page"
+      className="title"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      FCC MCR
+    </a>
+  </h2>
+  <nav>
+    <a
+      href="https://www.freecodecamp.org/forum/c/united-kingdom-study-groups/manchester"
+    >
+      Forum
+    </a>
+    <a
+      aria-current="page"
+      className=""
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      Organisers
+    </a>
+    <a
+      href="/blog/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      Blog
+    </a>
+    <a
+      href="/learning-resources/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      Learning Resources
+    </a>
+  </nav>
+</header>
+`;

@@ -1,0 +1,48 @@
+@import "../../../styles/config/colour.scss";
+@import "../../../styles/utility/responds-to.scss";
+
+.wrap {
+  background: linear-gradient(360deg, #4a164b 0%, #6a166c 100%);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.4rem;
+  margin-bottom: 1rem;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  a {
+    text-align: center;
+    display: inline-block;
+  }
+
+  span {
+    background: linear-gradient(
+      90deg,
+      rgba(54, 197, 240, 0.73) 3.44%,
+      rgba(46, 182, 125, 0.72) 35.07%,
+      rgba(236, 178, 46, 0.74) 65.65%,
+      rgba(224, 30, 90, 0.67) 96.95%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  button {
+    background: #fff;
+    padding: 0.4rem 1.3rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
