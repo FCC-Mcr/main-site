@@ -1,0 +1,9 @@
+.grid {
+  // display: grid;
+  // taken from this article https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+  // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  // grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}

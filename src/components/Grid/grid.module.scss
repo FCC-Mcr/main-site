@@ -1,5 +1,0 @@
-.grid {
-  display: grid;
-  // taken from this article https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-}
