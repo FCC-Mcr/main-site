@@ -38,7 +38,7 @@ const NextCard = () => {
   }
 
   return (
-    <Card className={styles.nextCard} height={3} padding={2} borderRadius={20}>
+    <Card className={`${styles.nextCard} p-2`} height={3} borderRadius={20}>
       <p>Our next meet up is</p>
       <h2>{date.toLocaleDateString("en-GB", options)}</h2>
       <div>
