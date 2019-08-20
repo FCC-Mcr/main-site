@@ -2,18 +2,23 @@
 @import "../../styles/utility/responds-to.scss";
 
 .location {
-  grid-column: 1/9;
+  display: flex;
+  flex-direction: column;
+  flex: 2 1 380px;
   width: 100%;
+}
 
-  div {
-    border-radius: 15px;
-    overflow: hidden;
-    height: 400px;
-    margin-bottom: 2rem;
-    @include responds-to("xs", "max") {
-      border-radius: 0;
-      height: 550px;
-    }
+.map {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  // @include responds-to("sm", "max") {
+  //   height: 550px;
+  //   margin-bottom: 3rem;
+  // }
+  @media (max-width: 767px) {
+    height: 550px;
+    margin-bottom: 3rem;
   }
 }
 
@@ -46,4 +51,15 @@
 
 .active {
   color: $accent;
+}
+
+.wrap {
+  width: 100%;
+  height: calc(100% - 65px);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }
