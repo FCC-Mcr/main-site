@@ -15,14 +15,30 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
+        name: `content`,
         path: `${__dirname}/content`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-prismjs`],
+        plugins: [
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `${__dirname}/content`,
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 610,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
