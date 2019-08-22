@@ -135,7 +135,7 @@ Still further improvement can be made; to state that the callback is the second 
 
 ### Feedback Speed
 
-Reducing the time that it takes for code, to affect the changes made in a product, gives developers a sense of tactile instant feedback — providing developers do not have to wait long. Enables them to expend less effort assessing the small micro changes they make to the product. Below shows ReactJS ‘Hot Module Reloading’ feature, which reloads the browser whenever there is a change made to the UI.
+Reducing the time that it takes for code, to affect the changes made in a product, gives developers a sense of tactile instant feedback — providing developers do not have to wait long. This enables them to expend less effort assessing the small micro changes they make to the product. Below shows ReactJS ‘Hot Module Reloading’ feature, which reloads the browser whenever there is a change made to the UI.
 
 ![React feature known as hot module reloading](./hot-module-reloading.gif)
 
