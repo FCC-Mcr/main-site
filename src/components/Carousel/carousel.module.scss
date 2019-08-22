@@ -6,6 +6,10 @@
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
 
+  @include responds-to("xs", "min") {
+    padding: 0px 40px 40px;
+  }
+
   @include responds-to("xs", "max") {
     padding: 0px 15px 40px;
   }
