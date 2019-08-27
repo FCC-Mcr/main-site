@@ -1,4 +1,6 @@
 @import "../../styles/config/colour.scss";
+@import "../../styles/utility/responds-to.scss";
+
 .layout {
   display: flex;
   justify-content: space-between;
@@ -6,6 +8,7 @@
 }
 
 .upcoming-talks {
+  flex: 1 1 400px;
   img {
     margin-bottom: 0;
   }
@@ -20,8 +23,6 @@
 }
 
 .talk {
-  max-width: 374px;
-
   div {
     display: flex;
 
@@ -34,8 +35,11 @@
     height: 16px;
     margin-right: 0.3rem;
   }
-  p {
+  p,
+  small {
     margin-bottom: 0.4rem;
+  }
+  small {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -47,9 +51,13 @@
 }
 
 .button {
+  padding: 0 0.7rem;
   cursor: pointer;
   border-radius: 0 10px 10px 0;
   background: $accent;
   display: flex;
   align-items: center;
+  img {
+    max-width: none;
+  }
 }
