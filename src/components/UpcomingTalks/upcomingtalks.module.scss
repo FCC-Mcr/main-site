@@ -1,0 +1,45 @@
+@import "../../styles/config/colour.scss";
+.layout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.upcoming-talks {
+  max-width: 374px;
+
+  div {
+    display: flex;
+
+    p {
+      margin: 0 1rem 0.4rem 0;
+      color: #929292;
+    }
+  }
+  img {
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+  p {
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  h3 {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background: $accent;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-bottom: 0;
+  }
+}
