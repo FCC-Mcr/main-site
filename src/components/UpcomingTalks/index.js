@@ -57,10 +57,10 @@ const index = () => {
                   The Hive
                 </p>
               </div>
-              <p>{talk.node.description}</p>
+              <small>{talk.node.description}</small>
             </div>
             <div
-              className={`${styles.button} p-1`}
+              className={`${styles.button}`}
               onClick={() => downloadCalendarFile(talk.node)}
             >
               <img src={calendar} alt="calendar icon" />
