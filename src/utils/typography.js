@@ -3,7 +3,8 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  scaleRatio: 2,
+  headerLineHeight: 1.3,
+  scaleRatio: 1.9,
   headerFontFamily: ["PublicSans-ExtraBold"],
   bodyFontFamily: ["PublicSans-Medium"],
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
