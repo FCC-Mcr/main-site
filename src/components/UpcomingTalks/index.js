@@ -29,8 +29,6 @@ const index = () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <div>
       {" "}
@@ -42,7 +40,6 @@ const index = () => {
           day: "numeric",
           month: "long",
         }
-        console.log(talk)
 
         return (
           <Card height={3} className={`${styles.layout}`}>
@@ -51,23 +48,22 @@ const index = () => {
               <h3>{talk.node.title}</h3>
               <div>
                 <p>
-                  <img src={clock} alt="" />
+                  <img src={clock} alt="clock icon" />
                   {talk.node.start.match(/\d\d:\d\d/)} -{" "}
                   {talk.node.end.match(/\d\d:\d\d/)}
                 </p>
                 <p>
-                  <img src={location} alt="" />
+                  <img src={location} alt="location icon" />
                   The Hive
                 </p>
               </div>
               <p>{talk.node.description}</p>
             </div>
-
             <div
               className={`${styles.button} p-1`}
               onClick={() => downloadCalendarFile(talk.node)}
             >
-              <img src={calendar} alt="" />
+              <img src={calendar} alt="calendar icon" />
             </div>
           </Card>
         )
