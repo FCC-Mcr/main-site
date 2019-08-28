@@ -33,8 +33,6 @@ const index = () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <>
       <h1 className="center pl-1 pt-3">Organisers</h1>

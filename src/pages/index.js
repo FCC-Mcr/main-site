@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 // components
 import Layout from "../components/Layout/"
@@ -10,6 +9,7 @@ import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
+import UpcomingTalks from "../components/UpcomingTalks"
 
 const IndexPage = () => (
   <Layout>
@@ -20,25 +20,10 @@ const IndexPage = () => (
       <Location />
       <SocialPanel />
     </Flex>
+    <Flex>
+      <UpcomingTalks />
+    </Flex>
   </Layout>
 )
 
 export default IndexPage
-
-export const query = graphql`
-  query {
-    allMeetup(limit: 3) {
-      edges {
-        node {
-          id
-          title
-          description
-          location
-          start
-          end
-          iCalUID
-        }
-      }
-    }
-  }
-`
