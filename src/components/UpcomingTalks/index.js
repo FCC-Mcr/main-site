@@ -42,7 +42,7 @@ const index = () => {
         }
 
         return (
-          <Card height={3} className={`${styles.layout}`}>
+          <Card key={i} height={3} className={`${styles.layout}`}>
             <div className={`${styles.talk}  p-1`}>
               <p>{date.toLocaleDateString("en-GB", options)}</p>
               <h3>{talk.node.title}</h3>
