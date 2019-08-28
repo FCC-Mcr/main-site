@@ -9,6 +9,7 @@
 
 .upcoming-talks {
   flex: 1 1 400px;
+  min-width: 0;
   img {
     margin-bottom: 0;
   }
@@ -23,6 +24,7 @@
 }
 
 .talk {
+  min-width: 0;
   div {
     display: flex;
 
