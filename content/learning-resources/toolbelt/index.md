@@ -1,18 +1,21 @@
 ---
 title: Toolbelt
+description: Helps developers build applications/websites faster and automate tedious processes. Just makes life a bit easier (which we all like)
 ---
-Can't be stressed enough, time spent invested into improving their environment. Helps developers build applications/websites faster and automate tedious processes. Just makes life a bit easier.
+
+Helps developers build applications/websites faster and automate tedious processes. Just makes life a bit easier (which we all like)
 
 ## Text Editors
 
 [Atom](https://atom.io/) - modern hackable text editor
 
-+ [10 essential Atom add ons](https://www.sitepoint.com/10-essential-atom-add-ons/)
-+ [12 Favorite Atom Tips and Shortcuts to Improve Your Workflow](https://www.sitepoint.com/12-favorite-atom-tips-and-shortcuts-to-improve-your-workflow/)
-+ [Handy Atom Shortcuts](https://gist.github.com/chrissimpkins/5bf5686bae86b8129bee#atom_file)
-+ [Atom Snippets](http://flight-manual.atom.io/using-atom/sections/snippets/)
+- [10 essential Atom add ons](https://www.sitepoint.com/10-essential-atom-add-ons/)
+- [12 Favorite Atom Tips and Shortcuts to Improve Your Workflow](https://www.sitepoint.com/12-favorite-atom-tips-and-shortcuts-to-improve-your-workflow/)
+- [Handy Atom Shortcuts](https://gist.github.com/chrissimpkins/5bf5686bae86b8129bee#atom_file)
+- [Atom Snippets](http://flight-manual.atom.io/using-atom/sections/snippets/)
 
 ## Boilerplates
+
 Useful if you want something quick and easy to get off the ground.
 
 [Express Generator](https://expressjs.com/en/starter/generator.html)
@@ -20,6 +23,7 @@ Useful if you want something quick and easy to get off the ground.
 [Express Authentication Starter](https://github.com/sahat/hackathon-starter)
 
 ## Dependency Management
+
 What if every everyone released the new version of their modules at the same time, and everyone updated the moment after. Simply put it, never gonna happen.
 
 [Node Version Manager (NVM)](https://github.com/creationix/nvm) [Mac OSX and Linux]
@@ -66,10 +70,9 @@ $ nvm alias default node
 
 [Gitkraken](https://www.gitkraken.com/) - UI friendly git for Git novices and professionals alike. Git is a software industry standard, so it's a must!
 
-
-+ [Git and GitHub for Poets](https://www.youtube.com/watch?v=BCQHnlnPusY)
-+ [Git for Noobs - command line](https://www.youtube.com/watch?v=JPKOESR1k04&t=1011s)
-+ [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Git and GitHub for Poets](https://www.youtube.com/watch?v=BCQHnlnPusY)
+- [Git for Noobs - command line](https://www.youtube.com/watch?v=JPKOESR1k04&t=1011s)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ### Useful git commands
 
@@ -86,14 +89,17 @@ $ git rm -r --cached .
 ```
 
 ## Task Runners + Bundlers
-1) Task Runners - used to automate, enable faster and efficient builds; enhances developer workflow, with plugins.
-2) Bundlers - are task runners, and with asset loading optimisation.
+
+1. Task Runners - used to automate, enable faster and efficient builds; enhances developer workflow, with plugins.
+2. Bundlers - are task runners, and with asset loading optimisation.
 
 [Gulp](https://gulpjs.com/) - simple, easy to learn task runner, producing efficient builds, automate task
-+ [Gulp Basics with LevelUpTuts](https://www.youtube.com/watch?v=wNlEK8qrb0M&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos)
-+ [Express, Browsersync, Nodemon and Sass config](https://gist.github.com/Adam-Collier/973abbb109a39c8be1cd2000666d9c3e) - Full-Stack config starter back for gulp users
+
+- [Gulp Basics with LevelUpTuts](https://www.youtube.com/watch?v=wNlEK8qrb0M&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos)
+- [Express, Browsersync, Nodemon and Sass config](https://gist.github.com/Adam-Collier/973abbb109a39c8be1cd2000666d9c3e) - Full-Stack config starter back for gulp users
 
 [Webpack](https://webpack.js.org/) - Builds a graph of dependencies makes loading dependencies faster and enables more modular code
-+ [Getting Started with Webpack](https://webpack.js.org/guides/getting-started/)
+
+- [Getting Started with Webpack](https://webpack.js.org/guides/getting-started/)
 
 [Parceljs](https://parceljs.org/) - Blazing fast, zero configuration web application bundler

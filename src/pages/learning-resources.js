@@ -15,6 +15,7 @@ const LearningResourcesPage = ({ data }) => (
           <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
             <h3>{node.frontmatter.title}</h3>
           </Link>
+          <p>{node.frontmatter.description}</p>
         </div>
       ))}
     </article>
@@ -37,6 +38,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
           }
         }
       }

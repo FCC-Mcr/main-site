@@ -1,5 +1,6 @@
 ---
 title: Front End
+description: The practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. This is what the user of your web app or static website will see, and interact with - kinda like the stars of the show on stage.
 ---
 
 The practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
