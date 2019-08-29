@@ -6,7 +6,7 @@ import arrow from "../../icons/arrow.svg"
 
 const index = ({ data, title, flex }) => (
   <div className={`${styles.blogposts} ${flex ? styles.flex : ""}`}>
-    <h1>{title}</h1>
+    <h2>{title}</h2>
     {data.map(({ node }) => (
       <div className={styles.blogPost} key={node.id}>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
