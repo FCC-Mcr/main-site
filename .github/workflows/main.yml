@@ -10,4 +10,5 @@ jobs:
       - name: make http request to now deploy hook
       # Uses the master branch of a public repository
         uses: "actions/bin/curl@master"
-        args: ${ZEIT_NOW_WEBHOOK}
+        with:
+          args: ${ZEIT_NOW_WEBHOOK}
