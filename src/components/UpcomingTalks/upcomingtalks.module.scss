@@ -6,6 +6,20 @@
 }
 
 .upcoming-talks {
+  img {
+    margin-bottom: 0;
+  }
+  a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    img {
+      padding-left: 0.2rem;
+    }
+  }
+}
+
+.talk {
   max-width: 374px;
 
   div {
@@ -38,8 +52,4 @@
   background: $accent;
   display: flex;
   align-items: center;
-
-  img {
-    margin-bottom: 0;
-  }
 }

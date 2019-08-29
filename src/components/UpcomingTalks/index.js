@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import Card from "../Card"
 import downloadCalendarFile from "../../utils/downloadCalendarFile"
@@ -9,6 +9,7 @@ import styles from "../UpcomingTalks/upcomingtalks.module.scss"
 import clock from "../../icons/clock.svg"
 import location from "../../icons/location.svg"
 import calendar from "../../icons/calendar.svg"
+import arrow from "../../icons/arrow.svg"
 
 const index = () => {
   const data = useStaticQuery(graphql`
@@ -29,49 +30,47 @@ const index = () => {
     }
   `)
 
-  console.log(data)
-
   return (
-    <div>
-      {" "}
+    <div className={styles.upcomingTalks}>
       <h1>Upcoming Talks</h1>
-      {data.allMeetup.edges.map((talk, i) => {
-        let date = new Date(talk.node.start)
+      {data.allMeetup.edges.map(({ node }) => {
+        let date = new Date(node.start)
         let options = {
           weekday: "long",
           day: "numeric",
           month: "long",
         }
-        console.log(talk)
 
         return (
-          <Card height={3} className={`${styles.layout}`}>
-            <div className={`${styles.upcomingTalks}  p-1`}>
+          <Card height={3} className={styles.layout}>
+            <div className={`${styles.talk}  p-1`}>
               <p>{date.toLocaleDateString("en-GB", options)}</p>
-              <h3>{talk.node.title}</h3>
+              <h3>{node.title}</h3>
               <div>
                 <p>
-                  <img src={clock} alt="" />
-                  {talk.node.start.match(/\d\d:\d\d/)} -{" "}
-                  {talk.node.end.match(/\d\d:\d\d/)}
+                  <img src={clock} alt="clock icon" />
+                  {node.start.match(/\d\d:\d\d/)} -{" "}
+                  {node.end.match(/\d\d:\d\d/)}
                 </p>
                 <p>
-                  <img src={location} alt="" />
+                  <img src={location} alt="location icon" />
                   The Hive
                 </p>
               </div>
-              <p>{talk.node.description}</p>
+              <p>{node.description}</p>
             </div>
-
             <div
               className={`${styles.button} p-1`}
-              onClick={() => downloadCalendarFile(talk.node)}
+              onClick={() => downloadCalendarFile(node)}
             >
-              <img src={calendar} alt="" />
+              <img src={calendar} alt="calendar icon" />
             </div>
           </Card>
         )
       })}
+      <Link to="/upcoming-talks/">
+        More talks <img src={arrow} alt="arrow icon" />
+      </Link>
     </div>
   )
 }
