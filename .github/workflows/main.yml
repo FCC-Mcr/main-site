@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: make http request to now deploy hook
       # Uses the master branch of a public repository
-        uses = "actions/bin/curl@master"
+        uses: "actions/bin/curl@master"
       # The deploy hook secret is passed as the argument
-        args = ["${ZEIT_NOW_WEBHOOK}"]
+        args: [${ZEIT_NOW_WEBHOOK}]
