@@ -8,21 +8,15 @@
 }
 
 .upcoming-talks {
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   flex: 1 1 400px;
   min-width: 0;
-=======
->>>>>>> a1d73a6e48c3b79b319b6503748a526695c51251
   img {
     margin-bottom: 0;
   }
   a {
-<<<<<<< HEAD
     margin-top: auto;
-=======
->>>>>>> a1d73a6e48c3b79b319b6503748a526695c51251
     display: block;
     text-align: right;
     text-decoration: none;
@@ -31,12 +25,6 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
-
-.talk {
-  max-width: 374px;
->>>>>>> a1d73a6e48c3b79b319b6503748a526695c51251
 
 .talk {
   min-width: 0;
@@ -79,12 +67,9 @@
   background: $accent;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   img {
     max-width: none;
   }
-=======
->>>>>>> a1d73a6e48c3b79b319b6503748a526695c51251
 }
 
 .location {
