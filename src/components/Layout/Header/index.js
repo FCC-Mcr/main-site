@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 // icons
-import Logo from "../../../icons/logo.svg"
+import logo from "../../../icons/logo.svg"
 
 import styles from "./header.module.scss"
 
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => (
       <Link to="/" className={styles.title}>
         {/* need to bring in icon */}
         <span className={styles.logo}>
-          <Logo />
+          <img src={logo} alt="" />
         </span>
         {siteTitle}
       </Link>

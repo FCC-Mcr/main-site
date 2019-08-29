@@ -24,8 +24,8 @@ $nav-spacing: 30px;
   position: relative;
   z-index: map-get($layers, "highest");
 
-  .logo svg {
-    margin-right: 13px;
+  .logo img {
+    margin-right: 10px;
     margin-bottom: -2px;
   }
 

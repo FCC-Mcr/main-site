@@ -10,27 +10,29 @@ export default ({ data }) => {
   const siteTitle = post.frontmatter.title
 
   return (
-    <Layout blog>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div>
-        <h1>{siteTitle}</h1>
-        <p>
-          {post.frontmatter.date} - {`${post.timeToRead} min read`}
-        </p>
-        {post.frontmatter.featuredImage && (
-          <Image
-            style={{
-              marginBottom: rhythm(1),
-              borderRadius: "1%",
-            }}
-            sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-          />
-        )}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <article className="main blog">
+        <div>
+          <h1>{siteTitle}</h1>
+          <p>
+            {post.frontmatter.date} - {`${post.timeToRead} min read`}
+          </p>
+          {post.frontmatter.featuredImage && (
+            <Image
+              style={{
+                marginBottom: rhythm(1),
+                borderRadius: "1%",
+              }}
+              sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+            />
+          )}
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+      </article>
     </Layout>
   )
 }

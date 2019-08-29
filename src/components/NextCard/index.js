@@ -7,8 +7,8 @@ import downloadCalendarFile from "../../utils/downloadCalendarFile"
 // components
 import Card from "../Card"
 // icons
-import Clock from "../../icons/clock.svg"
-import Location from "../../icons/location.svg"
+import clock from "../../icons/clock.svg"
+import location from "../../icons/location.svg"
 
 const NextCard = () => {
   const data = useStaticQuery(graphql`
@@ -38,16 +38,16 @@ const NextCard = () => {
   }
 
   return (
-    <Card className={styles.nextCard} height={3}>
+    <Card className={`${styles.nextCard} p-2`} height={3} borderRadius={20}>
       <p>Our next meet up is</p>
       <h2>{date.toLocaleDateString("en-GB", options)}</h2>
       <div>
         <p>
-          <Clock />
+          <img src={clock} alt="" />
           18:00 - 21:00
         </p>
         <p>
-          <Location />
+          <img src={location} alt="" />
           The Hive
         </p>
       </div>

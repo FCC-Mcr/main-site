@@ -5,10 +5,14 @@ import styles from "./card.module.scss"
  * @param { string } className class to add to className string
  * @param { Number } height determines box-shadow strength
  */
-const Card = ({ children, className, height = 0 }) => {
+const Card = ({ children, className, height = 0, borderRadius = 10 }) => {
   const shadowClass = height > 0 ? `u-shadow--${height}` : ""
+
   return (
-    <div className={`${styles.card} ${className} ${shadowClass}`}>
+    <div
+      className={`${styles.card} ${className} ${shadowClass}`}
+      style={{ borderRadius: `${borderRadius}px` }}
+    >
       {children}
     </div>
   )

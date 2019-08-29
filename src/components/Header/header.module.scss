@@ -2,27 +2,17 @@
 @import "../../styles/config/colour.scss";
 
 .header {
+  grid-column: 1/4;
   background-image: url(../../icons/header.svg);
   background-position: 0 -60px;
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
   display: flex;
-  height: 550px;
   justify-content: center;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   margin-top: -2.499rem;
-  padding-top: 80px;
+  padding-top: 130px;
   position: relative;
-  right: 50%;
-  width: 100vw;
-
-  @include responds-to("md", "max") {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 
   @include responds-to("xs", "max") {
     background-position: 0 -20px;
@@ -34,7 +24,7 @@
 
   > div {
     max-width: 800px;
-    width: 100%;
+    width: calc(100% - 30px);
 
     > p {
       margin-bottom: 2rem;
