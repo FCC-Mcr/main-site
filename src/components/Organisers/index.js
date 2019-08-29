@@ -33,11 +33,9 @@ const index = () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <>
-      <h1 className="center pl-1 pt-3">Organisers</h1>
+      <h2 className="center pl-1 pt-3">Organisers</h2>
       <Carousel>
         <Card height={3} className={`${styles.organiser} p-1`}>
           <div className={styles.grid}>
