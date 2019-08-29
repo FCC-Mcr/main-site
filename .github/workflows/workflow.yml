@@ -1,0 +1,17 @@
+name: rebuild main site
+
+on:
+  schedule:
+  - cron: "45 0-23 * * 1-6"
+
+jobs:
+  curl:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: make http request to now deploy hook
+    # Uses the master branch of a public repository
+      uses: "actions/bin/curl@master"
+      with:
+        args: $ZEIT_NOW_WEBHOOK
