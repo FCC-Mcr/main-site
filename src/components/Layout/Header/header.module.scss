@@ -24,6 +24,11 @@ $nav-spacing: 30px;
   position: relative;
   z-index: map-get($layers, "highest");
 
+  .logo img {
+    margin-right: 10px;
+    margin-bottom: -2px;
+  }
+
   h2 {
     line-height: inherit;
     margin: 0;
