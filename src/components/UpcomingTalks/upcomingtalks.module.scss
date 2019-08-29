@@ -8,12 +8,15 @@
 }
 
 .upcoming-talks {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 400px;
   min-width: 0;
   img {
     margin-bottom: 0;
   }
   a {
+    margin-top: auto;
     display: block;
     text-align: right;
     text-decoration: none;
@@ -29,8 +32,13 @@
     display: flex;
 
     p {
-      margin: 0 1rem 0.4rem 0;
+      margin: 0 0 0.4rem;
       color: #929292;
+      flex: 1;
+
+      &:first-of-type {
+        flex: 0 1 145px;
+      }
     }
   }
   img {
@@ -62,4 +70,11 @@
   img {
     max-width: none;
   }
+}
+
+.location {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
