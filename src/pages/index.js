@@ -10,6 +10,7 @@ import Flex from "../components/Flex"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingTalks from "../components/UpcomingTalks"
+import LearningResources from "../components/LearningResources"
 
 const IndexPage = () => (
   <Layout>
@@ -23,6 +24,7 @@ const IndexPage = () => (
     <Flex>
       <UpcomingTalks />
     </Flex>
+    <LearningResources />
   </Layout>
 )
 
