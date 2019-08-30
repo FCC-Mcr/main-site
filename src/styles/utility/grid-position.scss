@@ -1,6 +1,9 @@
+$main-max-width: 1030px;
+$blog-max-width: 640px;
+
 .main {
   width: 100vw;
-  max-width: 960px;
+  max-width: $main-max-width;
   grid-column: 2/3;
   padding: 2.499rem 1rem;
 }
@@ -12,7 +15,7 @@
 
 .center {
   width: 100vw;
-  max-width: 960px;
+  max-width: $main-max-width;
   grid-column: 2/3;
 }
 
