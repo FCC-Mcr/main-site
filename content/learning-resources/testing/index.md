@@ -9,8 +9,6 @@ How do you know if the system you built works? The easy answer we usually don't.
 
 (Coming Soon)
 
-</br>
-
 ## **End-to-End Test** - Regression + Acceptance Testing
 
 (Coming Soon)
