@@ -18,7 +18,7 @@ const typography = new Typography({
       fontKerning: "auto",
     },
     a: {
-      color: "#4D844F",
+      color: "#3f6c41",
     },
   }),
 })
