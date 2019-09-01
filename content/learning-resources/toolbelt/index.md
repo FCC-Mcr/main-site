@@ -66,6 +66,7 @@ $ nvm alias default node
 
 [Gitkraken](https://www.gitkraken.com/) - UI friendly git for Git novices and professionals alike. Git is a software industry standard, so it's a must!
 
+[Pro Git](https://git-scm.com/book/en/v2) - A thorough guide to git and all its commands.
 
 + [Git and GitHub for Poets](https://www.youtube.com/watch?v=BCQHnlnPusY)
 + [Git for Noobs - command line](https://www.youtube.com/watch?v=JPKOESR1k04&t=1011s)
