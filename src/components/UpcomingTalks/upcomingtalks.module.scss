@@ -1,0 +1,80 @@
+@import "../../styles/config/colour.scss";
+@import "../../styles/utility/responds-to.scss";
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.upcoming-talks {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 400px;
+  min-width: 0;
+  img {
+    margin-bottom: 0;
+  }
+  a {
+    margin-top: auto;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    img {
+      padding-left: 0.2rem;
+    }
+  }
+}
+
+.talk {
+  min-width: 0;
+  div {
+    display: flex;
+
+    p {
+      margin: 0 0 0.4rem;
+      color: #929292;
+      flex: 1;
+
+      &:first-of-type {
+        flex: 0 1 145px;
+      }
+    }
+  }
+  img {
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+  p,
+  small {
+    margin-bottom: 0.4rem;
+  }
+  small {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  h3 {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.button {
+  padding: 0 0.7rem;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background: $accent;
+  display: flex;
+  align-items: center;
+  img {
+    max-width: none;
+  }
+}
+
+.location {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

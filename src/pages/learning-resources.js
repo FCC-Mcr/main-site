@@ -7,15 +7,18 @@ import SEO from "../components/SEO"
 const LearningResourcesPage = ({ data }) => (
   <Layout>
     <SEO title="Learning Resources" />
-    <h1>Hi people</h1>
-    <p>Welcome to the FCC Learning Resources Page</p>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-          <h3>{node.frontmatter.title}</h3>
-        </Link>
-      </div>
-    ))}
+    <article className="main blog">
+      <h1>Hi people</h1>
+      <p>Welcome to the FCC Learning Resources Page</p>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <h3>{node.frontmatter.title}</h3>
+          </Link>
+          <p>{node.frontmatter.description}</p>
+        </div>
+      ))}
+    </article>
   </Layout>
 )
 
@@ -35,6 +38,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
           }
         }
       }

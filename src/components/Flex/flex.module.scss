@@ -1,0 +1,12 @@
+@import "../../styles/utility/responds-to.scss";
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    margin-bottom: 4rem;
+    @include responds-to("sm", "max") {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/**
+ * base global html element styling
+ */
+
+body {
+  overflow-x: hidden;
+  /* wont matter in the long run but with minimal content the body cuts the content in half */
+  min-height: 100vh;
+}
