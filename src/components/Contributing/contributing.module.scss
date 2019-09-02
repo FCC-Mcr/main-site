@@ -4,4 +4,5 @@
   @include responds-to("sm", "min") {
     max-width: 720px;
   }
+  margin-bottom: 4rem;
 }
