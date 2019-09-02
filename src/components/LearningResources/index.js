@@ -42,7 +42,7 @@ const index = props => {
             <Card
               key={i}
               height={3}
-              className={`${styles.learningResources} p-2`}
+              className={`${styles.learningResources} p-1`}
             >
               <h3>{node.frontmatter.title}</h3>
               <div dangerouslySetInnerHTML={{ __html: html }} />
