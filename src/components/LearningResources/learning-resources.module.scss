@@ -1,13 +1,21 @@
 @import "../../styles/config/colour.scss";
+@import "../../styles/utility/responds-to.scss";
 
 .learning-resources {
-  position: relative;
   scroll-snap-align: center;
-  width: 400px;
-  overflow: hidden;
+  position: relative;
   margin-right: 15px;
   display: inline-block;
   vertical-align: top;
+  width: 400px;
+  @include responds-to("xxs", "max") {
+    width: calc(100vw - 30px);
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   h3,
   h4,
@@ -35,6 +43,7 @@
     align-items: center;
     text-decoration: none;
     font-size: 16px;
+    border-radius: 0 0 10px 10px;
   }
 
   h4 {
