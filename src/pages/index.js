@@ -11,6 +11,7 @@ import Flex from "../components/Flex"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingTalks from "../components/UpcomingTalks"
+import LearningResources from "../components/LearningResources"
 import Blogposts from "../components/Blogposts"
 import Contributing from "../components/Contributing"
 
@@ -31,6 +32,7 @@ const IndexPage = ({ data }) => (
         data={data.allMarkdownRemark.edges}
       />
     </Flex>
+    <LearningResources />
     <Contributing />
   </Layout>
 )
