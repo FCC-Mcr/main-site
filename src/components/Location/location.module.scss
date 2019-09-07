@@ -24,13 +24,9 @@
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
-  padding-left: 2rem;
-  @include responds-to("xs", "max") {
-    padding-left: 1rem;
-  }
+  padding-left: 1rem;
   li {
     margin: 0;
-    margin-right: 28px;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
@@ -50,7 +46,7 @@
 
 .wrap {
   width: 100%;
-  height: calc(100% - 65px);
+  height: calc(100% - 59px);
 
   iframe {
     width: 100%;
