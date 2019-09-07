@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Helmet } from "react-helmet"
 import styles from "./location.module.scss"
 
 import trainIcon from "../../icons/train.svg"
@@ -37,6 +38,10 @@ const index = props => {
 
   return (
     <div className={styles.location}>
+      <Helmet>
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" />
+      </Helmet>
       <h2>Location</h2>
       <div className={`${styles.map} u-shadow--3`}>
         <ul className={`${styles.selector} px-1 py-1 u-shadow--2`}>

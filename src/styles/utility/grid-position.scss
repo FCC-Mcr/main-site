@@ -1,5 +1,5 @@
 $main-max-width: 1030px;
-$blog-max-width: 640px;
+$blog-max-width: 720px;
 
 .main {
   width: 100vw;
@@ -10,7 +10,7 @@ $blog-max-width: 640px;
 
 .blog {
   width: 100vw;
-  max-width: 640px;
+  max-width: $blog-max-width;
 }
 
 .center {

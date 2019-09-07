@@ -1,20 +1,23 @@
 @font-face {
-  font-family: "PublicSans-Medium";
+  font-family: "Public Sans Web";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   src: url("../../fonts/PublicSans-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "PublicSans-Bold";
-  font-style: bold;
-  font-weight: bold;
+  font-family: "Public Sans Web";
+  font-style: normal;
+  font-weight: 700;
   src: url("../../fonts/PublicSans-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "PublicSans-ExtraBold";
-  font-style: bold;
-  font-weight: bold;
+  font-family: "Public Sans Web";
+  font-style: normal;
+  font-weight: 800;
   src: url("../../fonts/PublicSans-ExtraBold.woff2") format("woff2");
+  font-display: swap;
 }
