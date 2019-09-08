@@ -24,33 +24,31 @@
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
-  padding-left: 2rem;
-  @include responds-to("xs", "max") {
-    padding-left: 1rem;
-  }
   li {
     margin: 0;
-    margin-right: 28px;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
-    font-size: 0.77rem;
+    padding: 0.8rem;
+    color: $grey;
+    font-size: 0.9rem;
+
+    &.active {
+      color: $accent;
+    }
   }
+
   img {
-    margin-bottom: 0;
-    vertical-align: text-bottom;
+    margin-bottom: 0.15rem;
+    vertical-align: middle;
     margin-right: 10px;
     width: 17px;
   }
 }
 
-.active {
-  color: $accent;
-}
-
 .wrap {
   width: 100%;
-  height: calc(100% - 65px);
+  height: calc(100% - 55px);
 
   iframe {
     width: 100%;

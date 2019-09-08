@@ -44,7 +44,7 @@ const index = props => {
       </Helmet>
       <h2>Location</h2>
       <div className={`${styles.map} u-shadow--3`}>
-        <ul className={`${styles.selector} px-1 py-1 u-shadow--2`}>
+        <ul className={`${styles.selector} px-1 u-shadow--2`}>
           {locations.map(({ location, param }, index) => (
             <li
               key={index}
