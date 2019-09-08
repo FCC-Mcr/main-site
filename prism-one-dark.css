@@ -7,7 +7,6 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #abb2bf;
   background: none;
-  font-size: 0.733rem;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
