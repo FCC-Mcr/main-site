@@ -9,6 +9,7 @@ const typography = new Typography({
   headerWeight: 800,
   bodyFontFamily: ["Public Sans Web"],
   bodyWeight: 500,
+  blockMarginBottom: "1rem",
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     "h3, h4, h5, h6": {
       fontFamily: "Public Sans Web",
