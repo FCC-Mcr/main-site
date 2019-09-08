@@ -14,7 +14,10 @@ import arrow from "../../icons/arrow.svg"
 const index = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMeetup(limit: 2) {
+      allMeetup(
+        filter: { description: { ne: null }, title: { ne: null } }
+        limit: 2
+      ) {
         edges {
           node {
             id
