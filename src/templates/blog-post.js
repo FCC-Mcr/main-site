@@ -5,9 +5,14 @@ import SEO from "../components/SEO"
 import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
 
+import styles from "./blog-post.module.scss"
+
 export default ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title
+
+  let authorImage = data
+  console.log(authorImage)
 
   return (
     <Layout>
@@ -18,9 +23,22 @@ export default ({ data }) => {
       <article className="main blog">
         <div>
           <h1>{siteTitle}</h1>
-          <p>
-            {post.frontmatter.date} - {`${post.timeToRead} min read`}
-          </p>
+          <div className={styles.author}>
+            {data.author.edges.length ? (
+              <Image fixed={data.author.edges[0].node.childImageSharp.fixed} />
+            ) : (
+              <Image
+                fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
+              />
+            )}
+            <div>
+              <p>Written by {post.frontmatter.author}</p>
+              <p>
+                {post.frontmatter.date} - {`${post.timeToRead} min read`}
+              </p>
+            </div>
+          </div>
+
           {post.frontmatter.featuredImage && (
             <Image
               style={{
@@ -38,18 +56,43 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $authorRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
       excerpt(pruneLength: 160)
       frontmatter {
+        author
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {
             sizes(maxWidth: 720) {
               ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+    author: allFile(filter: { absolutePath: { regex: $authorRegex } }) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 55, height: 55) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    defaultAuthor: allFile(
+      filter: { absolutePath: { regex: "/default-author/" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 55, height: 55) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

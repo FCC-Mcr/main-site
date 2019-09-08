@@ -34,6 +34,9 @@ exports.createPages = ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              author
+            }
           }
         }
       }
@@ -57,6 +60,10 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
           slug: node.fields.slug,
+          authorRegex: `/${node.frontmatter.author
+            .split(" ")
+            .join("-")
+            .toLowerCase()}.jpg/`,
         },
       })
     })
