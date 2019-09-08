@@ -57,7 +57,7 @@ const index = () => {
                   {node.location}
                 </p>
               </div>
-              <small>{node.description}</small>
+              <small dangerouslySetInnerHTML={{ __html: node.description }} />
             </div>
             <div
               className={`${styles.button} p-1`}
