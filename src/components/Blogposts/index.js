@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styles from "./blogposts.module.scss"
 
 import arrow from "../../icons/arrow.svg"
+import externalLinkIcon from "../../icons/external-link.svg"
 
 const index = ({ data, title, flex }) => (
   <div className={`${styles.blogposts} ${flex ? styles.flex : ""}`}>
@@ -17,7 +18,16 @@ const index = ({ data, title, flex }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h3>{node.frontmatter.title}</h3>
+              <h3>
+                {node.frontmatter.title}
+                {isExternal && (
+                  <img
+                    className={styles.externalLink}
+                    src={externalLinkIcon}
+                    alt="external link icon"
+                  />
+                )}
+              </h3>
             </a>
           ) : (
             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -28,7 +38,6 @@ const index = ({ data, title, flex }) => (
           <p>{node.excerpt}</p>
           <small>Written by {node.frontmatter.author}</small>
           <small>{node.timeToRead} min read</small>
-          {isExternal && <small>external</small>}
         </div>
       )
     })}
