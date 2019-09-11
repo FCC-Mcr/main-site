@@ -57,6 +57,8 @@ export const query = graphql`
             title
             date
             author
+            isExternal
+            externalLink
           }
         }
       }

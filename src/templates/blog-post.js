@@ -49,6 +49,16 @@ export default ({ data }) => {
             />
           )}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          {post.frontmatter.isExternal && (
+            <a
+              href={post.frontmatter.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              read more
+            </a>
+          )}
         </div>
       </article>
     </Layout>
@@ -64,6 +74,8 @@ export const query = graphql`
       frontmatter {
         author
         title
+        isExternal
+        externalLink
         date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {

@@ -36,6 +36,8 @@ exports.createPages = ({ graphql, actions }) => {
             }
             frontmatter {
               author
+              isExternal
+              externalLink
             }
           }
         }
