@@ -44,6 +44,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/.*.md$/" } }
       limit: 3
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -57,6 +58,8 @@ export const query = graphql`
             title
             date
             author
+            isExternal
+            externalLink
           }
         }
       }

@@ -7,13 +7,11 @@ import { rhythm } from "../utils/typography"
 
 import styles from "./blog-post.module.scss"
 
+import externalLinkIcon from "../icons/external-link.svg"
+
 export default ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title
-
-  let authorImage = data
-  console.log(authorImage)
-
   return (
     <Layout>
       <SEO
@@ -49,6 +47,21 @@ export default ({ data }) => {
             />
           )}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          {post.frontmatter.isExternal && (
+            <a
+              href={post.frontmatter.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              read more{" "}
+              <img
+                className={styles.externalLink}
+                src={externalLinkIcon}
+                alt="external link icon"
+              />
+            </a>
+          )}
         </div>
       </article>
     </Layout>
@@ -64,6 +77,8 @@ export const query = graphql`
       frontmatter {
         author
         title
+        isExternal
+        externalLink
         date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {
