@@ -7,7 +7,7 @@ import externalLinkIcon from "../../icons/external-link.svg"
 
 const index = ({ data, title, flex }) => (
   <div className={`${styles.blogposts} ${flex ? styles.flex : ""}`}>
-    <h1>{title}</h1>
+    {flex ? <h2>{title}</h2> : <h1>{title}</h1>}
     {data.map(({ node }) => {
       const isExternal = node.frontmatter.isExternal === true
       return (
