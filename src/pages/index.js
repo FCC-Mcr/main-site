@@ -12,6 +12,8 @@ import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingTalks from "../components/UpcomingTalks"
 import Blogposts from "../components/Blogposts"
+import LearningResources from "../components/LearningResources"
+import Contributing from "../components/Contributing"
 
 const IndexPage = ({ data }) => (
   <Layout>
