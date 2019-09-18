@@ -15,14 +15,18 @@ const index = () => {
   const data = useStaticQuery(graphql`
     query {
       allMeetup(
-        filter: { description: { ne: null }, title: { ne: null } }
+        filter: {
+          excerpt: { ne: null }
+          title: { ne: null }
+          location: { ne: null }
+        }
         limit: 2
       ) {
         edges {
           node {
             id
+            excerpt(pruneLength: 400)
             title
-            description
             location
             start
             end
@@ -60,7 +64,7 @@ const index = () => {
                   {node.location}
                 </p>
               </div>
-              <small dangerouslySetInnerHTML={{ __html: node.description }} />
+              <small dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
             <div
               className={`${styles.button} p-1`}
