@@ -29,7 +29,9 @@ const NextCard = () => {
     }
   `)
 
-  const date = new Date(data.allMeetup.edges[0].node.start)
+  let meetup = data.allMeetup.edges[0].node
+
+  const date = new Date(meetup.start)
 
   var options = {
     weekday: "long",
@@ -44,16 +46,16 @@ const NextCard = () => {
       <div>
         <p>
           <img src={clock} alt="" />
-          18:00 - 21:00
+          {meetup.start.match(/\d\d:\d\d/)} - {meetup.end.match(/\d\d:\d\d/)}
         </p>
         <p>
           <img src={location} alt="" />
-          The Hive
+          {meetup.location}
         </p>
       </div>
       <button
         className="u-shadow--4"
-        onClick={() => downloadCalendarFile(data.allMeetup.edges[0].node)}
+        onClick={() => downloadCalendarFile(meetup)}
       >
         Add to calendar
       </button>
