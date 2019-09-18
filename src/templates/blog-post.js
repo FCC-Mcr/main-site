@@ -5,10 +5,13 @@ import SEO from "../components/SEO"
 import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
 
+import styles from "./blog-post.module.scss"
+
+import externalLinkIcon from "../icons/external-link.svg"
+
 export default ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = post.frontmatter.title
-
   return (
     <Layout>
       <SEO
@@ -18,9 +21,22 @@ export default ({ data }) => {
       <article className="main blog">
         <div>
           <h1>{siteTitle}</h1>
-          <p>
-            {post.frontmatter.date} - {`${post.timeToRead} min read`}
-          </p>
+          <div className={styles.author}>
+            {data.author.edges.length ? (
+              <Image fixed={data.author.edges[0].node.childImageSharp.fixed} />
+            ) : (
+              <Image
+                fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
+              />
+            )}
+            <div>
+              <p>Written by {post.frontmatter.author}</p>
+              <p>
+                {post.frontmatter.date} - {`${post.timeToRead} min read`}
+              </p>
+            </div>
+          </div>
+
           {post.frontmatter.featuredImage && (
             <Image
               style={{
@@ -31,6 +47,21 @@ export default ({ data }) => {
             />
           )}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          {post.frontmatter.isExternal && (
+            <a
+              href={post.frontmatter.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              read more{" "}
+              <img
+                className={styles.externalLink}
+                src={externalLinkIcon}
+                alt="external link icon"
+              />
+            </a>
+          )}
         </div>
       </article>
     </Layout>
@@ -38,18 +69,45 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $authorRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
       excerpt(pruneLength: 160)
       frontmatter {
+        author
         title
-        date(formatString: "MMMM DD, YYYY")
+        isExternal
+        externalLink
+        date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 680) {
+            sizes(maxWidth: 720) {
               ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+    author: allFile(filter: { absolutePath: { regex: $authorRegex } }) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 55, height: 55) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    defaultAuthor: allFile(
+      filter: { absolutePath: { regex: "/default-author/" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 55, height: 55) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

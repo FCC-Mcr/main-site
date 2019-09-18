@@ -14,7 +14,10 @@ import arrow from "../../icons/arrow.svg"
 const index = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMeetup(limit: 2) {
+      allMeetup(
+        filter: { description: { ne: null }, title: { ne: null } }
+        limit: 2
+      ) {
         edges {
           node {
             id
@@ -57,7 +60,7 @@ const index = () => {
                   {node.location}
                 </p>
               </div>
-              <small>{node.description}</small>
+              <small dangerouslySetInnerHTML={{ __html: node.description }} />
             </div>
             <div
               className={`${styles.button} p-1`}

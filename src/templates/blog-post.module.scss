@@ -1,0 +1,23 @@
+.author {
+  display: flex;
+  margin-bottom: 1.666rem;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    display: block;
+  }
+
+  p {
+    padding-left: 0.8rem;
+    margin-bottom: 0rem;
+    font-size: 0.8rem;
+  }
+}
+
+.external-link {
+  margin-bottom: 0.15rem;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 17px;
+}

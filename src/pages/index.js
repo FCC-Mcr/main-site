@@ -12,6 +12,8 @@ import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingTalks from "../components/UpcomingTalks"
 import Blogposts from "../components/Blogposts"
+import LearningResources from "../components/LearningResources"
+import Contributing from "../components/Contributing"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -30,6 +32,8 @@ const IndexPage = ({ data }) => (
         data={data.allMarkdownRemark.edges}
       />
     </Flex>
+    <LearningResources />
+    <Contributing />
   </Layout>
 )
 
@@ -40,6 +44,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/.*.md$/" } }
       limit: 3
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -53,6 +58,8 @@ export const query = graphql`
             title
             date
             author
+            isExternal
+            externalLink
           }
         }
       }

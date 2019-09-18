@@ -1,0 +1,8 @@
+@import "../../styles/utility/responds-to.scss";
+
+.contributing {
+  @include responds-to("sm", "min") {
+    max-width: 720px;
+  }
+  margin-bottom: 4rem;
+}

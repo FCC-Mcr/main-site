@@ -4,12 +4,17 @@ const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerLineHeight: 1.3,
-  scaleRatio: 2.4,
-  headerFontFamily: ["PublicSans-ExtraBold"],
-  bodyFontFamily: ["PublicSans-Medium"],
+  scaleRatio: 2,
+  headerFontFamily: ["Public Sans Web"],
+  headerWeight: 800,
+  bodyFontFamily: ["Public Sans Web"],
+  bodyWeight: 500,
+  blockMarginBottom: "1rem",
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     "h3, h4, h5, h6": {
-      fontFamily: "PublicSans-Bold",
+      fontFamily: "Public Sans Web",
+      fontStyle: "normal",
+      fontWeight: 700,
     },
     code: {
       fontSize: rhythm(1 / 2),
