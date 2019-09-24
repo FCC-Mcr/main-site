@@ -16,6 +16,9 @@ const typography = new Typography({
       fontStyle: "normal",
       fontWeight: 700,
     },
+    h1: {
+      marginBottom: "1.666rem",
+    },
     code: {
       fontSize: rhythm(1 / 2),
     },

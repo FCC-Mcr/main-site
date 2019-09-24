@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Card from "../Card"
 import downloadCalendarFile from "../../utils/downloadCalendarFile"
@@ -11,36 +11,11 @@ import location from "../../icons/location.svg"
 import calendar from "../../icons/calendar.svg"
 import arrow from "../../icons/arrow.svg"
 
-const index = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMeetup(
-        filter: {
-          excerpt: { ne: null }
-          title: { ne: null }
-          location: { ne: null }
-        }
-        limit: 2
-      ) {
-        edges {
-          node {
-            id
-            excerpt(pruneLength: 400)
-            title
-            location
-            start
-            end
-            iCalUID
-          }
-        }
-      }
-    }
-  `)
-
+const index = ({ data, page }) => {
   return (
     <div className={styles.upcomingTalks}>
-      <h2>Upcoming Talks</h2>
-      {data.allMeetup.edges.map(({ node }, i) => {
+      {page ? <h1>Upcoming Talks</h1> : <h2>Upcoming Talks</h2>}
+      {data.map(({ node }, i) => {
         let date = new Date(node.start)
         let options = {
           weekday: "long",
@@ -75,9 +50,11 @@ const index = () => {
           </Card>
         )
       })}
-      <Link to="/upcoming-talks/">
-        More talks <img src={arrow} alt="arrow icon" />
-      </Link>
+      {!page ? (
+        <Link to="/upcoming-talks/">
+          More talks <img src={arrow} alt="arrow icon" />
+        </Link>
+      ) : null}
     </div>
   )
 }
