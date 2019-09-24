@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <UpcomingTalks />
+      <UpcomingTalks data={data.allMeetup.edges} />
       <Blogposts
         flex
         title="Blogposts from the community"
@@ -61,6 +61,26 @@ export const query = graphql`
             isExternal
             externalLink
           }
+        }
+      }
+    }
+    allMeetup(
+      filter: {
+        excerpt: { ne: null }
+        title: { ne: null }
+        location: { ne: null }
+      }
+      limit: 2
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 400)
+          title
+          location
+          start
+          end
+          iCalUID
         }
       }
     }
