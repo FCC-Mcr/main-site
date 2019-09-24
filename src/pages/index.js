@@ -76,6 +76,7 @@ export const query = graphql`
         node {
           id
           excerpt(pruneLength: 400)
+          description
           title
           location
           start
