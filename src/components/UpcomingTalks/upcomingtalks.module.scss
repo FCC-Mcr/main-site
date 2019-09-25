@@ -46,10 +46,10 @@
     margin-right: 0.3rem;
   }
   p,
-  small {
+  > p:last-child {
     margin-bottom: 0.4rem;
   }
-  small {
+  > p:last-child {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
