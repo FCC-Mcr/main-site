@@ -29,7 +29,17 @@ const NextCard = () => {
     }
   `)
 
-  let meetup = data.allMeetup.edges[0].node
+  let defaultContent = {
+    location:
+      "Feed Agency - The Hive - 4th Floor - 51 Lever Street - Manchester - M1 1FN",
+    start: "2019-09-26T18:00:00+01:00",
+    end: "2019-09-26T21:00:00+01:00",
+  }
+
+  let meetup =
+    data.allMeetup.edges[0] === undefined
+      ? defaultContent
+      : data.allMeetup.edges[0].node
 
   const date = new Date(meetup.start)
 
