@@ -27,12 +27,16 @@ const upcomingTalks = ({ data }) => {
     }
   })
 
+  console.log(tomorrow)
+
   return (
     <Layout>
       <article className="main blog">
         <h1>Upcoming Talks</h1>
-        <UpcomingTalks data={today} title="Today" page />
-        <UpcomingTalks data={tomorrow} title="Tomorrow" page />
+        {today.length > 0 && <UpcomingTalks data={today} title="Today" page />}
+        {tomorrow.length > 0 && (
+          <UpcomingTalks data={tomorrow} title="Tomorrow" page />
+        )}
         <UpcomingTalks data={otherDays} title="Coming up" page />
       </article>
     </Layout>
