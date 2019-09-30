@@ -59,7 +59,7 @@ const index = ({ data, title, page }) => {
                 <img src={calendar} alt="calendar icon" />
               </div>
             </Card>
-            <hr></hr>
+            {i !== data.length - 1 && <hr />}
           </>
         )
       })}
