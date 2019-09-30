@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <UpcomingTalks data={data.allMeetup.edges} />
+      <UpcomingTalks data={data.allMeetup.edges} title="Upcoming Talks" />
       <Blogposts
         flex
         title="Blogposts from the community"

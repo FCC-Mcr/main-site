@@ -11,10 +11,10 @@ import location from "../../icons/location.svg"
 import calendar from "../../icons/calendar.svg"
 import arrow from "../../icons/arrow.svg"
 
-const index = ({ data, page }) => {
+const index = ({ data, title, page }) => {
   return (
     <div className={styles.upcomingTalks}>
-      {page ? <h1>Upcoming Talks</h1> : <h2>Upcoming Talks</h2>}
+      <h2>{title}</h2>
       {data.map(({ node }, i) => {
         let date = new Date(node.start)
         let options = {
@@ -53,11 +53,11 @@ const index = ({ data, page }) => {
           </Card>
         )
       })}
-      {!page ? (
+      {!page && (
         <Link to="/upcoming-talks/">
           More talks <img src={arrow} alt="arrow icon" />
         </Link>
-      ) : null}
+      )}
     </div>
   )
 }
