@@ -23,34 +23,44 @@ const index = ({ data, title, page }) => {
           month: "long",
         }
 
+        // remove any <br> tags at the beginning of the string
+        node.excerpt = node.excerpt.replace(
+          /^(<br\s*\/?>)*|(<br\s*\/?>)*$/gm,
+          ""
+        )
+
         return (
-          <Card key={i} height={3} className={styles.layout}>
-            <div className={`${styles.talk}  p-1`}>
-              <p>{date.toLocaleDateString("en-GB", options)}</p>
-              <h3>{node.title}</h3>
-              <div>
-                <p>
-                  <img src={clock} alt="clock icon" />
-                  {node.start.match(/\d\d:\d\d/)} -{" "}
-                  {node.end.match(/\d\d:\d\d/)}
-                </p>
-                <p className={styles.location}>
-                  <img src={location} alt="location icon" />
-                  {node.location}
-                </p>
+          <>
+            <Card key={i} className={styles.layout}>
+              <div className={`${styles.talk} pr-2`}>
+                <p>{date.toLocaleDateString("en-GB", options)}</p>
+                <h3>{node.title}</h3>
+                <div>
+                  <p>
+                    <img src={clock} alt="clock icon" />
+                    {node.start.match(/\d\d:\d\d/)} -{" "}
+                    {node.end.match(/\d\d:\d\d/)}
+                  </p>
+                  {console.log(node.excerpt.trim())}
+                  <p className={styles.location}>
+                    <img src={location} alt="location icon" />
+                    {node.location}
+                  </p>
+                </div>
+                <p
+                  className="small-text"
+                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                />
               </div>
-              <p
-                className="small-text"
-                dangerouslySetInnerHTML={{ __html: node.excerpt }}
-              />
-            </div>
-            <div
-              className={`${styles.button} p-1`}
-              onClick={() => downloadCalendarFile(node)}
-            >
-              <img src={calendar} alt="calendar icon" />
-            </div>
-          </Card>
+              <div
+                className={`${styles.button} p-1`}
+                onClick={() => downloadCalendarFile(node)}
+              >
+                <img src={calendar} alt="calendar icon" />
+              </div>
+            </Card>
+            {i !== data.length - 1 && <hr />}
+          </>
         )
       })}
       {!page && (
