@@ -9,11 +9,15 @@ const typography = new Typography({
   headerWeight: 800,
   bodyFontFamily: ["Public Sans Web"],
   bodyWeight: 500,
+  blockMarginBottom: "1rem",
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     "h3, h4, h5, h6": {
       fontFamily: "Public Sans Web",
       fontStyle: "normal",
       fontWeight: 700,
+    },
+    h1: {
+      marginBottom: "1.666rem",
     },
     code: {
       fontSize: rhythm(1 / 2),
@@ -23,6 +27,9 @@ const typography = new Typography({
     },
     a: {
       color: "#3f6c41",
+    },
+    ".small-text": {
+      fontSize: "0.875rem",
     },
   }),
 })

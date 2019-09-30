@@ -7,7 +7,6 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #abb2bf;
   background: none;
-  font-size: 0.733rem;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
@@ -196,6 +195,14 @@ pre.line-numbers > code {
   padding: 1.5rem;
   overflow: auto;
   font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .gatsby-highlight {
+    width: 100vw;
+    margin: 1.666rem 0 1.666rem -1rem;
+    border-radius: 0;
+  }
 }
 
 /**

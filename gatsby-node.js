@@ -34,6 +34,11 @@ exports.createPages = ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              author
+              isExternal
+              externalLink
+            }
           }
         }
       }
@@ -57,6 +62,10 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
           slug: node.fields.slug,
+          authorRegex: `/${node.frontmatter.author
+            .split(" ")
+            .join("-")
+            .toLowerCase()}.jpg/`,
         },
       })
     })
@@ -123,4 +132,28 @@ exports.sourceNodes = async ({ actions }) => {
   })
 
   return
+}
+
+exports.setFieldsOnGraphQLNodeType = ({ type }) => {
+  if (type.name === `Meetup`) {
+    return {
+      excerpt: {
+        type: `String`,
+        args: {
+          pruneLength: {
+            type: `Int`,
+            defaultValue: 140,
+          },
+        },
+        resolve: (source, fieldArgs) => {
+          return source.description
+            ? source.description.substring(0, fieldArgs.pruneLength)
+            : null
+        },
+      },
+    }
+  }
+
+  // by default return empty object
+  return {}
 }

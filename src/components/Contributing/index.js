@@ -16,15 +16,14 @@ const index = props => {
         mistake, another contributor will eventually correct it.
       </p>
       <p>
-        If you're unsure on where you should start we have created a handy
-        contributing guide which you can find{" "}
+        If you're unsure on where you should start we have created a handy{" "}
         <a href="https://github.com/FCC-Mcr/main-site/blob/master/CONTRIBUTING.md">
-          here
+          contributing guide
         </a>
         . If that doesnt help or you feel something is unclear shoot us a
-        message us on twitter{" "}
-        <a href="https://twitter.com/freecodecampmcr?lang=en">here</a> where one
-        of our organisers will help you out.
+        message us on{" "}
+        <a href="https://twitter.com/freecodecampmcr?lang=en">twitter</a> where
+        one of our organisers will help you out.
       </p>
     </div>
   )

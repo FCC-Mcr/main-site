@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <UpcomingTalks />
+      <UpcomingTalks data={data.allMeetup.edges} title="Upcoming Talks" />
       <Blogposts
         flex
         title="Blogposts from the community"
@@ -44,6 +44,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/.*.md$/" } }
       limit: 3
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -57,7 +58,30 @@ export const query = graphql`
             title
             date
             author
+            isExternal
+            externalLink
           }
+        }
+      }
+    }
+    allMeetup(
+      filter: {
+        excerpt: { ne: null }
+        title: { ne: null }
+        location: { ne: null }
+      }
+      limit: 2
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 400)
+          description
+          title
+          location
+          start
+          end
+          iCalUID
         }
       }
     }
