@@ -28,6 +28,9 @@ const typography = new Typography({
     a: {
       color: "#3f6c41",
     },
+    ".small-text": {
+      fontSize: "0.875rem",
+    },
   }),
 })
 
