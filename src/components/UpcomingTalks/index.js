@@ -53,11 +53,11 @@ const index = ({ data, title, page }) => {
           </Card>
         )
       })}
-      {!page ? (
+      {!page && (
         <Link to="/upcoming-talks/">
           More talks <img src={arrow} alt="arrow icon" />
         </Link>
-      ) : null}
+      )}
     </div>
   )
 }
