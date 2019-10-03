@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import FAB from "../../FAB"
+
 // icons
 import logo from "../../../icons/logo.svg"
 
@@ -19,19 +21,21 @@ const MainNav = () => (
 )
 
 const Header = ({ siteTitle }) => (
-  <header className={`${styles.header}  u-shadow--2`}>
-    <h2>
-      <Link to="/" className={styles.title}>
-        {/* need to bring in icon */}
-        <span className={styles.logo}>
-          <img src={logo} alt="" />
-        </span>
-        {siteTitle}
-      </Link>
-    </h2>
-
-    <MainNav />
-  </header>
+  <>
+    <header className={`${styles.header}  u-shadow--2`}>
+      <h2>
+        <Link to="/" className={styles.title}>
+          {/* need to bring in icon */}
+          <span className={styles.logo}>
+            <img src={logo} alt="" />
+          </span>
+          {siteTitle}
+        </Link>
+      </h2>
+      <MainNav />
+    </header>
+    <FAB />
+  </>
 )
 
 Header.propTypes = {
