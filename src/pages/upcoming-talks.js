@@ -27,8 +27,6 @@ const upcomingTalks = ({ data }) => {
     }
   })
 
-  console.log(tomorrow)
-
   return (
     <Layout>
       <article className="main blog">
