@@ -41,7 +41,6 @@ const index = ({ data, title, page }) => {
                     {node.start.match(/\d\d:\d\d/)} -{" "}
                     {node.end.match(/\d\d:\d\d/)}
                   </p>
-                  {console.log(node.excerpt.trim())}
                   <p className={styles.location}>
                     <img src={location} alt="location icon" />
                     {node.location}
