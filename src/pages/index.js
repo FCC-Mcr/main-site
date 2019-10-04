@@ -69,6 +69,8 @@ export const query = graphql`
         excerpt: { ne: null }
         title: { ne: null }
         location: { ne: null }
+        start: { ne: null }
+        end: { ne: null }
       }
       limit: 2
     ) {
