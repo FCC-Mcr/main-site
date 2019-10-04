@@ -5,12 +5,10 @@ import menu from "../../icons/menu.svg"
 
 const Menu = ({ handleClick }) => (
   <div className={styles.menu} onClick={e => handleClick()}>
-    <a href="https://www.freecodecamp.org/forum/c/united-kingdom-study-groups/manchester">
-      Forum
-    </a>
-    <Link to="/">Organisers</Link>
+    <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
+    <Link to="/upcoming-talks/">Upcoming Talks</Link>
   </div>
 )
 
