@@ -1,0 +1,52 @@
+@import "../../styles/config/colour.scss";
+@import "../../styles/config/globals.scss";
+@import "../../styles/utility/responds-to.scss";
+
+.fab {
+  position: fixed;
+  bottom: 44px;
+  right: 20px;
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  @include responds-to("xs") {
+    display: none;
+  }
+  align-items: center;
+  justify-content: center;
+  z-index: map-get($layers, "highest");
+
+  img {
+    margin: 0;
+  }
+}
+.menu {
+  position: fixed;
+  z-index: map-get($layers, "higher");
+  @include responds-to("xs") {
+    display: none;
+  }
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+
+  a {
+    color: #ffffff;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 7vw;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
