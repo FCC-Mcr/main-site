@@ -4,12 +4,12 @@ import styles from "./fab.module.scss"
 import menu from "../../icons/menu.svg"
 
 const Menu = ({ handleClick }) => (
-  <div className={styles.menu} onClick={e => handleClick()}>
+  <nav className={styles.menu} onClick={e => handleClick()}>
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
     <Link to="/upcoming-talks/">Upcoming Talks</Link>
-  </div>
+  </nav>
 )
 
 const index = props => {

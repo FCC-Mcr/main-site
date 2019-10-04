@@ -11,9 +11,6 @@ import styles from "./header.module.scss"
 
 const MainNav = () => (
   <nav>
-    <a href="https://www.freecodecamp.org/forum/c/united-kingdom-study-groups/manchester">
-      Forum
-    </a>
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
