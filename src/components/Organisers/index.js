@@ -45,7 +45,7 @@ const index = () => {
             </div>
             <p>
               FCC Alum, Full stack JS & C#, poor ukulele player and source of
-              many donuts 🍩🍩🍩
+              many donuts 🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩
             </p>
           </div>
         </Card>
