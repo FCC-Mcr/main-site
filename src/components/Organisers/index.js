@@ -44,9 +44,8 @@ const index = () => {
               <a href="https://twitter.com/JD_aka_Techy">@JD_aka_Techy</a>
             </div>
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.”
+              FCC Alum, Full stack JS & C#, poor ukulele player and source of
+              many donuts 🍩🍩🍩
             </p>
           </div>
         </Card>
@@ -58,9 +57,8 @@ const index = () => {
               <a href="https://twitter.com/CollierAdam">@collieradam</a>
             </div>
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.”
+              Design/Developer guy @Missguided. Side project initiator. I like
+              making stuff. Currently 82% tea ✌️
             </p>
           </div>
         </Card>
@@ -86,9 +84,8 @@ const index = () => {
               <a href="https://twitter.com/feyagape">@feyagape</a>
             </div>
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.”
+              Founder of CodeandStuff & CodePossible. Self taught developer. Two
+              time Google Scholarship winner.
             </p>
           </div>
         </Card>
