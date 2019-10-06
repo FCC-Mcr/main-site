@@ -11,8 +11,8 @@ import Flex from "../components/Flex"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingTalks from "../components/UpcomingTalks"
-import Blogposts from "../components/Blogposts"
 import LearningResources from "../components/LearningResources"
+import Blogposts from "../components/Blogposts"
 import Contributing from "../components/Contributing"
 
 const IndexPage = ({ data }) => (
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <UpcomingTalks />
+      <UpcomingTalks data={data.allMeetup.edges} title="Upcoming Talks" />
       <Blogposts
         flex
         title="Blogposts from the community"
@@ -61,6 +61,29 @@ export const query = graphql`
             isExternal
             externalLink
           }
+        }
+      }
+    }
+    allMeetup(
+      filter: {
+        excerpt: { ne: null }
+        title: { ne: null }
+        location: { ne: null }
+        start: { ne: null }
+        end: { ne: null }
+      }
+      limit: 2
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 400)
+          description
+          title
+          location
+          start
+          end
+          iCalUID
         }
       }
     }

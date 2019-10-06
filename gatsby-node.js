@@ -133,3 +133,27 @@ exports.sourceNodes = async ({ actions }) => {
 
   return
 }
+
+exports.setFieldsOnGraphQLNodeType = ({ type }) => {
+  if (type.name === `Meetup`) {
+    return {
+      excerpt: {
+        type: `String`,
+        args: {
+          pruneLength: {
+            type: `Int`,
+            defaultValue: 140,
+          },
+        },
+        resolve: (source, fieldArgs) => {
+          return source.description
+            ? source.description.substring(0, fieldArgs.pruneLength)
+            : null
+        },
+      },
+    }
+  }
+
+  // by default return empty object
+  return {}
+}

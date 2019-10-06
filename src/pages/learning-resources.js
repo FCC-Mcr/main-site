@@ -8,8 +8,7 @@ const LearningResourcesPage = ({ data }) => (
   <Layout>
     <SEO title="Learning Resources" />
     <article className="main blog">
-      <h1>Hi people</h1>
-      <p>Welcome to the FCC Learning Resources Page</p>
+      <h1>Learning Resources</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link style={{ boxShadow: `none` }} to={node.fields.slug}>

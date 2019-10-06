@@ -197,6 +197,14 @@ pre.line-numbers > code {
   font-size: 14px;
 }
 
+@media (max-width: 720px) {
+  .gatsby-highlight {
+    width: 100vw;
+    margin: 1.666rem 0 1.666rem -1rem;
+    border-radius: 0;
+  }
+}
+
 /**
  * Remove the default PrismJS theme background-color, border-radius, margin,
  * padding and overflow.
