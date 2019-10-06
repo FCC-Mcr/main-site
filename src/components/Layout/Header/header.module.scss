@@ -20,24 +20,14 @@ $nav-spacing: 30px;
   color: $accent;
   height: $header-height;
   justify-content: space-between;
+  align-items: center;
   padding: 0 2em;
   position: relative;
   z-index: map-get($layers, "highest");
 
-  .logo img {
+  .logo {
     margin-right: 10px;
     margin-bottom: -2px;
-  }
-
-  h2 {
-    line-height: inherit;
-    margin: 0;
-    padding-bottom: 4px;
-  }
-  .title {
-    color: $accent;
-    font-size: 20px; // TODO: replace with configuration values
-    text-decoration: none;
   }
 }
 
@@ -47,6 +37,8 @@ nav {
 
   a {
     color: $accent;
+    height: 35px;
+    font-weight: 700;
     margin-right: $nav-spacing;
     text-decoration: none;
     &:hover {
