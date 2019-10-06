@@ -57,7 +57,7 @@ const index = () => {
               <a href="https://twitter.com/CollierAdam">@collieradam</a>
             </div>
             <p>
-              Design/Developer guy @Missguided. Side project initiator. I like
+              Design/Developer guy @Missguided. Side project initiator. Always
               making stuff. Currently 82% tea ✌️
             </p>
           </div>
@@ -70,9 +70,8 @@ const index = () => {
               <a href="https://twitter.com/peterdaily">@peterdaily</a>
             </div>
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.”
+              Bit of a geek. Self taught Front end web developer. Long suffering
+              Stockport County fan.
             </p>
           </div>
         </Card>
