@@ -7,11 +7,13 @@ const index = () => (
     <div>
       <h1>FreeCodeCamp Manchester</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+        Welcome to FreeCodeCamp Manchester! We are mentors, coders and learners
+        from Manchester, Greater Manchester and its surrounding areas and one
+        part of the global FreeCodeCamp Community. We hold Study Groups at Feed
+        Agency at 51 Lever Street twice a month for our members to meet in
+        person, code together and get help and advice from Organisers and
+        Mentors - Keep an eye on the events for further information and we hope
+        to see you around!
       </p>
       <NextCard />
     </div>
