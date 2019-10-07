@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import UpcomingTalks from "../components/UpcomingTalks"
 
+import SEO from "../components/SEO"
+
 import { graphql } from "gatsby"
 
 const upcomingTalks = ({ data }) => {
@@ -18,6 +20,9 @@ const upcomingTalks = ({ data }) => {
 
   data.allMeetup.edges.forEach(x => {
     let { node } = x
+
+    node.excerpt = node.excerpt.replace(/<a\s+/gi, `<a rel="noopener" `)
+
     if (node.start < todayEnd) {
       today.push(x)
     } else if (node.start > todayEnd && node.start < tomorrowEnd) {
@@ -29,6 +34,7 @@ const upcomingTalks = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Learning Resources" />
       <article className="main blog">
         <h1>Upcoming Talks</h1>
         {today.length > 0 && <UpcomingTalks data={today} title="Today" page />}
