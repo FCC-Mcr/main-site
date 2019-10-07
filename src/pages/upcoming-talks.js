@@ -34,7 +34,7 @@ const upcomingTalks = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Learning Resources" />
+      <SEO title="Upcoming Talks" />
       <article className="main blog">
         <h1>Upcoming Talks</h1>
         {today.length > 0 && <UpcomingTalks data={today} title="Today" page />}
