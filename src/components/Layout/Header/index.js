@@ -20,7 +20,7 @@ const MainNav = () => (
 
 const Header = ({ siteTitle }) => (
   <>
-    <header className={`${styles.header}  u-shadow--2`}>
+    <header className={`${styles.header}  u-shadow--1`}>
       <Link to="/" className={styles.title}>
         {/* need to bring in icon */}
         <img className={styles.logo} src={logo} alt="" />
