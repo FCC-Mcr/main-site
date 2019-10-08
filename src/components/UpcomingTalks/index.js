@@ -24,10 +24,9 @@ const index = ({ data, title, page }) => {
         }
 
         // remove any <br> tags at the beginning of the string
-        node.excerpt = node.excerpt.replace(
-          /^(<br\s*\/?>)*|(<br\s*\/?>)*$/gm,
-          ""
-        )
+        node.excerpt = node.excerpt
+          .replace(/^(<br\s*\/?>)*|(<br\s*\/?>)*$/gm, "")
+          .replace(/<b>|<\/b>/gm, "")
 
         return (
           <>
