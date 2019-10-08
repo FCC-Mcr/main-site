@@ -20,10 +20,10 @@
   white-space: nowrap;
 
   @include responds-to("xs", "min") {
-    padding: 0px 40px 4rem;
+    padding: 10px 40px 4rem;
   }
 
   @include responds-to("xs", "max") {
-    padding: 0px 15px 40px;
+    padding: 10px 15px 40px;
   }
 }
