@@ -5,6 +5,7 @@
   margin-right: 15px;
   display: inline-block;
   vertical-align: top;
+  min-height: 210px;
 
   @include responds-to("xxs", "max") {
     width: calc(100vw - 30px);
