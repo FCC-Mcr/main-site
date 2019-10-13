@@ -45,7 +45,10 @@ const index = () => {
             </div>
             <p>
               FCC Alum, Full stack JS & C#, poor ukulele player and source of
-              many donuts 🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩🍩
+              many donuts{" "}
+              <span role="img" aria-label="donut">
+                🍩
+              </span>
             </p>
           </div>
         </Card>
@@ -58,7 +61,10 @@ const index = () => {
             </div>
             <p>
               Design/Developer guy @Missguided. Side project initiator. Always
-              making stuff. Currently 82% tea ✌️
+              making stuff. Currently 82% tea{" "}
+              <span role="img" aria-label="peace">
+                ✌️
+              </span>
             </p>
           </div>
         </Card>

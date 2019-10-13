@@ -50,11 +50,14 @@
 .wrap {
   width: 100%;
   height: calc(100% - 55px);
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
 
   iframe {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     margin-bottom: 0;
+    z-index: 1;
   }
 }

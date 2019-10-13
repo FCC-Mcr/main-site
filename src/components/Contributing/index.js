@@ -20,10 +20,15 @@ const index = props => {
         <a href="https://github.com/FCC-Mcr/main-site/blob/master/CONTRIBUTING.md">
           contributing guide
         </a>
-        . If that doesnt help or you feel something is unclear shoot us a
-        message us on{" "}
-        <a href="https://twitter.com/freecodecampmcr?lang=en">twitter</a> where
-        one of our organisers will help you out.
+        . If that doesn't help or you feel something is unclear shoot us a
+        message us on our&nbsp;
+        <a href="https://fccmcr.slack.com/">Slack channel</a>
+        &nbsp;and one of our organisers will help you out.
+      </p>
+      <p>
+        <a href="https://fcc-mcr-invite.herokuapp.com/">
+          Not yet a member of our Slack? get an invite here.
+        </a>
       </p>
     </div>
   )
