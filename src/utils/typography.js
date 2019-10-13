@@ -1,10 +1,10 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "16px",
   baseLineHeight: 1.666,
   headerLineHeight: 1.3,
-  scaleRatio: 2,
+  scaleRatio: 2.3,
   headerFontFamily: ["Public Sans Web"],
   headerWeight: 800,
   bodyFontFamily: ["Public Sans Web"],
