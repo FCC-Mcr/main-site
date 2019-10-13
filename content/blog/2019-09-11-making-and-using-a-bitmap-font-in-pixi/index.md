@@ -1,7 +1,7 @@
 ---
 title: Making and Using a Bitmap Font in PIXI.js v5
-date: 2019-09-11
-author: Bob
+date: 2019-04-01
+author: Adam Marc Williams
 isExternal: true
 externalLink: "https://www.adammarcwilliams.co.uk/creating-bitmap-text-pixi/"
 ---
