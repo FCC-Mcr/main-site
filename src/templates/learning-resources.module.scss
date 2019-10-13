@@ -1,0 +1,11 @@
+@import "../styles/config/colour.scss";
+
+.content {
+  p > a:first-of-type {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}

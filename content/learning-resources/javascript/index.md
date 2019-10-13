@@ -1,29 +1,19 @@
 ---
-title: Front End
-description: The practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. This is what the user of your web app or static website will see, and interact with - kinda like the stars of the show on stage.
+title: Javascript
+description: JavaScript is the programming language of the web. You can use it to add dynamic behavior, store information, and handle requests and responses on a website.
 ---
 
-The practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
+JavaScript is the programming language of the web. You can use it to add dynamic behavior, store information, and handle requests and responses on a website.
 
-This is what the user of your web app or static website will see, and interact with - kinda like the stars of the show on stage.
+## Subscribe worthy newsletters
 
-## **CSS** (Cascading Style Sheets)
+[Javascript Weekly](https://javascriptweekly.com/) - A free, once–weekly email roundup of JavaScript news and articles.
 
-Breaking this word up into smaller parts, lets start with the phase 'Style Sheets'.
+## Podcasts
 
-**Style Sheets :** During the earlier days of the internet, HTML only allowed for very little style of it's web pages, and only allowed for inline styling, written within the same file. Nowadays, these style sheets, are files that segregated from HTML files, and can be easily added anytime.
+[Syntax FM](https://syntax.fm/) - An invaluable poadcast hosted by the one and only Wes Bos and Scott Tolinski
 
-**Cascading :** This word represents how the styles are organised, when both styles for the same selector is made, the latest change to that style will be the one most prominant - the one that actually gets used.
-
-If you are completely new to web development, please head to [W3School CSS](https://www.w3schools.com/css/)
-
-[Flexbox](https://medium.freecodecamp.com/an-animated-guide-to-flexbox-d280cf6afc35#.k9s9rseha) - An nice animated guide to Web Designers companion for responsive designs
-
-[CSS Animations](https://www.youtube.com/watch?v=8kK-cA99SA0&list=PLqGj3iMvMa4LvJ8VctoXnPI0dtE40wfid) - Great playlist from Devtips (definitely recommend watching a lot of his videos)
-
-[Pseudo Class Selectors](https://css-tricks.com/pseudo-class-selectors/) - Gain Mastery manipulating the shadow-DOM
-
-## **JavaScript**
+## Articles
 
 [Javascript for Cats](http://jsforcats.com) - A big leap here, **JavaScript** + Using the **Web Console** + **Cats**; try not to be too intimidated.
 
@@ -75,20 +65,4 @@ Not going to go into any more depth, the story to take from this is that having 
 
 [Lets Learn ES6 Playlist](https://www.youtube.com/watch?v=LTbnmiXWs2k&list=PL57atfCFqj2h5fpdZD-doGEIs0NZxeJTX)
 
-### **React**
-
-React is a view library created by Facebook, that frontend devs utilize. Due to it's rapid ability to render only particular parts of the page when it's required - known as dynamically generating elements.
-
-In the past, whenever some part of the page has changed,even if it was a single letter, the whole page has to be reload. Where as react can load in that tiny change, for that single letter, without having to reload the entire page
-
-[React Howto by Pete Hunt](https://github.com/petehunt/react-howto)
-
-[React intro for people who know just enough jQuery to get by](http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/)
-
-[9 things every React.js beginner should know](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
-
-[React Fundamentals - Tyler McGinnis](https://reacttraining.com/online/react-fundamentals)
-
-[React FreeCodeCamp Beta](http://hysterical-amusement.surge.sh)
-
-[The Motherload of React and Redux Links](https://github.com/markerikson/react-redux-links)
+[An Intro to Typescript](https://www.swyx.io/speaking/intro-to-typescript/) - A couple of guys at Netlify wrote this very cool intro to Typescript
