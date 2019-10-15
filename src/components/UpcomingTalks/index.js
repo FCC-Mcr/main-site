@@ -45,10 +45,7 @@ const index = ({ data, title, page }) => {
                     {node.location}
                   </p>
                 </div>
-                <p
-                  className="small-text"
-                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                />
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
               <div
                 className={`${styles.button} p-1`}
