@@ -27,6 +27,7 @@ const index = ({ data, title, page }) => {
         node.excerpt = node.excerpt
           .replace(/^(<br\s*\/?>)*|(<br\s*\/?>)*$/gm, "")
           .replace(/<b>|<\/b>/gm, "")
+          .replace(/<a\s+/gi, `<a rel="noopener" `)
 
         return (
           <>
