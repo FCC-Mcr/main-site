@@ -21,8 +21,6 @@ const upcomingTalks = ({ data }) => {
   data.allMeetup.edges.forEach(x => {
     let { node } = x
 
-    node.excerpt = node.excerpt.replace(/<a\s+/gi, `<a rel="noopener" `)
-
     if (node.start < todayEnd) {
       today.push(x)
     } else if (node.start > todayEnd && node.start < tomorrowEnd) {
