@@ -42,8 +42,6 @@ const NextCard = () => {
     month: "long",
   }
 
-  console.log(meetup)
-
   return (
     <Card className={`${styles.nextCard} p-2`} height={3} borderRadius={20}>
       <p>Our next meet up is</p>
