@@ -29,19 +29,12 @@ const NextCard = () => {
     }
   `)
 
-  let defaultContent = {
-    location:
-      "Feed Agency - The Hive - 4th Floor - 51 Lever Street - Manchester - M1 1FN",
-    start: "2019-09-26T18:00:00+01:00",
-    end: "2019-09-26T21:00:00+01:00",
+  let meetup = data.allMeetup.edges[0]
+
+  let getDate = () => {
+    const date = new Date(meetup.start)
+    return date.toLocaleDateString("en-GB", options)
   }
-
-  let meetup =
-    data.allMeetup.edges[0] === undefined
-      ? defaultContent
-      : data.allMeetup.edges[0].node
-
-  const date = new Date(meetup.start)
 
   var options = {
     weekday: "long",
@@ -52,16 +45,15 @@ const NextCard = () => {
   return (
     <Card className={`${styles.nextCard} p-2`} height={3} borderRadius={20}>
       <p>Our next meet up is</p>
-      <h2>{date.toLocaleDateString("en-GB", options)}</h2>
+      <h2>{meetup ? getDate() : "TBC"}</h2>
       <div>
+        <img src={clock} alt="" />
         <p>
-          <img src={clock} alt="" />
-          {meetup.start.match(/\d\d:\d\d/)} - {meetup.end.match(/\d\d:\d\d/)}
+          {meetup ? meetup.start.match(/\d\d:\d\d/) : "18:00"} -{" "}
+          {meetup ? meetup.end.match(/\d\d:\d\d/) : "21:00"}
         </p>
-        <p>
-          <img src={location} alt="" />
-          {meetup.location}
-        </p>
+        <img src={location} alt="" />
+        <p>{meetup ? meetup.location : "TBC"}</p>
       </div>
       <button
         className="u-shadow--4"

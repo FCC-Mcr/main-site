@@ -27,6 +27,7 @@ const index = ({ data, title, page }) => {
         node.excerpt = node.excerpt
           .replace(/^(<br\s*\/?>)*|(<br\s*\/?>)*$/gm, "")
           .replace(/<b>|<\/b>/gm, "")
+          .replace(/<a\s+/gi, `<a rel="noopener" `)
 
         return (
           <>
@@ -45,10 +46,7 @@ const index = ({ data, title, page }) => {
                     {node.location}
                   </p>
                 </div>
-                <p
-                  className="small-text"
-                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                />
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
               <div
                 className={`${styles.button} p-1`}
