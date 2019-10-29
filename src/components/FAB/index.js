@@ -12,7 +12,7 @@ const Menu = ({ handleClick }) => (
   </nav>
 )
 
-const index = props => {
+const index = () => {
   const [toggle, setToggle] = useState(false)
 
   let handleClick = () => {

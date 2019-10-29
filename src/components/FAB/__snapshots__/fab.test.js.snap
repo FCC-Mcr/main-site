@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fab Menu Initially renders with only menu button 1`] = `
+<div>
+  <div
+    class="fab u-shadow--3"
+  >
+    <img
+      alt="menu button"
+      src="[object Object]"
+    />
+  </div>
+</div>
+`;
+
+exports[`Fab Menu OnClick renders fab nav menu 1`] = `
+<div>
+  <div
+    class="fab u-shadow--3"
+  >
+    <img
+      alt="menu button"
+      src="[object Object]"
+    />
+  </div>
+  <nav
+    class="menu"
+  >
+    <a
+      aria-current="page"
+      class=""
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      href="/blog/"
+    >
+      Blog
+    </a>
+    <a
+      href="/learning-resources/"
+    >
+      Resources
+    </a>
+    <a
+      href="/upcoming-talks/"
+    >
+      Upcoming Talks
+    </a>
+  </nav>
+</div>
+`;
+
+exports[`Fab Menu Once opened re-clicking the menu button will close the menu 1`] = `
+<div>
+  <div
+    class="fab u-shadow--3"
+  >
+    <img
+      alt="menu button"
+      src="[object Object]"
+    />
+  </div>
+</div>
+`;

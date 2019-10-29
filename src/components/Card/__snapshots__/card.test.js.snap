@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic Card Component functionality Appends className for shadow based on height prop 1`] = `
+<div
+  class="card  u-shadow--2"
+  style="border-radius: 10px;"
+/>
+`;
+
+exports[`Basic Card Component functionality Appends className prop to class 1`] = `
+<div
+  class="card addedText "
+  style="border-radius: 10px;"
+/>
+`;
+
+exports[`Basic Card Component functionality Renders children 1`] = `
+<div
+  class="card  "
+  style="border-radius: 10px;"
+>
+  <div>
+    child1
+  </div>
+  <div>
+    child2
+  </div>
+</div>
+`;
+
+exports[`Basic Card Component functionality Renders empty with defaults when called with no props 1`] = `
+<div
+  class="card  "
+  style="border-radius: 10px;"
+/>
+`;

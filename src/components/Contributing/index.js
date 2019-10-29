@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./contributing.module.scss"
 
-const index = props => {
+const index = () => {
   return (
     <div className={`${styles.contributing} center px-1`}>
       <h2>Contributing</h2>
@@ -16,7 +16,7 @@ const index = props => {
         mistake, another contributor will eventually correct it.
       </p>
       <p>
-        If you're unsure on where you should start we have created a handy{" "}
+        If you're unsure on where you should start we have created a handy&nbsp;
         <a href="https://github.com/FCC-Mcr/main-site/blob/master/CONTRIBUTING.md">
           contributing guide
         </a>

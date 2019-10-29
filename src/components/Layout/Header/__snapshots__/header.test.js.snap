@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<header
-  className="header  u-shadow--2"
->
-  <h2>
+Array [
+  <header
+    className="header  u-shadow--1"
+  >
     <a
       aria-current="page"
       className="title"
@@ -13,39 +13,54 @@ exports[`Header renders correctly 1`] = `
       onMouseEnter={[Function]}
       style={Object {}}
     >
-      FCC MCR
+      <img
+        alt=""
+        className="logo"
+        src={Object {}}
+      />
     </a>
-  </h2>
-  <nav>
-    <a
-      href="https://www.freecodecamp.org/forum/c/united-kingdom-study-groups/manchester"
-    >
-      Forum
-    </a>
-    <a
-      aria-current="page"
-      className=""
-      href="/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      style={Object {}}
-    >
-      Organisers
-    </a>
-    <a
-      href="/blog/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-    >
-      Blog
-    </a>
-    <a
-      href="/learning-resources/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-    >
-      Learning Resources
-    </a>
-  </nav>
-</header>
+    <nav>
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+      <a
+        href="/blog/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Blog
+      </a>
+      <a
+        href="/learning-resources/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Resources
+      </a>
+      <a
+        href="/upcoming-talks/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Upcoming Talks
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="fab u-shadow--3"
+    onClick={[Function]}
+  >
+    <img
+      alt="menu button"
+      src={Object {}}
+    />
+  </div>,
+]
 `;
