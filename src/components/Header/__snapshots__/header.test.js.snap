@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header component Snapshot 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <div>
+      <h1>
+        FreeCodeCamp Manchester
+      </h1>
+      <p>
+        Welcome to FreeCodeCamp Manchester! We are mentors, coders and learners from Manchester, Greater Manchester and its surrounding areas and one part of the global FreeCodeCamp Community. We hold Study Groups twice a month for our members to meet in person, code together and get help and advice from Organisers and Mentors - Keep an eye on the events for further information and we hope to see you around!
+      </p>
+      <div>
+        mock next card
+      </div>
+    </div>
+  </div>
+</div>
+`;

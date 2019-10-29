@@ -5,7 +5,7 @@ import styles from "./blogposts.module.scss"
 import arrow from "../../icons/arrow.svg"
 import externalLinkIcon from "../../icons/external-link.svg"
 
-const index = ({ data, title, flex }) => (
+const index = ({ data = [], title, flex }) => (
   <div className={`${styles.blogposts} ${flex ? styles.flex : ""}`}>
     {flex ? <h2>{title}</h2> : <h1>{title}</h1>}
     {data.map(({ node }) => {

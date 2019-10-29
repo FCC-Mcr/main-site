@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPosts renders empty when passed no data 1`] = `
+<div>
+  <div
+    class="blogposts "
+  >
+    <h1 />
+  </div>
+</div>
+`;

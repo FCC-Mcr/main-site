@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel section Snapshot 1`] = `
+<div>
+  <div
+    class="carouselWrapper full-width"
+  >
+    <div
+      class="carousel full-width"
+    />
+  </div>
+</div>
+`;
