@@ -43,7 +43,7 @@ const NextCard = () => {
   }
 
   return (
-    <Card className={`${styles.nextCard} p-2`} height={3} borderRadius={20}>
+    <Card className={`${styles.nextCard} p-2`}>
       <p>Our next meet up is</p>
       <h2>{meetup ? getDate() : "TBC"}</h2>
       <div>
