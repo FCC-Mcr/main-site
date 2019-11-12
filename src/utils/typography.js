@@ -5,14 +5,14 @@ const typography = new Typography({
   baseLineHeight: 1.666,
   headerLineHeight: 1.3,
   scaleRatio: 2.3,
-  headerFontFamily: ["Public Sans Web"],
+  headerFontFamily: ["Inter"],
   headerWeight: 800,
-  bodyFontFamily: ["Public Sans Web"],
+  bodyFontFamily: ["Inter"],
   bodyWeight: 500,
   blockMarginBottom: "1rem",
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     "h3, h4, h5, h6": {
-      fontFamily: "Public Sans Web",
+      fontFamily: "Inter",
       fontStyle: "normal",
       fontWeight: 700,
     },
@@ -27,6 +27,9 @@ const typography = new Typography({
     },
     a: {
       color: "#3f6c41",
+    },
+    ".extra-large-font": {
+      fontSize: "4.5rem",
     },
     ".small-text": {
       fontSize: "0.875rem",

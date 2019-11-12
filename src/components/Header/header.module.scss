@@ -3,11 +3,6 @@
 
 .header {
   grid-column: 1/4;
-  background-image: url(../../icons/header.svg);
-  background-position: 0 -60px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $white;
   display: flex;
   justify-content: center;
   margin-top: -2.499rem;
