@@ -18,12 +18,5 @@
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
-
-  @include responds-to("xs", "min") {
-    padding: 10px 40px 4rem;
-  }
-
-  @include responds-to("xs", "max") {
-    padding: 10px 15px 40px;
-  }
+  padding: 3.5rem 40px 10rem;
 }
