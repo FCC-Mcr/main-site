@@ -113,7 +113,7 @@ const index = () => {
   return (
     <>
       <h2
-        className="large-font center pl-1 pt-3"
+        className="large-text center pl-1 pt-3"
         style={{ textAlign: "center" }}
       >
         The Organisers
@@ -142,19 +142,21 @@ const index = () => {
                   {organiser.languages.map(language => {
                     switch (language) {
                       case "javascript": {
-                        return <img src={javascriptLogo} />
+                        return (
+                          <img src={javascriptLogo} alt="javascript logo" />
+                        )
                       }
                       case "react": {
-                        return <img src={reactLogo} />
+                        return <img src={reactLogo} alt="react logo" />
                       }
                       case "css": {
-                        return <img src={cssLogo} />
+                        return <img src={cssLogo} alt="css logo" />
                       }
                       case "node": {
-                        return <img src={nodeLogo} />
+                        return <img src={nodeLogo} alt="node logo" />
                       }
                       default: {
-                        console.log("oh no there's no resources")
+                        return console.log("oh no there's no resources")
                       }
                     }
                   })}
