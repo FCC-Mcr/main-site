@@ -7,7 +7,7 @@ import styles from "./header.module.scss"
 const index = () => (
   <div className={styles.header}>
     <div>
-      <h1 className="extra-large-font">FreeCodeCamp Manchester</h1>
+      <h1 className="xx-large-font">FreeCodeCamp Manchester</h1>
       <p>
         Welcome to FreeCodeCamp Manchester! We are mentors, coders and learners
         from Manchester, Greater Manchester and its surrounding areas and one
