@@ -1,0 +1,7 @@
+$main-max-width: 1200px;
+
+.center {
+  width: 100vw;
+  max-width: $main-max-width;
+  grid-column: 2/3;
+}

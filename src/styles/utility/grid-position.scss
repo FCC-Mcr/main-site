@@ -13,12 +13,6 @@ $blog-max-width: 720px;
   max-width: $blog-max-width;
 }
 
-.center {
-  width: 100vw;
-  max-width: $main-max-width;
-  grid-column: 2/3;
-}
-
 .full-width {
   grid-column: 1/5;
 }

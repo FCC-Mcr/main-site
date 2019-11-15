@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 import Carousel from "../Carousel"
 import styles from "./organisers.module.scss"
+import Center from "../Center"
 
 import javascriptLogo from "../../../logos/Javascript.svg"
 import reactLogo from "../../../logos/React.svg"
@@ -112,12 +113,12 @@ const index = () => {
 
   return (
     <>
-      <h2
-        className="large-text center pl-1 pt-3"
-        style={{ textAlign: "center" }}
-      >
-        The Organisers
-      </h2>
+      <Center>
+        <h2 className="large-text pl-1 pt-3" style={{ textAlign: "center" }}>
+          The Organisers
+        </h2>
+      </Center>
+
       <Carousel>
         {organisers.map(organiser => (
           <Card height={3} className={`${styles.organiser}`}>

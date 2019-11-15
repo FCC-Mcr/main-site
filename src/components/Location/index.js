@@ -42,9 +42,9 @@ const index = props => {
         <link rel="preconnect" href="https://maps.googleapis.com" />
         <link rel="preconnect" href="https://maps.gstatic.com" />
       </Helmet>
-      <h2>Location</h2>
-      <div className={`${styles.map} u-shadow--3`}>
-        <ul className={`${styles.selector} px-1 u-shadow--2`}>
+      <h2 className="large-text">Location</h2>
+      <div className={`${styles.map} shadow-large`}>
+        <ul className={`${styles.selector} px-1`}>
           {locations.map(({ location, param }, index) => (
             <li
               key={index}

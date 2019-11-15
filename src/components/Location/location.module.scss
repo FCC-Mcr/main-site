@@ -6,14 +6,16 @@
   flex-direction: column;
   flex: 2 1 380px;
   width: 100%;
+
+  h2 {
+    margin-bottom: 3.5rem;
+  }
 }
 
 .map {
-  border-radius: 15px;
   overflow: hidden;
-  height: 100%;
+  height: 500px;
   @media (max-width: 767px) {
-    height: 550px;
     width: 100vw;
     margin-left: -15px;
     border-radius: 0;
@@ -49,10 +51,10 @@
   }
 
   img {
-    margin-bottom: 0.15rem;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 17px;
+    margin-bottom: 0;
+    vertical-align: bottom;
+    margin-right: 0.25rem;
+    height: 24px;
   }
 
   @media (max-width: 767px) {

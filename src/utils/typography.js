@@ -31,10 +31,10 @@ const typography = new Typography({
     a: {
       color: "#2c2c2c",
     },
-    ".xx-large-font": {
+    ".xx-large-text": {
       fontSize: "4.5rem",
     },
-    ".large-font": {
+    ".large-text": {
       fontSize: "2.625rem",
     },
     ".small-text": {
