@@ -25,11 +25,15 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <UpcomingTalks data={data.allMeetup.edges} title="Upcoming Talks" />
       <Blogposts
-        flex
-        title="Blogposts from the community"
         data={data.allMarkdownRemark.edges}
+        isHomepage
+        title="Blogposts"
+      />
+      <UpcomingTalks
+        data={data.allMeetup.edges}
+        isHomepage
+        title="Other Meetups"
       />
     </Flex>
     <LearningResources />

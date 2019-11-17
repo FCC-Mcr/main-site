@@ -2,6 +2,8 @@ import React from "react"
 import Carousel from "../Carousel"
 import Card from "../Card"
 
+import Center from "../Center"
+
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import styles from "./learning-resources.module.scss"
@@ -31,7 +33,11 @@ const index = props => {
 
   return (
     <>
-      <h2 className="center pl-1">Learning Resources</h2>
+      <Center>
+        <h2 className="large-text" style={{ textAlign: "center" }}>
+          Learning Resources
+        </h2>
+      </Center>
       <Carousel>
         {data.allMarkdownRemark.edges.map(({ node }, i) => {
           let html = node.html

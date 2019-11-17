@@ -120,8 +120,8 @@ const index = () => {
       </Center>
 
       <Carousel>
-        {organisers.map(organiser => (
-          <Card height={3} className={`${styles.organiser}`}>
+        {organisers.map((organiser, i) => (
+          <Card key={i} height={3} className={`${styles.organiser}`}>
             <div className={styles.grid}>
               <Img
                 fluid={
@@ -140,21 +140,25 @@ const index = () => {
               <p>
                 I can help with:
                 <span>
-                  {organiser.languages.map(language => {
+                  {organiser.languages.map((language, i) => {
                     switch (language) {
                       case "javascript": {
                         return (
-                          <img src={javascriptLogo} alt="javascript logo" />
+                          <img
+                            key={i}
+                            src={javascriptLogo}
+                            alt="javascript logo"
+                          />
                         )
                       }
                       case "react": {
-                        return <img src={reactLogo} alt="react logo" />
+                        return <img key={i} src={reactLogo} alt="react logo" />
                       }
                       case "css": {
-                        return <img src={cssLogo} alt="css logo" />
+                        return <img key={i} src={cssLogo} alt="css logo" />
                       }
                       case "node": {
-                        return <img src={nodeLogo} alt="node logo" />
+                        return <img key={i} src={nodeLogo} alt="node logo" />
                       }
                       default: {
                         return console.log("oh no there's no resources")

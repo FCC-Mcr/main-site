@@ -36,6 +36,7 @@ const typography = new Typography({
     },
     ".large-text": {
       fontSize: "2.625rem",
+      marginBottom: "3.5rem",
     },
     ".small-text": {
       fontSize: "0.875rem",
