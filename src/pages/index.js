@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
         title="Other Meetups"
       />
     </Flex>
-    <LearningResources />
+    <LearningResources isCarousel />
     <Contributing />
   </Layout>
 )
