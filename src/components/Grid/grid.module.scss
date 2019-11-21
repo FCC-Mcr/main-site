@@ -1,0 +1,9 @@
+@import "../../styles/utility/responds-to.scss";
+
+.grid {
+  display: grid;
+  padding: 0 2rem;
+  @include responds-to("xs", "max") {
+    padding: 0;
+  }
+}
