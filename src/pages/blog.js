@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
+import Center from "../components/Center"
 import SEO from "../components/SEO"
 
 import Blogposts from "../components/Blogposts"
@@ -9,9 +10,11 @@ import Blogposts from "../components/Blogposts"
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
-    <article className="main blog">
-      <Blogposts title="Blog" data={data.allMarkdownRemark.edges} />
-    </article>
+    <Center maxWidth="720px">
+      <article>
+        <Blogposts title="Blog" data={data.allMarkdownRemark.edges} />
+      </article>
+    </Center>
   </Layout>
 )
 
