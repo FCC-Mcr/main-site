@@ -1,0 +1,18 @@
+.learning-resources {
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(
+      to right top,
+      #f7df1e 17.58%,
+      #f8df1f 50%,
+      #ffffff 50%,
+      #ffffff 80.36%
+    );
+  }
+}
