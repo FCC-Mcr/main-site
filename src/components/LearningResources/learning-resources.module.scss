@@ -2,16 +2,8 @@
 @import "../../styles/utility/responds-to.scss";
 
 .learning-resources {
-  scroll-snap-align: center;
   position: relative;
-  margin-right: 15px;
-  display: inline-block;
-  vertical-align: top;
-  width: 400px;
-  @include responds-to("xxs", "max") {
-    width: calc(100vw - 30px);
-    margin-right: 10px;
-  }
+  padding: 1.25rem 1.5rem;
 
   &:last-child {
     margin-right: 0;
@@ -25,42 +17,48 @@
     white-space: normal;
   }
 
-  div {
-    height: 430px;
-    overflow: hidden;
-    position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 42px;
-      top: 50%;
-      left: 0;
-      right: 0;
-      background: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-      );
-    }
+  h3 {
+    margin-bottom: 0;
   }
 
-  > a {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 60px;
-    background: $accent;
-    color: $white;
+  div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 0 0 10px 10px;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
   }
 
   h4 {
     font-size: 1.2rem;
+  }
+
+  button {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.carousel {
+  scroll-snap-align: center;
+  margin: 0 1rem 0 1rem;
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid {
+  margin: 0;
+  width: 100%;
+  @include responds-to("xs", "max") {
+    width: calc(100vw - 2rem);
+    margin-right: 10px;
   }
 }
