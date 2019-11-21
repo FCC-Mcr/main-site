@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Center from "../components/Center"
 import SEO from "../components/SEO"
 import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
@@ -18,52 +19,56 @@ export default ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article className="main blog">
-        <div>
-          <h1>{siteTitle}</h1>
-          <div className={styles.author}>
-            {data.author.edges.length ? (
-              <Image fixed={data.author.edges[0].node.childImageSharp.fixed} />
-            ) : (
+      <Center>
+        <article>
+          <div>
+            <h1>{siteTitle}</h1>
+            <div className={styles.author}>
+              {data.author.edges.length ? (
+                <Image
+                  fixed={data.author.edges[0].node.childImageSharp.fixed}
+                />
+              ) : (
+                <Image
+                  fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
+                />
+              )}
+              <div>
+                <p>Written by {post.frontmatter.author}</p>
+                <p>
+                  {post.frontmatter.date} - {`${post.timeToRead} min read`}
+                </p>
+              </div>
+            </div>
+
+            {post.frontmatter.featuredImage && (
               <Image
-                fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
+                style={{
+                  marginBottom: rhythm(1),
+                  borderRadius: "1%",
+                }}
+                sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
               />
             )}
-            <div>
-              <p>Written by {post.frontmatter.author}</p>
-              <p>
-                {post.frontmatter.date} - {`${post.timeToRead} min read`}
-              </p>
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+            {post.frontmatter.isExternal && (
+              <a
+                href={post.frontmatter.externalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                read more{" "}
+                <img
+                  className={styles.externalLink}
+                  src={externalLinkIcon}
+                  alt="external link icon"
+                />
+              </a>
+            )}
           </div>
-
-          {post.frontmatter.featuredImage && (
-            <Image
-              style={{
-                marginBottom: rhythm(1),
-                borderRadius: "1%",
-              }}
-              sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-            />
-          )}
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-          {post.frontmatter.isExternal && (
-            <a
-              href={post.frontmatter.externalLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              read more{" "}
-              <img
-                className={styles.externalLink}
-                src={externalLinkIcon}
-                alt="external link icon"
-              />
-            </a>
-          )}
-        </div>
-      </article>
+        </article>
+      </Center>
     </Layout>
   )
 }
