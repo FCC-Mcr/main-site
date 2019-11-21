@@ -3,7 +3,7 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.666,
-  headerLineHeight: 1.2,
+  headerLineHeight: 1.4,
   scaleRatio: 2.8,
   headerFontFamily: ["Inter"],
   headerColor: "#2c2c2c",
@@ -30,6 +30,7 @@ const typography = new Typography({
     },
     a: {
       color: "#2c2c2c",
+      textDecoration: "none",
     },
     ".xx-large-text": {
       fontSize: "4.5rem",
