@@ -7,10 +7,10 @@ import Carousel from "../Carousel"
 import styles from "./organisers.module.scss"
 import Center from "../Center"
 
-import javascriptLogo from "../../../logos/Javascript.svg"
-import reactLogo from "../../../logos/React.svg"
-import cssLogo from "../../../logos/CSS.svg"
-import nodeLogo from "../../../logos/Node.svg"
+import javascriptLogo from "../../../logos/javascript.svg"
+import reactLogo from "../../../logos/react.svg"
+import cssLogo from "../../../logos/css.svg"
+import nodeLogo from "../../../logos/node.svg"
 
 const index = () => {
   const data = useStaticQuery(graphql`
