@@ -1,7 +1,11 @@
-$main-max-width: 1200px;
+$main-max-width: 1300px;
 
 .center {
-  width: 100vw;
+  width: 100%;
   max-width: $main-max-width;
   grid-column: 2/3;
+
+  > article {
+    padding: 2.499rem 0;
+  }
 }
