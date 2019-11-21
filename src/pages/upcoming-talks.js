@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Center from "../components/Center"
 import UpcomingTalks from "../components/UpcomingTalks"
 
 import SEO from "../components/SEO"
@@ -33,14 +34,18 @@ const upcomingTalks = ({ data }) => {
   return (
     <Layout>
       <SEO title="Upcoming Talks" />
-      <article className="main blog">
-        <h1>Upcoming Talks</h1>
-        {today.length > 0 && <UpcomingTalks data={today} title="Today" page />}
-        {tomorrow.length > 0 && (
-          <UpcomingTalks data={tomorrow} title="Tomorrow" page />
-        )}
-        <UpcomingTalks data={otherDays} title="Coming up" page />
-      </article>
+      <Center maxWidth="720px">
+        <article>
+          <h1>Upcoming Talks</h1>
+          {today.length > 0 && (
+            <UpcomingTalks data={today} title="Today" page />
+          )}
+          {tomorrow.length > 0 && (
+            <UpcomingTalks data={tomorrow} title="Tomorrow" page />
+          )}
+          <UpcomingTalks data={otherDays} title="Coming up" page />
+        </article>
+      </Center>
     </Layout>
   )
 }
