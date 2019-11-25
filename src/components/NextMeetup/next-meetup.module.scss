@@ -1,0 +1,45 @@
+.next-meetup {
+  padding: 6rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+
+    p {
+      margin: 0 2rem 0 0;
+      flex: 0 0 auto;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      &:last-of-type {
+        flex: 0 1 auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    img {
+      height: 1.3rem;
+      margin-bottom: 0;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.title {
+  color: var(--grey-color);
+  font-size: 2.2rem;
+}
