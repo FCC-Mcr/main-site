@@ -19,54 +19,50 @@ export default ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Center>
+      <Center maxWidth="var(--content-width)">
         <article>
-          <div>
-            <h1>{siteTitle}</h1>
-            <div className={styles.author}>
-              {data.author.edges.length ? (
-                <Image
-                  fixed={data.author.edges[0].node.childImageSharp.fixed}
-                />
-              ) : (
-                <Image
-                  fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
-                />
-              )}
-              <div>
-                <p>Written by {post.frontmatter.author}</p>
-                <p>
-                  {post.frontmatter.date} - {`${post.timeToRead} min read`}
-                </p>
-              </div>
-            </div>
-
-            {post.frontmatter.featuredImage && (
+          <h1>{siteTitle}</h1>
+          <div className={styles.author}>
+            {data.author.edges.length ? (
+              <Image fixed={data.author.edges[0].node.childImageSharp.fixed} />
+            ) : (
               <Image
-                style={{
-                  marginBottom: rhythm(1),
-                  borderRadius: "1%",
-                }}
-                sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+                fixed={data.defaultAuthor.edges[0].node.childImageSharp.fixed}
               />
             )}
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-            {post.frontmatter.isExternal && (
-              <a
-                href={post.frontmatter.externalLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                read more{" "}
-                <img
-                  className={styles.externalLink}
-                  src={externalLinkIcon}
-                  alt="external link icon"
-                />
-              </a>
-            )}
+            <div>
+              <p>Written by {post.frontmatter.author}</p>
+              <p>
+                {post.frontmatter.date} - {`${post.timeToRead} min read`}
+              </p>
+            </div>
           </div>
+
+          {post.frontmatter.featuredImage && (
+            <Image
+              style={{
+                marginBottom: rhythm(1),
+                borderRadius: "1%",
+              }}
+              sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+            />
+          )}
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          {post.frontmatter.isExternal && (
+            <a
+              href={post.frontmatter.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              read more{" "}
+              <img
+                className={styles.externalLink}
+                src={externalLinkIcon}
+                alt="external link icon"
+              />
+            </a>
+          )}
         </article>
       </Center>
     </Layout>
