@@ -6,11 +6,13 @@ import Layout from "../components/Layout/"
 import SEO from "../components/SEO/"
 
 import Header from "../components/Header"
+import NextMeetup from "../components/NextMeetup"
 import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"
+import Grid from "../components/Grid"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
-import UpcomingTalks from "../components/UpcomingTalks"
+import UpcomingMeetups from "../components/UpcomingMeetups"
 import LearningResources from "../components/LearningResources"
 import Blogposts from "../components/Blogposts"
 import Contributing from "../components/Contributing"
@@ -19,6 +21,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Header />
+    <NextMeetup />
     <Organisers />
     <Flex>
       <Location />
@@ -30,11 +33,18 @@ const IndexPage = ({ data }) => (
         isHomepage
         title="Blogposts"
       />
-      <UpcomingTalks
-        data={data.allMeetup.edges}
-        isHomepage
-        title="Other Meetups"
-      />
+      <Grid
+        style={{
+          gridTemplateColumns: "auto",
+          gridAutoRows: "max-content",
+          flex: "1 1 300px",
+        }}
+      >
+        <h2 className="large-text" style={{ marginBottom: "3.5rem" }}>
+          Other Meetups
+        </h2>
+        <UpcomingMeetups data={data.allMeetup.edges} />
+      </Grid>
     </Flex>
     <LearningResources isCarousel />
     <Contributing />
