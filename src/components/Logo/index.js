@@ -8,7 +8,7 @@ import reactLogo from "../../../logos/react.svg"
 import testingLogo from "../../../logos/testing.svg"
 import toolbeltLogo from "../../../logos/toolbelt.svg"
 
-const index = ({ name }) => {
+const Index = ({ name }) => {
   let logo = name => {
     switch (name) {
       case "accessibility": {
@@ -41,4 +41,4 @@ const index = ({ name }) => {
   return <img src={logo(name)} alt={`${name} logo`} />
 }
 
-export default index
+export default Index
