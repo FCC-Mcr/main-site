@@ -10,7 +10,7 @@ import Blogposts from "../components/Blogposts"
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
-    <Center maxWidth="720px">
+    <Center maxWidth="var(--content-width)">
       <article>
         <Blogposts title="Blog" data={data.allMarkdownRemark.edges} />
       </article>
