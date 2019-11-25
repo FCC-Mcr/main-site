@@ -1,18 +1,3 @@
-$main-max-width: 1030px;
-$blog-max-width: 720px;
-
-.main {
-  width: 100vw;
-  max-width: $main-max-width;
-  grid-column: 2/3;
-  padding: 2.499rem 0rem;
-}
-
-.blog {
-  width: 100vw;
-  max-width: $blog-max-width;
-}
-
 .full-width {
   grid-column: 1/5;
 }
