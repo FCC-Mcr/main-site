@@ -2,12 +2,12 @@ import styles from "./center.module.scss"
 
 import React from "react"
 
-const index = ({ children, maxWidth }) => {
+const Index = ({ children, maxWidth, className }) => {
   return (
-    <div className={styles.center} style={{ maxWidth }}>
+    <div className={`${styles.center} ${className}`} style={{ maxWidth }}>
       {children}
     </div>
   )
 }
 
-export default index
+export default Index

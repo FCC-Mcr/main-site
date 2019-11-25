@@ -1,4 +1,4 @@
-$main-max-width: 1300px;
+$main-max-width: 1200px;
 
 .center {
   width: 100%;
@@ -6,6 +6,6 @@ $main-max-width: 1300px;
   grid-column: 2/3;
 
   > article {
-    padding: 2.499rem 0;
+    padding: 2.499rem 0rem;
   }
 }
