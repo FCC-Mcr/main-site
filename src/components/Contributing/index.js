@@ -2,11 +2,11 @@ import React from "react"
 import Center from "../Center"
 import styles from "./contributing.module.scss"
 
-const index = props => {
+const Index = props => {
   return (
     <Center>
-      <div className={`${styles.contributing} center px-1`}>
-        <h2>Contributing</h2>
+      <div className={`${styles.contributing}`}>
+        <h2 className="large-text">Contributing</h2>
         <p>
           We want to make contributing to this project as enjoyable and
           accessible as possible. All contributions are welcome, including
@@ -38,4 +38,4 @@ const index = props => {
   )
 }
 
-export default index
+export default Index
