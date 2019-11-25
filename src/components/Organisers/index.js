@@ -12,7 +12,7 @@ import reactLogo from "../../../logos/react.svg"
 import cssLogo from "../../../logos/css.svg"
 import nodeLogo from "../../../logos/node.svg"
 
-const index = () => {
+const Index = () => {
   const data = useStaticQuery(graphql`
     query {
       adam: file(relativePath: { eq: "organiser-adam.jpg" }) {
@@ -114,9 +114,7 @@ const index = () => {
   return (
     <>
       <Center>
-        <h2 className="large-text pl-1 pt-3" style={{ textAlign: "center" }}>
-          The Organisers
-        </h2>
+        <h2 className={`${styles.title} large-text`}>The Organisers</h2>
       </Center>
 
       <Carousel>
@@ -175,4 +173,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

@@ -1,4 +1,12 @@
 @import "../../styles/utility/responds-to.scss";
+
+.title {
+  margin-bottom: 3.5rem;
+  @include responds-to("sm", "min") {
+    text-align: center;
+  }
+}
+
 .organiser {
   scroll-snap-align: center;
   width: 360px;
@@ -7,6 +15,10 @@
   vertical-align: top;
   min-height: 210px;
   padding: 1.5rem;
+  @include responds-to("sm", "max") {
+    width: calc(100vw - 4rem);
+    margin-right: 0.5rem;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -55,6 +67,9 @@
   display: grid;
   grid-template-columns: 56px 1fr;
   grid-gap: 16px 12px;
+  @include responds-to("sm", "max") {
+    grid-template-rows: auto 110px 1fr;
+  }
 
   div {
     align-self: center;
