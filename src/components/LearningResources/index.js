@@ -11,7 +11,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import styles from "./learning-resources.module.scss"
 
-const index = ({ isCarousel }) => {
+const Index = ({ isCarousel }) => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -55,9 +55,7 @@ const index = ({ isCarousel }) => {
   return (
     <>
       <Center>
-        <h2 className="large-text" style={{ textAlign: "center" }}>
-          Learning Resources
-        </h2>
+        <h2 className={`${styles.title} large-text`}>Learning Resources</h2>
       </Center>
       <WrapperComponent isCarousel={isCarousel}>
         {data.allMarkdownRemark.edges.map(({ node }, i) => (
@@ -86,4 +84,4 @@ const index = ({ isCarousel }) => {
   )
 }
 
-export default index
+export default Index

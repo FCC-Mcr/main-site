@@ -1,6 +1,13 @@
 @import "../../styles/config/colour.scss";
 @import "../../styles/utility/responds-to.scss";
 
+.title {
+  margin-bottom: 3.5rem;
+  @include responds-to("sm", "min") {
+    text-align: center;
+  }
+}
+
 .learning-resources {
   position: relative;
   padding: 1.25rem 1.5rem;
@@ -52,6 +59,11 @@
   width: 400px;
   display: inline-block;
   vertical-align: top;
+  @include responds-to("sm", "max") {
+    width: calc(100vw - 4rem);
+    margin-right: 1rem;
+    margin-left: 0;
+  }
 }
 
 .grid {
