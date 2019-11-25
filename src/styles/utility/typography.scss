@@ -1,0 +1,23 @@
+@import "./responds-to.scss";
+
+.xx-large-text {
+  font-size: 4.5rem;
+  @include responds-to("sm", "max") {
+    font-size: 2.6rem;
+  }
+}
+
+.x-large-text {
+  font-size: 3rem;
+}
+
+.large-text {
+  font-size: 2.625rem;
+  @include responds-to("sm", "max") {
+    text-align: left;
+    font-size: 2.2rem;
+  }
+}
+.small-text {
+  font-size: 0.875rem;
+}
