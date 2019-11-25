@@ -4,9 +4,9 @@ import Meetup from "../Meetup"
 const Index = ({ data }) => {
   return (
     <>
-      {data.map(({ node }, i) => {
-        return <Meetup node={node} key={i} />
-      })}
+      {data.map(({ node }, i) => (
+        <Meetup node={node} key={i} />
+      ))}
     </>
   )
 }

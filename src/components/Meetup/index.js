@@ -8,7 +8,7 @@ import styles from "./meetup.module.scss"
 import clock from "../../icons/clock.svg"
 import location from "../../icons/location.svg"
 
-const Index = ({ node, key }) => {
+const Index = ({ node }) => {
   let date = new Date(node.start)
   let options = {
     weekday: "long",
@@ -23,7 +23,7 @@ const Index = ({ node, key }) => {
     .replace(/<a\s+/gi, `<a rel="noopener" `)
 
   return (
-    <div key={key} className={styles.meetup}>
+    <div className={styles.meetup}>
       <span>{date.toLocaleDateString("en-GB", options)}</span>
       <h3>{node.title}</h3>
       <div>
