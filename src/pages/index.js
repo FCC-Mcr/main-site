@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => (
         <UpcomingMeetups data={data.allMeetup.edges} />
       </Grid>
     </Flex>
-    <LearningResources isCarousel />
+    <LearningResources isCarousel isHomepage />
     <Contributing />
   </Layout>
 )
