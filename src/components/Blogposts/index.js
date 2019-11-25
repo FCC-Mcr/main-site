@@ -15,7 +15,7 @@ const Content = ({ node }) => (
   </>
 )
 
-const index = ({ data, title, isHomepage }) => (
+const Index = ({ data, title, isHomepage }) => (
   <div className={`${styles.blogposts} ${isHomepage ? styles.flex : ""}`}>
     {isHomepage ? <h2 className="large-text">{title}</h2> : <h1>{title}</h1>}
 
@@ -52,4 +52,4 @@ const index = ({ data, title, isHomepage }) => (
   </div>
 )
 
-export default index
+export default Index
