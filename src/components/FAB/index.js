@@ -8,11 +8,11 @@ const Menu = ({ handleClick }) => (
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
-    <Link to="/upcoming-talks/">Upcoming Talks</Link>
+    <Link to="/upcoming-meetups/">Upcoming Talks</Link>
   </nav>
 )
 
-const index = props => {
+const Index = props => {
   const [toggle, setToggle] = useState(false)
 
   let handleClick = () => {
@@ -29,4 +29,4 @@ const index = props => {
   )
 }
 
-export default index
+export default Index
