@@ -1,6 +1,9 @@
 @import "../../styles/utility/responds-to.scss";
 
 .blogposts {
+  h2 {
+    margin-bottom: 3.5rem;
+  }
   img {
     margin-bottom: 0;
   }
