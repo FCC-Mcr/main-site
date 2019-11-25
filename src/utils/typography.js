@@ -32,16 +32,6 @@ const typography = new Typography({
       color: "#2c2c2c",
       textDecoration: "none",
     },
-    ".xx-large-text": {
-      fontSize: "4.5rem",
-    },
-    ".large-text": {
-      fontSize: "2.625rem",
-      marginBottom: "3.5rem",
-    },
-    ".small-text": {
-      fontSize: "0.875rem",
-    },
   }),
 })
 
