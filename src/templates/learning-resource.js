@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Center from "../components/Center"
 
 import styles from "./learning-resources.module.scss"
 
@@ -16,10 +17,12 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <div className={`main blog ${styles.content}`}>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <Center maxWidth="var(--content-width)">
+        <article className={`${styles.content}`}>
+          <h1>{post.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </article>
+      </Center>
     </Layout>
   )
 }
