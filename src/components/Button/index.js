@@ -1,12 +1,21 @@
 import React from "react"
 import styles from "./button.module.scss"
 
-const index = ({ text = "Read More", color = "#000000", onClick }) => {
+const Index = ({
+  text = "Read More",
+  color = "#000000",
+  backgroundColor = "",
+  onClick,
+}) => {
   return (
-    <button className={styles.button} style={{ color }} onClick={onClick}>
+    <button
+      className={`${styles.button} ${backgroundColor ? styles.background : ""}`}
+      style={{ color, backgroundColor }}
+      onClick={onClick}
+    >
       {text} →
     </button>
   )
 }
 
-export default index
+export default Index
