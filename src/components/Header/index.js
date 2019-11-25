@@ -2,7 +2,7 @@ import React from "react"
 
 import styles from "./header.module.scss"
 
-const index = () => (
+const Index = () => (
   <div className={styles.header}>
     <div>
       <h1 className="xx-large-text">FreeCodeCamp Manchester</h1>
@@ -18,4 +18,4 @@ const index = () => (
   </div>
 )
 
-export default index
+export default Index
