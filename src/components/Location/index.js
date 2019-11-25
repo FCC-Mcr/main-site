@@ -5,7 +5,7 @@ import styles from "./location.module.scss"
 import trainIcon from "../../icons/train.svg"
 import trainIconActive from "../../icons/train-active.svg"
 
-const index = props => {
+const Index = props => {
   // Victoria set as default
   const [mapParams, setMapParams] = useState(
     "pb=!1m28!1m12!1m3!1d8040.475167502979!2d-2.248156931839827!3d53.48747948318092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x487bb1c7b5629105%3A0xb97cf304dc092fdb!2sVictoria+Station%2C+Manchester!3m2!1d53.4876223!2d-2.2415118!4m5!1s0x487bb1beb3938f8f%3A0x49dc3fe46f3357d3!2sThe+Hive%2C+51+Lever+St%2C+Manchester+M1+1FN!3m2!1d53.4833089!2d-2.2329376!5e0!3m2!1sen!2suk!4v1566148827358!5m2!1sen!2suk"
@@ -79,4 +79,4 @@ const index = props => {
   )
 }
 
-export default index
+export default Index
