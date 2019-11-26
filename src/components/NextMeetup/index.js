@@ -62,6 +62,7 @@ const Index = () => {
         color="#FFFFFF"
         text="Add to Calendar"
         onClick={() => downloadCalendarFile(meetup)}
+        isDisabled={meetup ? false : true}
       />
     </Center>
   )

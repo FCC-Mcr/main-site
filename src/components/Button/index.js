@@ -6,16 +6,19 @@ const Index = ({
   color = "#000000",
   backgroundColor = "",
   onClick,
-}) => {
-  return (
-    <button
-      className={`${styles.button} ${backgroundColor ? styles.background : ""}`}
-      style={{ color, backgroundColor }}
-      onClick={onClick}
-    >
-      {text} →
-    </button>
-  )
-}
+  isDisabled,
+}) => (
+  <button
+    className={`${styles.button} ${backgroundColor && styles.background}`}
+    style={{
+      color,
+      backgroundColor: isDisabled ? "var(--grey-color)" : backgroundColor,
+    }}
+    onClick={onClick}
+    disabled={isDisabled ? true : false}
+  >
+    {text} →
+  </button>
+)
 
 export default Index
