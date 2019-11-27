@@ -21,7 +21,7 @@ const MainNav = () => (
 const Header = ({ siteTitle }) => (
   <>
     <header className={`${styles.header}  u-shadow--1`}>
-      <Link to="/" className={styles.title}>
+      <Link to="/" className={styles.title} aria-label="Home">
         {/* need to bring in icon */}
         <img className={styles.logo} src={logo} alt="" />
       </Link>
