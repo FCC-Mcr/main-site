@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import Center from "../components/Center"
 
@@ -17,6 +18,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={`${post.frontmatter.title} Resources`} />
       <Center maxWidth="var(--content-width)">
         <article className={`${styles.content}`}>
           <h1>{post.frontmatter.title}</h1>
