@@ -6,7 +6,7 @@ author: Adam Collier
 
 Whilst learning react I have heard a lot of talk about Redux and that being the go to solution for state management in a web application. But as I've done a little bit of exploring and read countless articles there has also been a lot of people leaning on React Context instead since it's already included as an API in React.
 
-I don't particularly know a lot about Redux and I certainly havent used it extensively but I decided to give React Context a whirl and see how I got on. The implementation I used was heavily (and I mean heavily) inspired by a post by the one and only Kent C Dodds, which can be found [here](https://kentcdodds.com/blog/how-to-use-react-context-effectively).
+I don't particularly know a lot about Redux and I certainly havent used it extensively but I decided to give React Context a whirl and see how I got on. The implementation I used was heavily (and I mean heavily) inspired by the one and only Kent C Dodds in his blog post [how to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively).
 
 This was also using React Hooks which also got me a little excited (I've been a big fan since playing around with them)
 
