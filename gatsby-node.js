@@ -91,7 +91,7 @@ exports.sourceNodes = async ({ actions }) => {
   // fetch raw data from the randomuser api
   const fetchMeetups = () =>
     axios.get(
-      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=200&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
+      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=30&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
     )
   // await for results
   const res = await fetchMeetups()
