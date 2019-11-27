@@ -3,7 +3,8 @@
 
 .meetup {
   margin-bottom: 2rem;
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
 
   span {
     display: flex;
@@ -16,37 +17,10 @@
     margin-bottom: 0.5rem;
   }
 
-  div {
-    display: grid;
-    grid-template-columns: max-content max-content max-content 1fr;
-    margin-bottom: 0.5rem;
-    align-items: center;
-
-    p {
-      margin: 0 0 0.4rem;
-      color: $grey;
-      flex: 1;
-
-      &:first-of-type {
-        flex: 0 1 145px;
-      }
-    }
-  }
-
   img {
     height: 16px;
     margin-right: 0.3rem;
     margin-bottom: 0;
-  }
-
-  > a {
-    margin-top: auto;
-    display: block;
-    text-align: right;
-    text-decoration: none;
-    img {
-      padding-left: 0.2rem;
-    }
   }
 
   p {
@@ -66,4 +40,36 @@ span.location {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: max-content max-content max-content 1fr;
+  margin-bottom: 0.5rem;
+  align-items: center;
+
+  p {
+    margin: 0 0 0.4rem;
+    color: $grey;
+    flex: 1;
+
+    &:first-of-type {
+      flex: 0 1 145px;
+    }
+  }
+}
+
+.link {
+  margin-top: auto;
+
+  a {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+
+    img {
+      margin-right: 0.25rem;
+      height: 24px;
+    }
+  }
 }
