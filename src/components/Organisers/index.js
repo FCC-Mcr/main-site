@@ -3,14 +3,10 @@ import Card from "../Card"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Carousel from "../Carousel"
-import styles from "./organisers.module.scss"
 import Center from "../Center"
-
-import javascriptLogo from "../../../logos/javascript.svg"
-import reactLogo from "../../../logos/react.svg"
-import cssLogo from "../../../logos/css.svg"
-import nodeLogo from "../../../logos/node.svg"
+import Carousel from "../Carousel"
+import Logo from "../Logo"
+import styles from "./organisers.module.scss"
 
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -75,7 +71,7 @@ const Index = () => {
           ✌️
         </span>
       `,
-      languages: ["javascript", "node", "react"],
+      languages: ["html", "css", "javascript", "node", "react"],
     },
     {
       name: "Pete Daily",
@@ -91,7 +87,7 @@ const Index = () => {
         Bit of a geek. Self taught Front end web developer. Long suffering
         Stockport County fan.
       `,
-      languages: ["javascript", "node", "react"],
+      languages: ["html", "css", "javascript", "angular", "node", "react"],
     },
     {
       name: "Fey Ijaware",
@@ -104,8 +100,7 @@ const Index = () => {
         link: "https://github.com/FeyAgape",
       },
       description: `
-        Founder of CodeandStuff & CodePossible. Self taught developer. Two
-        time Google Scholarship winner.
+        Self-taught developer and senior developer @dwpdigital. Founder of CodeandStuff & CodePossible.
       `,
       languages: ["javascript", "node", "react"],
     },
@@ -139,29 +134,30 @@ const Index = () => {
                 I can help with:
                 <span>
                   {organiser.languages.map((language, i) => {
-                    switch (language) {
-                      case "javascript": {
-                        return (
-                          <img
-                            key={i}
-                            src={javascriptLogo}
-                            alt="javascript logo"
-                          />
-                        )
-                      }
-                      case "react": {
-                        return <img key={i} src={reactLogo} alt="react logo" />
-                      }
-                      case "css": {
-                        return <img key={i} src={cssLogo} alt="css logo" />
-                      }
-                      case "node": {
-                        return <img key={i} src={nodeLogo} alt="node logo" />
-                      }
-                      default: {
-                        return console.log("oh no there's no resources")
-                      }
-                    }
+                    return <Logo name={language} />
+                    // switch (language) {
+                    //   case "javascript": {
+                    //     return (
+                    //       <img
+                    //         key={i}
+                    //         src={javascriptLogo}
+                    //         alt="javascript logo"
+                    //       />
+                    //     )
+                    //   }
+                    //   case "react": {
+                    //     return <img key={i} src={reactLogo} alt="react logo" />
+                    //   }
+                    //   case "css": {
+                    //     return <img key={i} src={cssLogo} alt="css logo" />
+                    //   }
+                    //   case "node": {
+                    //     return <img key={i} src={nodeLogo} alt="node logo" />
+                    //   }
+                    //   default: {
+                    //     return console.log("oh no there's no resources")
+                    //   }
+                    // }
                   })}
                 </span>
               </p>
