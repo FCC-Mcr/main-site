@@ -134,30 +134,7 @@ const Index = () => {
                 I can help with:
                 <span>
                   {organiser.languages.map((language, i) => {
-                    return <Logo name={language} />
-                    // switch (language) {
-                    //   case "javascript": {
-                    //     return (
-                    //       <img
-                    //         key={i}
-                    //         src={javascriptLogo}
-                    //         alt="javascript logo"
-                    //       />
-                    //     )
-                    //   }
-                    //   case "react": {
-                    //     return <img key={i} src={reactLogo} alt="react logo" />
-                    //   }
-                    //   case "css": {
-                    //     return <img key={i} src={cssLogo} alt="css logo" />
-                    //   }
-                    //   case "node": {
-                    //     return <img key={i} src={nodeLogo} alt="node logo" />
-                    //   }
-                    //   default: {
-                    //     return console.log("oh no there's no resources")
-                    //   }
-                    // }
+                    return <Logo key={i} name={language} />
                   })}
                 </span>
               </p>
