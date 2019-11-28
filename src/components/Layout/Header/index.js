@@ -5,8 +5,6 @@ import MobileMenu from "../../MobileMenu"
 
 // icons
 import logo from "../../../icons/logo.svg"
-import menu from "../../../icons/menu.svg"
-
 import styles from "./header.module.scss"
 
 const MainNav = () => (
