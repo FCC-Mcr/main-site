@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import styles from "./fab.module.scss"
+import styles from "./mobile-menu.module.scss"
 import menu from "../../icons/menu.svg"
 
 const Menu = ({ handleClick }) => (
@@ -21,9 +21,7 @@ const Index = props => {
 
   return (
     <>
-      <div className={`${styles.fab} u-shadow--3`} onClick={e => handleClick()}>
-        <img src={menu} alt="menu button" />
-      </div>
+      <img onClick={e => handleClick()} src={menu} alt="menu button" />
       {toggle && <Menu handleClick={handleClick} />}
     </>
   )

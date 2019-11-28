@@ -7,14 +7,11 @@
 @import "../../../styles/config/colour.scss";
 @import "../../../styles/config/globals.scss";
 
-$header-height: 50px;
-$nav-spacing: 30px;
+$header-height: 3.5rem;
+$nav-spacing: 2rem;
 
 .header {
-  display: none;
-  @include responds-to("xs") {
-    display: flex;
-  }
+  display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
   color: $accent;
@@ -22,6 +19,13 @@ $nav-spacing: 30px;
   justify-content: space-between;
   align-items: center;
   padding: 0 2em;
+  @include responds-to("sm", "max") {
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   position: relative;
   z-index: map-get($layers, "highest");
 
@@ -31,16 +35,15 @@ $nav-spacing: 30px;
 
   .logo {
     margin-bottom: 0;
+    @include responds-to("sm", "max") {
+      height: 2rem;
+    }
   }
 }
 
 nav {
-  display: inline-block;
-  font-size: 16px; // TODO: replace with configuration values
-
   a {
     color: $accent;
-    height: 35px;
     font-weight: 600;
     margin-right: $nav-spacing;
     text-decoration: none;
@@ -50,5 +53,24 @@ nav {
   }
   :last-child {
     margin-right: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  @include responds-to("sm", "min") {
+    img {
+      display: none;
+    }
+  }
+  @include responds-to("sm", "max") {
+    > a {
+      display: none;
+    }
+    img {
+      height: 1.25rem;
+      margin-bottom: 0;
+    }
   }
 }

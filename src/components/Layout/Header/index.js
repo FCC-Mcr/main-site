@@ -1,20 +1,21 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
-import FAB from "../../FAB"
+import MobileMenu from "../../MobileMenu"
 
 // icons
 import logo from "../../../icons/logo.svg"
+import menu from "../../../icons/menu.svg"
 
 import styles from "./header.module.scss"
 
 const MainNav = () => (
-  <nav>
+  <nav className={styles.nav}>
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
     <Link to="/upcoming-meetups/">Upcoming Talks</Link>
+    <MobileMenu />
   </nav>
 )
 
@@ -27,7 +28,6 @@ const Header = ({ siteTitle }) => (
       </Link>
       <MainNav />
     </header>
-    <FAB />
   </>
 )
 
