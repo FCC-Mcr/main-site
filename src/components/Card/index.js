@@ -9,7 +9,9 @@ const Card = ({ children, className, shadowSize = "large" }) => {
   const shadowClass = shadowSize ? `shadow-${shadowSize}` : ""
 
   return (
-    <div className={`${styles.card} ${className} ${shadowClass}`}>
+    <div
+      className={`${styles.card} ${className ? className : ""} ${shadowClass}`}
+    >
       {children}
     </div>
   )
