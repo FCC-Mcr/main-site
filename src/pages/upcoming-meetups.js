@@ -37,6 +37,7 @@ const upcomingMeetups = ({ data }) => {
       style={{
         gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
         gridGap: "2rem",
+        marginBottom: "4rem",
       }}
     >
       <UpcomingMeetups data={day} title="Today" page />
