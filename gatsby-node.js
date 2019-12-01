@@ -53,8 +53,37 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      upcomingMeetups: allMeetup(
+        filter: {
+          excerpt: { ne: null }
+          title: { ne: null }
+          location: { ne: null }
+          start: { ne: null }
+          end: { ne: null }
+        }
+        limit: $limit
+        skip: $skip
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 800)
+            description
+            title
+            location
+            start
+            end
+            iCalUID
+          }
+        }
+      }
     }
   `).then(result => {
+    // error if no results
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`)
+      return
+    }
     // create blog pages
     result.data.blog.edges.forEach(({ node }) => {
       createPage({
@@ -76,6 +105,32 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/learning-resource.js`),
         context: {
           slug: node.fields.slug,
+        },
+      })
+    })
+    // create upcoming talks pages
+    const meetups = result.data.upcomingMeetups.edges
+    const postsPerPage = 20
+    const numPages = Math.ceil(meetups.length / postsPerPage)
+    // result.data.upcomingMeetups.edges.forEach(({ node }) => {
+    //   createPage({
+    //     path: node.fields.slug,
+    //     component: path.resolve(`./src/templates/learning-resource.js`),
+    //     context: {
+    //       slug: node.fields.slug,
+    //     },
+    //   })
+    // })
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/upcoming-meetups` : `/upcoming-meetups/${i + 1}`,
+        component: path.resolve("./src/templates/upcoming-meetups.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
         },
       })
     })
