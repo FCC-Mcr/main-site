@@ -29,11 +29,23 @@ const Index = () => {
     }
   `)
 
-  let meetup = data.allMeetup.edges[0]
+  let meetup = data.allMeetup.edges[0].node
+
+  let getOrdinal = n => {
+    var s = ["th", "st", "nd", "rd"],
+      v = n % 100
+    return n + (s[(v - 20) % 10] || s[v] || s[0])
+  }
 
   let getDate = () => {
     const date = new Date(meetup.start)
-    return date.toLocaleDateString("en-GB", options)
+    let formattedDate = date.toLocaleDateString("en-GB", options)
+    let dateNumber = formattedDate.match(/\d+/gi)
+    let dateWithOrdinal = formattedDate.replace(
+      /\d+/gi,
+      `${getOrdinal(dateNumber)}`
+    )
+    return dateWithOrdinal
   }
 
   var options = {
