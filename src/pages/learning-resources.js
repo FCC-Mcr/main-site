@@ -9,7 +9,7 @@ import SEO from "../components/SEO"
 const LearningResourcesPage = () => (
   <Layout>
     <SEO title="Learning Resources" />
-    <Center>
+    <Center maxWidth="1200px">
       <article className={styles.learningResources}>
         <LearningResources />
       </article>
