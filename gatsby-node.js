@@ -22,7 +22,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   return graphql(`
     {
@@ -61,8 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
           start: { ne: null }
           end: { ne: null }
         }
-        limit: $limit
-        skip: $skip
+        limit: 1000
       ) {
         edges {
           node {
@@ -108,19 +107,10 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-    // create upcoming talks pages
+    // create upcoming metups pages
     const meetups = result.data.upcomingMeetups.edges
     const postsPerPage = 20
     const numPages = Math.ceil(meetups.length / postsPerPage)
-    // result.data.upcomingMeetups.edges.forEach(({ node }) => {
-    //   createPage({
-    //     path: node.fields.slug,
-    //     component: path.resolve(`./src/templates/learning-resource.js`),
-    //     context: {
-    //       slug: node.fields.slug,
-    //     },
-    //   })
-    // })
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
@@ -146,7 +136,7 @@ exports.sourceNodes = async ({ actions }) => {
   // fetch raw data from the randomuser api
   const fetchMeetups = () =>
     axios.get(
-      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=30&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
+      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=1000&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
     )
   // await for results
   const res = await fetchMeetups()
