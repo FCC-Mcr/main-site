@@ -3,6 +3,10 @@
 .layout {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: minmax(2rem, 1fr) minmax(0, auto) minmax(2rem, 1fr);
   grid-auto-rows: auto;
+
+  @include responds-to("xs", "max") {
+    grid-template-columns: 1rem minmax(0, 1fr) 1rem;
+  }
 }

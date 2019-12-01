@@ -1,23 +1,11 @@
-@font-face {
-  font-family: "Public Sans Web";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../../fonts/PublicSans-Medium.woff2") format("woff2");
-  font-display: swap;
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
 }
 
-@font-face {
-  font-family: "Public Sans Web";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/PublicSans-Bold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Public Sans Web";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../../fonts/PublicSans-ExtraBold.woff2") format("woff2");
-  font-display: swap;
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }

@@ -1,17 +1,17 @@
 import React from "react"
+import Card from "../../Card"
 
-import arrow from "../../../icons/arrow-white.svg"
+import twitterLogo from "../../../icons/twitter.svg"
 
 import styles from "./twitterBar.module.scss"
 
 const TwitterBar = () => (
-  <a
-    href="https://twitter.com/FreeCodeCampMCR"
-    className={`${styles.twitterBar} u-shadow--3`}
-  >
-    Follow us on Twitter
-    <img src={arrow} alt="" />
-  </a>
+  <Card className={styles.twitter}>
+    <img src={twitterLogo} alt="twitter logo" />
+    <a href="https://twitter.com/FreeCodeCampMCR">
+      <button>Follow us on Twitter →</button>
+    </a>
+  </Card>
 )
 
 export default TwitterBar

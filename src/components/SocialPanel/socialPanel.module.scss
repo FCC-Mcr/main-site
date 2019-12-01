@@ -1,8 +1,19 @@
 @import "../../styles/utility/responds-to.scss";
 
 .social-panel {
-  flex: 2.1 1 250px;
-  @include responds-to("xs", "min") {
-    margin-left: 2rem;
+  flex: 0.8 1 250px;
+
+  @include responds-to("sm", "max") {
+    flex: 1 1 250px;
+  }
+
+  h2 {
+    margin-bottom: 3.5rem;
+  }
+  @include responds-to("sm", "min") {
+    margin-left: 1.5rem;
+  }
+  @include responds-to("md", "min") {
+    margin-left: 3rem;
   }
 }

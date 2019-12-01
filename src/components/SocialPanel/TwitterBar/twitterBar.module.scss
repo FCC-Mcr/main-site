@@ -1,13 +1,25 @@
-.twitter-bar {
-  background: linear-gradient(180deg, #1da1f2 0%, #1988cd 100%);
-  border-radius: 20px;
+.twitter {
   color: #fff;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 2rem 0.8rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+
   img {
     margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 0;
+    background: #fff;
+    border: none;
+    color: #1b92db;
+    cursor: pointer;
   }
 }
