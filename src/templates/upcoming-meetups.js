@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import Button from "../components/Button"
 import Layout from "../components/Layout"
 import Grid from "../components/Grid"
 import Center from "../components/Center"
@@ -6,9 +8,18 @@ import UpcomingMeetups from "../components/UpcomingMeetups"
 
 import SEO from "../components/SEO"
 
+import styles from "./upcoming-meetups.module.scss"
+
 import { graphql } from "gatsby"
 
-const upcomingMeetups = ({ data }) => {
+const upcomingMeetups = ({ data, pageContext }) => {
+  // pagination links
+  const { currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+  const nextPage = (currentPage + 1).toString()
+
   let todayEnd = new Date()
   todayEnd = new Date(todayEnd.setHours(23, 59, 59, 999)).toISOString()
 
@@ -46,24 +57,36 @@ const upcomingMeetups = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Upcoming Talks" />
+      <SEO title="Upcoming Meetups" />
       <Center maxWidth="1030px">
         <article>
-          <h1>Upcoming Meetups</h1>
+          {isFirst && <h1>Upcoming Meetups</h1>}
           {today.length > 0 && (
             <>
-              <h2>Today</h2>
+              {isFirst && <h2>Today</h2>}
               <MeetupGrid day={today} />
             </>
           )}
           {tomorrow.length > 0 && (
             <>
-              <h2>Tomorrow</h2>
+              {isFirst && <h2>Tomorrow</h2>}
               <MeetupGrid day={tomorrow} />
             </>
           )}
-          <h2>Coming Up</h2>
+          {isFirst && <h2>Coming Up</h2>}
           <MeetupGrid day={otherDays} />
+          <div className={styles.pagination}>
+            {!isFirst && (
+              <Link to={`/upcoming-meetups/${prevPage}`} rel="prev">
+                <Button text="← Previous Page" />
+              </Link>
+            )}
+            {!isLast && (
+              <Link to={`/upcoming-meetups/${nextPage}`} rel="next">
+                <Button text="Next Page →" />
+              </Link>
+            )}
+          </div>
         </article>
       </Center>
     </Layout>
@@ -73,7 +96,7 @@ const upcomingMeetups = ({ data }) => {
 export default upcomingMeetups
 
 export const query = graphql`
-  query {
+  query($skip: Int!, $limit: Int!) {
     allMeetup(
       filter: {
         excerpt: { ne: null }

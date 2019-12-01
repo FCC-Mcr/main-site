@@ -1,0 +1,8 @@
+.pagination {
+  display: flex;
+  a {
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+}
