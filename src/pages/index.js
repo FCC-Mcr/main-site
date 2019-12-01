@@ -28,19 +28,33 @@ const IndexPage = ({ data }) => (
       <SocialPanel />
     </Flex>
     <Flex>
-      <Blogposts
-        data={data.allMarkdownRemark.edges}
-        isHomepage
-        title="Blogposts"
-      />
+      <Grid
+        style={{
+          gridTemplateColumns: "auto",
+          gridAutoRows: "max-content",
+          flex: "1 1 400px",
+          gridGap: "2rem",
+          paddingRight: "4rem",
+        }}
+      >
+        <h2 className="large-text" style={{ marginBottom: "1.5rem" }}>
+          Blog
+        </h2>
+        <Blogposts
+          data={data.allMarkdownRemark.edges}
+          isHomepage
+          title="Blogposts"
+        />
+      </Grid>
       <Grid
         style={{
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
           flex: "1 1 300px",
+          gridGap: "2rem",
         }}
       >
-        <h2 className="large-text" style={{ marginBottom: "3.5rem" }}>
+        <h2 className="large-text" style={{ marginBottom: "1.5rem" }}>
           Other Meetups
         </h2>
         <UpcomingMeetups data={data.allMeetup.edges} />
