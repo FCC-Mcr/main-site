@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Center from "../components/Center"
 import SEO from "../components/SEO"
 import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
@@ -18,8 +19,8 @@ export default ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article className="main blog">
-        <div>
+      <Center maxWidth="var(--content-width)">
+        <article>
           <h1>{siteTitle}</h1>
           <div className={styles.author}>
             {data.author.edges.length ? (
@@ -62,8 +63,8 @@ export default ({ data }) => {
               />
             </a>
           )}
-        </div>
-      </article>
+        </article>
+      </Center>
     </Layout>
   )
 }

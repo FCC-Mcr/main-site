@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
-import UpcomingTalks from "../components/UpcomingTalks"
+import Grid from "../components/Grid"
+import Center from "../components/Center"
+import UpcomingMeetups from "../components/UpcomingMeetups"
 
 import SEO from "../components/SEO"
 
 import { graphql } from "gatsby"
 
-const upcomingTalks = ({ data }) => {
+const upcomingMeetups = ({ data }) => {
   let todayEnd = new Date()
   todayEnd = new Date(todayEnd.setHours(23, 59, 59, 999)).toISOString()
 
@@ -30,22 +32,45 @@ const upcomingTalks = ({ data }) => {
     }
   })
 
+  let MeetupGrid = ({ day }) => (
+    <Grid
+      style={{
+        gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+        gridGap: "2rem",
+        marginBottom: "4rem",
+      }}
+    >
+      <UpcomingMeetups data={day} title="Today" page />
+    </Grid>
+  )
+
   return (
     <Layout>
       <SEO title="Upcoming Talks" />
-      <article className="main blog">
-        <h1>Upcoming Talks</h1>
-        {today.length > 0 && <UpcomingTalks data={today} title="Today" page />}
-        {tomorrow.length > 0 && (
-          <UpcomingTalks data={tomorrow} title="Tomorrow" page />
-        )}
-        <UpcomingTalks data={otherDays} title="Coming up" page />
-      </article>
+      <Center maxWidth="1030px">
+        <article>
+          <h1>Upcoming Meetups</h1>
+          {today.length > 0 && (
+            <>
+              <h2>Today</h2>
+              <MeetupGrid day={today} />
+            </>
+          )}
+          {tomorrow.length > 0 && (
+            <>
+              <h2>Tomorrow</h2>
+              <MeetupGrid day={tomorrow} />
+            </>
+          )}
+          <h2>Coming Up</h2>
+          <MeetupGrid day={otherDays} />
+        </article>
+      </Center>
     </Layout>
   )
 }
 
-export default upcomingTalks
+export default upcomingMeetups
 
 export const query = graphql`
   query {

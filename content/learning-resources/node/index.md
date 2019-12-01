@@ -1,6 +1,7 @@
 ---
-title: Back End
+title: Node
 description: The backend of an application is the code that is run on the server and is responsible for things like calculations, business logic, database interactions, and performance.
+color: var(--node-color)
 ---
 
 The backend of an application is the code that is run on the server and is responsible for things like calculations, business logic, database interactions, and performance.

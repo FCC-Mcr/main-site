@@ -197,7 +197,7 @@ pre.line-numbers > code {
   font-size: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 599px) {
   .gatsby-highlight {
     width: 100vw;
     margin: 1.666rem 0 1.666rem -1rem;

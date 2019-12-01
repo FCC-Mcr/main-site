@@ -1,53 +1,22 @@
 @import "../../styles/utility/responds-to.scss";
 
 .blogposts {
+  h2 {
+    margin-bottom: 3.5rem;
+  }
   img {
     margin-bottom: 0;
-  }
-  a {
-    text-decoration: none;
-    &:last-child {
-      display: block;
-      text-align: right;
-      text-decoration: none;
-      margin-top: auto;
-      img {
-        padding-left: 0.2rem;
-      }
-    }
-
-    .external-link {
-      margin-bottom: 4px;
-      vertical-align: middle;
-      margin-left: 12px;
-      width: 14px;
-    }
-  }
-}
-
-.blog-post {
-  margin-bottom: 1rem;
-
-  h3 {
-    margin-bottom: 0.6rem;
-  }
-  p {
-    margin-bottom: 0.2rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  small {
-    margin-right: 1rem;
   }
 }
 
 .flex {
-  flex: 1 1 550px;
+  @include responds-to("sm", "min") {
+    padding-right: 2rem;
+  }
+  @include responds-to("md", "min") {
+    padding-right: 6rem;
+  }
+  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
-  @include responds-to("sm", "min") {
-    padding-left: 2rem;
-  }
 }

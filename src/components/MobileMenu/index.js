@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import styles from "./fab.module.scss"
+import styles from "./mobile-menu.module.scss"
 import menu from "../../icons/menu.svg"
 
 const Menu = ({ handleClick }) => (
@@ -8,11 +8,11 @@ const Menu = ({ handleClick }) => (
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
-    <Link to="/upcoming-talks/">Upcoming Talks</Link>
+    <Link to="/upcoming-meetups/">Upcoming Talks</Link>
   </nav>
 )
 
-const index = props => {
+const Index = props => {
   const [toggle, setToggle] = useState(false)
 
   let handleClick = () => {
@@ -21,12 +21,10 @@ const index = props => {
 
   return (
     <>
-      <div className={`${styles.fab} u-shadow--3`} onClick={e => handleClick()}>
-        <img src={menu} alt="menu button" />
-      </div>
+      <img onClick={e => handleClick()} src={menu} alt="menu button" />
       {toggle && <Menu handleClick={handleClick} />}
     </>
   )
 }
 
-export default index
+export default Index

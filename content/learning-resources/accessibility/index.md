@@ -1,6 +1,7 @@
 ---
 title: Accessibility
-description: The practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.
+description: Enabling as many people as possible to use the web, including those with limited abilities. For people with disabilities, accessibility makes things possible.
+color: "#24C46B"
 ---
 
 [Colorable](https://colorable.jxnblk.com/) - An easy to understand colour contrast checker by Brent Jackson

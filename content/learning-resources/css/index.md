@@ -1,6 +1,7 @@
 ---
 title: CSS
-description: Cascading Style Sheets (CSS) handles the look and feel of a web page and tells the browser how to display the text and other content that you write in HTML. Every style of a webpage is determined by CSS, this includes page layouts, colors, and fonts. Think of HTML as the foundation (every house has one), and CSS as the aesthetic choices.
+description: Cascading Style Sheets (CSS) handles the look and feel of a web page and tells the browser how to display the text and other content that you write in HTML.
+color: "#2062AF"
 ---
 
 Breaking this word up into smaller parts, lets start with the phase 'Style Sheets'.

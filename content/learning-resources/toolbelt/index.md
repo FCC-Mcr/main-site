@@ -1,6 +1,7 @@
 ---
 title: Toolbelt
-description: Helps developers build applications/websites faster and automate tedious processes. Just makes life a bit easier (which we all like)
+description: Helps developers build applications/websites faster and automate tedious processes. These tools are a great addition to anyones arsenal
+color: "#21A3F1"
 ---
 
 Helps developers build applications/websites faster and automate tedious processes. Just makes life a bit easier (which we all like)
