@@ -3,9 +3,6 @@ import urlRegex from "url-regex"
 import Logo from "../Logo"
 import Button from "../Button"
 
-// import meetupLogo from "../../../logos/meetup.svg"
-// import eventbriteLogo from "../../../logos/eventbrite.svg"
-
 import downloadCalendarFile from "../../utils/downloadCalendarFile"
 import styles from "./meetup.module.scss"
 
