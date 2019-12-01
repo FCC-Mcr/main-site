@@ -49,14 +49,14 @@ const Index = ({ node }) => {
         <a href={url} className={styles.link}>
           {/* <img src={eventbriteLogo} alt="" /> */}
           <Logo name={title} />
-          <Button color={color} text={title} />
+          <Button color={color} text={`${title} →`} />
         </a>
       )
     } else {
       return (
         <Button
           color="#D43535"
-          text="Add to Calendar"
+          text="Add to Calendar →"
           onClick={() => downloadCalendarFile(node)}
         />
       )

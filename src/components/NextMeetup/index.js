@@ -72,7 +72,7 @@ const Index = () => {
       <Button
         backgroundColor="#D43535"
         color="#FFFFFF"
-        text="Add to Calendar"
+        text="Add to Calendar →"
         onClick={() => downloadCalendarFile(meetup)}
         isDisabled={meetup ? false : true}
       />

@@ -22,7 +22,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   return graphql(`
     {
@@ -53,8 +53,36 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      upcomingMeetups: allMeetup(
+        filter: {
+          excerpt: { ne: null }
+          title: { ne: null }
+          location: { ne: null }
+          start: { ne: null }
+          end: { ne: null }
+        }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 800)
+            description
+            title
+            location
+            start
+            end
+            iCalUID
+          }
+        }
+      }
     }
   `).then(result => {
+    // error if no results
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`)
+      return
+    }
     // create blog pages
     result.data.blog.edges.forEach(({ node }) => {
       createPage({
@@ -79,6 +107,23 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+    // create upcoming metups pages
+    const meetups = result.data.upcomingMeetups.edges
+    const postsPerPage = 20
+    const numPages = Math.ceil(meetups.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/upcoming-meetups` : `/upcoming-meetups/${i + 1}`,
+        component: path.resolve("./src/templates/upcoming-meetups.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
   })
 }
 
@@ -91,7 +136,7 @@ exports.sourceNodes = async ({ actions }) => {
   // fetch raw data from the randomuser api
   const fetchMeetups = () =>
     axios.get(
-      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=30&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
+      `https://www.googleapis.com/calendar/v3/calendars/a73q3trj8bssqjifgolb1q8fr4@group.calendar.google.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY&maxResults=1000&timeMin=${formattedDate}&singleEvents=true&orderBy=starttime`
     )
   // await for results
   const res = await fetchMeetups()

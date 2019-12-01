@@ -13,7 +13,7 @@ const Index = ({ node }) => {
       <span style={{ fontSize: "1rem" }}>&#x2022;</span>
       <span>{node.timeToRead} min read</span>
       <p>{node.excerpt}</p>
-      <Button text="Read More" color="#386339" link={node.fields.slug} />
+      <Button text="Read More →" color="#386339" link={node.fields.slug} />
     </>
   )
 

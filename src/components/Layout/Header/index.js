@@ -12,7 +12,7 @@ const MainNav = () => (
     <Link to="/">Home</Link>
     <Link to="/blog/">Blog</Link>
     <Link to="/learning-resources/">Resources</Link>
-    <Link to="/upcoming-meetups/">Upcoming Talks</Link>
+    <Link to="/upcoming-meetups/">Upcoming Meetups</Link>
     <MobileMenu />
   </nav>
 )

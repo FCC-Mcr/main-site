@@ -77,7 +77,7 @@ const Index = ({ isCarousel, isHomepage }) => {
               </div>
               <p>{node.frontmatter.description}</p>
               <Button
-                text={`${node.frontmatter.title} Resources`}
+                text={`${node.frontmatter.title} Resources →`}
                 color={node.frontmatter.color}
               />
             </Link>
