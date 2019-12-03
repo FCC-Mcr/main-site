@@ -29,7 +29,7 @@ const Index = () => {
     }
   `)
 
-  let meetup = data.allMeetup.edges[0].node
+  let meetup = data.allMeetup.edges[0] && data.allMeetup.edges[0].node
 
   let getOrdinal = n => {
     var s = ["th", "st", "nd", "rd"],
