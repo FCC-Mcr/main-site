@@ -29,7 +29,7 @@ const Index = () => {
     }
   `)
 
-  let meetup = data.allMeetup.edges[0].node
+  let meetup = data.allMeetup.edges[0] && data.allMeetup.edges[0].node
 
   let getOrdinal = n => {
     var s = ["th", "st", "nd", "rd"],
@@ -72,7 +72,7 @@ const Index = () => {
       <Button
         backgroundColor="#D43535"
         color="#FFFFFF"
-        text="Add to Calendar"
+        text="Add to Calendar →"
         onClick={() => downloadCalendarFile(meetup)}
         isDisabled={meetup ? false : true}
       />

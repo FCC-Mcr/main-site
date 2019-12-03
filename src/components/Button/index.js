@@ -17,7 +17,7 @@ const Index = ({
     onClick={onClick}
     disabled={isDisabled ? true : false}
   >
-    {text} →
+    {text}
   </button>
 )
 
