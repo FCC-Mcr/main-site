@@ -1,4 +1,43 @@
-@import url("https://rsms.me/inter/inter.css");
+// @import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.11")
+      format("woff2"),
+    url("https://rsms.me/inter/font-files/Inter-Medium.woff?v=3.11")
+      format("woff");
+  unicode-range: U+A, U+20-23, U+25-29, U+2C-59, U+61-7A, U+2013, U+2014, U+201C,
+    U+201D, U+2022, U+2026, U+2192, U+270C, U+FE0F, U+1F369;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.11")
+      format("woff2"),
+    url("https://rsms.me/inter/font-files/Inter-SemiBold.woff?v=3.11")
+      format("woff");
+  unicode-range: U+A, U+20-23, U+25-29, U+2C-59, U+61-7A, U+2013, U+2014, U+201C,
+    U+201D, U+2022, U+2026, U+2192, U+270C, U+FE0F, U+1F369;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff2?v=3.11")
+      format("woff2"),
+    url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff?v=3.11")
+      format("woff");
+  unicode-range: U+A, U+20-23, U+25-29, U+2C-59, U+61-7A, U+2013, U+2014, U+201C,
+    U+201D, U+2022, U+2026, U+2192, U+270C, U+FE0F, U+1F369;
+}
 
 html {
   font-family: "Inter", sans-serif;
