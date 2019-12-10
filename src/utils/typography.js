@@ -30,7 +30,6 @@ const typography = new Typography({
     },
     a: {
       color: "#2c2c2c",
-      textDecoration: "none",
     },
   }),
 })
