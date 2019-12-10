@@ -20,7 +20,7 @@ const typography = new Typography({
       color: "#2c2c2c",
     },
     h1: {
-      marginBottom: "3.5rem",
+      marginBottom: "1.5rem",
     },
     code: {
       fontSize: rhythm(1 / 2),
@@ -30,6 +30,7 @@ const typography = new Typography({
     },
     a: {
       color: "#2c2c2c",
+      // textDecoration: "none",
     },
   }),
 })
