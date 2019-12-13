@@ -13,7 +13,7 @@ const BlogPage = ({ data }) => (
     <SEO title="Blog" />
     <Center maxWidth="1030px">
       <article>
-        <h1>Blog</h1>
+        <h1 style={{ marginBottom: "var(--title-spacing)" }}>Blog</h1>
         <Grid
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",

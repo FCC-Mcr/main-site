@@ -33,11 +33,13 @@ const IndexPage = ({ data }) => (
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
           flex: "1 1 400px",
-          gridGap: "2rem",
           paddingRight: "4rem",
         }}
       >
-        <h2 className="large-text" style={{ marginBottom: "1.5rem" }}>
+        <h2
+          className="large-text"
+          style={{ marginBottom: "var(--title-spacing)" }}
+        >
           Blog
         </h2>
         <Blogposts
@@ -51,10 +53,12 @@ const IndexPage = ({ data }) => (
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
           flex: "1 1 300px",
-          gridGap: "2rem",
         }}
       >
-        <h2 className="large-text" style={{ marginBottom: "1.5rem" }}>
+        <h2
+          className="large-text"
+          style={{ marginBottom: "var(--title-spacing)" }}
+        >
           Other Meetups
         </h2>
         <UpcomingMeetups data={data.allMeetup.edges} />

@@ -3,9 +3,6 @@
 .flex {
   display: flex;
   flex-wrap: wrap;
-  @include responds-to("sm", "max") {
-    margin-bottom: 3rem;
-  }
   > div {
     margin-bottom: 4rem;
     @include responds-to("sm", "max") {

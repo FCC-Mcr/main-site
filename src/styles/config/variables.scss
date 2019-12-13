@@ -1,3 +1,5 @@
+@import "../utility/responds-to.scss";
+
 :root {
   // colors
   --button-default: #e21010;
@@ -15,4 +17,9 @@
   --learning-resource-links: #f7df1e;
   // content widths
   --content-width: 720px;
+
+  --title-spacing: 3.5rem;
+  @include responds-to("sm", "max") {
+    --title-spacing: 2rem;
+  }
 }

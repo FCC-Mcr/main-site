@@ -60,7 +60,11 @@ const upcomingMeetups = ({ data, pageContext }) => {
       <SEO title="Upcoming Meetups" />
       <Center maxWidth="1030px">
         <article>
-          {isFirst && <h1>Upcoming Meetups</h1>}
+          {isFirst && (
+            <h1 style={{ marginBottom: "var(--title-spacing)" }}>
+              Upcoming Meetups
+            </h1>
+          )}
           {today.length > 0 && (
             <>
               {isFirst && <h2>Today</h2>}
