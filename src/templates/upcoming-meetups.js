@@ -61,7 +61,9 @@ const upcomingMeetups = ({ data, pageContext }) => {
       <Center maxWidth="1030px">
         <article>
           {isFirst && (
-            <h1 style={{ marginBottom: "3.5rem" }}>Upcoming Meetups</h1>
+            <h1 style={{ marginBottom: "var(--title-spacing)" }}>
+              Upcoming Meetups
+            </h1>
           )}
           {today.length > 0 && (
             <>

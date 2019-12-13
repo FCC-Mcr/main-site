@@ -83,7 +83,7 @@ export const query = graphql`
         date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 720) {
+            sizes(maxWidth: 720, quality: 80) {
               ...GatsbyImageSharpSizes
             }
           }
@@ -94,7 +94,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fixed(width: 55, height: 55) {
+            fixed(width: 55, height: 55, quality: 80) {
               ...GatsbyImageSharpFixed
             }
           }

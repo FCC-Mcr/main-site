@@ -8,7 +8,7 @@
   }
 
   h2 {
-    margin-bottom: 3.5rem;
+    margin-bottom: var(--title-spacing);
   }
   @include responds-to("sm", "min") {
     margin-left: 1.5rem;

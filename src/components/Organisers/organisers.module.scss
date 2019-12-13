@@ -1,7 +1,7 @@
 @import "../../styles/utility/responds-to.scss";
 
 .title {
-  margin-bottom: 3.5rem;
+  margin-bottom: var(--title-spacing);
   @include responds-to("sm", "min") {
     text-align: center;
   }
