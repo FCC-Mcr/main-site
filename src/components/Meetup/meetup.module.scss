@@ -1,9 +1,14 @@
-@import "../../styles/config/colour.scss";
 @import "../../styles/utility/responds-to.scss";
 
 .meetup {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
+  @include responds-to("sm", "max") {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   span {
     display: flex;
@@ -49,7 +54,7 @@ span.location {
 
   p {
     margin: 0 0 0.4rem;
-    color: $grey;
+    color: var(--grey-color);
     flex: 1;
 
     &:first-of-type {
