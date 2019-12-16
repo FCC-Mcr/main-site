@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => (
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
           flex: "1 1 400px",
-          paddingRight: "4rem",
+          paddingRight: "var(--blog-conditional-padding)",
         }}
       >
         <h2
