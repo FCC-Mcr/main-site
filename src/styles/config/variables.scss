@@ -17,9 +17,19 @@
   --learning-resource-links: #f7df1e;
   // content widths
   --content-width: 720px;
-
+  // spacing for all titles on site
   --title-spacing: 3.5rem;
   @include responds-to("sm", "max") {
     --title-spacing: 2rem;
+  }
+  // standardize responsive grid layout
+  --grid-responsive-default: repeat(auto-fill, minmax(400px, 1fr));
+  @include responds-to("sm", "max") {
+    --grid-responsive-default: auto;
+  }
+  // conditional padding for blog on the homepage
+  --blog-conditional-padding: 4rem;
+  @include responds-to("sm", "max") {
+    --blog-conditional-padding: 0;
   }
 }
