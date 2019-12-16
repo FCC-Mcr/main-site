@@ -46,7 +46,7 @@ const upcomingMeetups = ({ data, pageContext }) => {
   let MeetupGrid = ({ day }) => (
     <Grid
       style={{
-        gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+        gridTemplateColumns: "var(--grid-responsive-default)",
         gridGap: "2rem",
         marginBottom: "4rem",
       }}

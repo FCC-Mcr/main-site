@@ -16,7 +16,7 @@ const BlogPage = ({ data }) => (
         <h1 style={{ marginBottom: "var(--title-spacing)" }}>Blog</h1>
         <Grid
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+            gridTemplateColumns: "var(--grid-responsive-default)",
             gridGap: "2rem",
           }}
         >
