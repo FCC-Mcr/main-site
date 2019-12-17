@@ -69,7 +69,7 @@
 
   @include responds-to("sm", "max") {
     --carousel-right-padding: 1rem;
-    width: calc(100vw - 4rem);
+    flex: 1 0 calc(100vw - 2.5rem);
     margin-right: 0.5rem;
   }
 }
