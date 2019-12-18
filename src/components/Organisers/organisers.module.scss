@@ -13,7 +13,6 @@
   scroll-snap-align: center;
   flex: 1 0 360px;
   margin-right: 2rem;
-  min-height: 210px;
   padding: 1.5rem;
 
   h3 {
@@ -79,7 +78,7 @@
   grid-template-columns: 56px 1fr;
   grid-gap: 16px 12px;
   @include responds-to("sm", "max") {
-    grid-template-rows: auto 110px 1fr;
+    grid-template-rows: auto 96px 1fr;
   }
 
   div {
