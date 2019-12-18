@@ -1,13 +1,12 @@
 import React from "react"
-import Carousel from "../Carousel"
-import Grid from "../Grid"
-import Card from "../Card"
-import Logo from "../Logo"
-
-import Center from "../Center"
-import Button from "../Button"
-
 import { Link, useStaticQuery, graphql } from "gatsby"
+
+import Button from "../Button"
+import Card from "../Card"
+import Carousel from "../Carousel"
+import Center from "../Center"
+import Grid from "../Grid"
+import Logo from "../Logo"
 
 import styles from "./learning-resources.module.scss"
 
@@ -65,9 +64,8 @@ const Index = ({ isCarousel, isHomepage }) => {
         {data.allMarkdownRemark.edges.map(({ node }, i) => (
           <Card
             key={i}
-            height={3}
-            className={`${styles.learningResources} ${
-              isCarousel ? styles.carousel : styles.grid
+            className={`${styles.learningResource} ${
+              isCarousel ? styles.carouselItem : styles.gridItem
             }`}
           >
             <Link to={node.fields.slug}>

@@ -8,21 +8,12 @@
 }
 
 .organiser {
+  --carousel-right-padding: 40px;
+  position: relative;
   scroll-snap-align: center;
-  width: 360px;
+  flex: 1 0 360px;
   margin-right: 2rem;
-  display: inline-block;
-  vertical-align: top;
-  min-height: 210px;
   padding: 1.5rem;
-  @include responds-to("sm", "max") {
-    width: calc(100vw - 4rem);
-    margin-right: 0.5rem;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   h3 {
     display: block;
@@ -61,6 +52,25 @@
     margin-right: 0.75rem;
     vertical-align: middle;
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:last-child:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(-1 * var(--carousel-right-padding));
+    width: var(--carousel-right-padding);
+    height: 1px;
+  }
+
+  @include responds-to("sm", "max") {
+    --carousel-right-padding: 1rem;
+    flex: 1 0 calc(100vw - 2.5rem);
+    margin-right: 0.5rem;
+  }
 }
 
 .grid {
@@ -68,7 +78,7 @@
   grid-template-columns: 56px 1fr;
   grid-gap: 16px 12px;
   @include responds-to("sm", "max") {
-    grid-template-rows: auto 110px 1fr;
+    grid-template-rows: auto 96px 1fr;
   }
 
   div {
