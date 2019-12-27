@@ -1,7 +1,7 @@
 ---
 title: What is DX (Developer Experience)?
 date: 2018-08-05
-featuredImage: ./epic-jump.png
+featuredImage: ./epic-jump.jpg
 author: Anthony Tran
 ---
 
@@ -24,7 +24,7 @@ This is nothing new of course, it’s been an age old problem, however this does
 
 ## Back to Basics
 
-![An adorable baby](./adorable-baby.png)
+![An adorable baby](./adorable-baby.jpg)
 
 > If you are not a bit of geek and generally disinterested the word etymologies, skip until you reach the section From UX to DX
 
@@ -90,11 +90,11 @@ So we’ve accurately described a definition for both UX and DX, and transferred
 
 The easier the API or tool is too learn, the sooner it can be effectively be utilised by more team members. We can even talk on a macro-scale, where an ecosystem of people revolving around a tool starts to grow, which can result in a faster rate of adoption.
 
-![react-js documentation on pure components](./reactjs-documentation-purecomponent.png)
+![react-js documentation on pure components](./reactjs-documentation-purecomponent.jpg)
 
 This section of the React Doc contains many links and highlights on core aspects on the API, including the prerequisite term “immutable objects”. All this is necessary to aim the API at a larger audience; whether you are a junior or senior, everyone can benefit from this documentation
 
-![d3-js documentation transitions](./d3-js-documentation-transitions.png)
+![d3-js documentation transitions](./d3-js-documentation-transitions.jpg)
 
 I specifically choose this section from the official D3JS page, as it has elements that API document authors should avoid — not disparaging the D3 library here, highly respect the work Mike Bostrom the creator is doing.
 
@@ -113,23 +113,23 @@ VueJS’s tutorials are an excellent example, take a look at the amount of suppo
 VueJS documents on Declarative Rendering
 The Vue team even went a step further with their interactive lessons using scrimba
 
-![Vue-js declaration rendering tutorial using Scrimba](./vue-js-declarative-rendering.png)
+![Vue-js declaration rendering tutorial using Scrimba](./vue-js-declarative-rendering.jpg)
 
 ### Feedback Quality
 
 Whenever something goes wrong, it’s essential that developers receive an unambiguous, detailed response of the error, a trace-stack and even a way to deal with the problem. This may all seem obvious, however not many tools out either are very specific with the issue at hand, meaning that developers spend time searching for problems they have presumably caused, time that could be spent developing
 
-![Beautified React error message on component exports](./react-error-message-on-js-exports.png)
+![Beautified React error message on component exports](./react-error-message-on-js-exports.jpg)
 
 The error message not only states the error, but it also gives the developer the likely solution to the problem _per se_. Let’s compare this to an example of the error messages of Node v4.
 
-![Set timeout Node v4 error message](./set-timeout-node-v4-error-message.png)
+![Set timeout Node v4 error message](./set-timeout-node-v4-error-message.jpg)
 
 I want to thank Anna Henningsen for her talk on Node.js at JSConf Iceland 2018. She mentions how this error message doesn’t really describe the problem that exists.
 
 With Anna’s help, the change to the error message for Node v5 is the one made below.
 
-![Set timeout Node v5 error message](./set-timeout-node-v5-error-message.png)
+![Set timeout Node v5 error message](./set-timeout-node-v5-error-message.jpg)
 
 Still further improvement can be made; to state that the callback is the second argument of the setTimeout method.
 
