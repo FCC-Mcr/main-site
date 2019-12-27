@@ -19,14 +19,13 @@ $nav-spacing: 2rem;
   justify-content: space-between;
   align-items: center;
   padding: 0 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   @include responds-to("sm", "max") {
     padding: 0 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
   }
-  position: relative;
   z-index: map-get($layers, "highest");
 
   > a {
