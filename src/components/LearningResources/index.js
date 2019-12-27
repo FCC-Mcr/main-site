@@ -67,6 +67,7 @@ const Index = ({ isCarousel, isHomepage }) => {
             className={`${styles.learningResource} ${
               isCarousel ? styles.carouselItem : styles.gridItem
             }`}
+            shadowType="hover"
           >
             <Link to={node.fields.slug}>
               <div>
