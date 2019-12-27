@@ -7,12 +7,22 @@ import MobileMenu from "../../MobileMenu"
 import logo from "../../../icons/logo.svg"
 import styles from "./header.module.scss"
 
+const activeStyles = {
+  textDecoration: "underline",
+}
+
+const NavLink = ({ children, to }) => (
+  <Link to={to} activeStyle={activeStyles}>
+    {children}
+  </Link>
+)
+
 const MainNav = () => (
   <nav className={styles.nav}>
-    <Link to="/">Home</Link>
-    <Link to="/blog/">Blog</Link>
-    <Link to="/learning-resources/">Resources</Link>
-    <Link to="/upcoming-meetups/">Upcoming Meetups</Link>
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/blog/">Blog</NavLink>
+    <NavLink to="/learning-resources/">Resources</NavLink>
+    <NavLink to="/upcoming-meetups/">Upcoming Meetups</NavLink>
     <MobileMenu />
   </nav>
 )
