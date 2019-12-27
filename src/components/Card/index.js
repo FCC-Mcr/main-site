@@ -5,8 +5,8 @@ import styles from "./card.module.scss"
  * @param { string } className class to add to className string
  * @param { Number } height determines box-shadow strength
  */
-const Card = ({ children, className, shadowSize = "large" }) => {
-  const shadowClass = shadowSize ? `shadow-${shadowSize}` : ""
+const Card = ({ children, className, shadowType = "large" }) => {
+  const shadowClass = shadowType ? `shadow-${shadowType}` : ""
 
   return (
     <div
