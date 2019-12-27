@@ -1,14 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import Center from "../components/Center"
-import SEO from "../components/SEO"
-import Image from "gatsby-image"
-import { rhythm } from "../utils/typography"
 
-import styles from "./blog-post.module.scss"
+import Center from "../components/Center"
+import Image from "gatsby-image"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 import externalLinkIcon from "../icons/external-link.svg"
+import styles from "./blog-post.module.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -41,8 +40,8 @@ export default ({ data }) => {
           {post.frontmatter.featuredImage && (
             <Image
               style={{
-                marginBottom: rhythm(1),
-                borderRadius: "1%",
+                marginBottom: "2rem",
+                borderRadius: "5px",
               }}
               sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
             />
@@ -83,8 +82,8 @@ export const query = graphql`
         date(formatString: "MMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 720, quality: 80) {
-              ...GatsbyImageSharpSizes
+            sizes(maxWidth: 720, quality: 90, toFormat: JPG) {
+              ...GatsbyImageSharpSizes_withWebp
             }
           }
         }
