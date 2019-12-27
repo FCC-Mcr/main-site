@@ -1,7 +1,8 @@
 ---
-title: Using React Context instead of Redux
-date: 2019-06-08
 author: Adam Collier
+date: 2019-06-08
+featuredImage: ./featured-image.jpg
+title: Using React Context instead of Redux
 ---
 
 Whilst learning react I have heard a lot of talk about Redux and that being the go to solution for state management in a web application. But as I've done a little bit of exploring and read countless articles there has also been a lot of people leaning on React Context instead since it's already included as an API in React.
