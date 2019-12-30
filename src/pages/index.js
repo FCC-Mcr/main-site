@@ -99,7 +99,7 @@ export const query = graphql`
     allMeetup(
       filter: {
         excerpt: { ne: null }
-        title: { ne: null }
+        title: { ne: null, regex: "/^(?!FreeCodeCamp).*$/gi" }
         location: { ne: null }
         start: { ne: null }
         end: { ne: null }

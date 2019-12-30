@@ -34,14 +34,16 @@ module.exports = {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               destinationDir: `${__dirname}/content`,
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `webp`],
             },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
               linkImagesToOriginal: false,
-              maxWidth: 684,
+              maxWidth: 720,
+              withWebp: true,
+              quality: 90,
             },
           },
         ],

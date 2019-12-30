@@ -1,7 +1,5 @@
 import React from "react"
 import Blogpost from "../Blogpost"
-// import Grid from "../Grid"
-// import styles from "./blogposts.module.scss"
 
 const Index = ({ data }) => (
   <>

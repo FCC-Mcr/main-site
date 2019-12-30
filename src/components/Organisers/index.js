@@ -114,7 +114,7 @@ const Index = () => {
 
       <Carousel>
         {organisers.map((organiser, i) => (
-          <Card key={i} height={3} className={`${styles.organiser}`}>
+          <Card key={i} shadowType="hover" className={`${styles.organiser}`}>
             <div className={styles.grid}>
               <Img
                 fluid={

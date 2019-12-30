@@ -49,6 +49,19 @@ export const query = graphql`
             author
             isExternal
             externalLink
+            featuredImage {
+              childImageSharp {
+                sizes(
+                  maxWidth: 720
+                  maxHeight: 360
+                  quality: 90
+                  toFormat: JPG
+                  cropFocus: CENTER
+                ) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
           }
         }
       }
