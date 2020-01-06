@@ -9,13 +9,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./Header/"
+import Header from "../Header"
 
 import styles from "./layout.module.scss"
 import "./layout.scss"
 import "../../styles/config/variables.scss"
 
-const Layout = ({ blog, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

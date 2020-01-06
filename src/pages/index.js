@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/"
 import SEO from "../components/SEO/"
 
-import Header from "../components/Header"
+import Header from "../components/Hero"
 import NextMeetup from "../components/NextMeetup"
 import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"

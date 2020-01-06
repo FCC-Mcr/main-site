@@ -1,11 +1,75 @@
-.header {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  margin-top: -2.499rem;
-  padding-top: 130px;
+/**
+ *  this is just for testing purposes to ensure scss and css modules
+ *  are initialised correctly feel free to alter or remove this file.
+ */
 
-  h1 {
-    margin-bottom: 1.2rem;
+@import "../../styles/utility/responds-to.scss";
+@import "../../styles/config/colour.scss";
+@import "../../styles/config/globals.scss";
+
+$header-height: 3.5rem;
+$nav-spacing: 2rem;
+
+.header {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: $accent;
+  height: $header-height;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include responds-to("sm", "max") {
+    padding: 0 1rem;
+  }
+  z-index: map-get($layers, "highest");
+
+  > a {
+    display: flex;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    @include responds-to("sm", "max") {
+      height: 2rem;
+    }
+  }
+}
+
+nav {
+  a {
+    color: $accent;
+    font-weight: 600;
+    margin-right: $nav-spacing;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  @include responds-to("sm", "min") {
+    img {
+      display: none;
+    }
+  }
+  @include responds-to("sm", "max") {
+    > a {
+      display: none;
+    }
+    img {
+      height: 1.25rem;
+      margin-bottom: 0;
+    }
   }
 }
