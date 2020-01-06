@@ -10,6 +10,20 @@ import Logo from "../Logo"
 
 import styles from "./learning-resources.module.scss"
 
+const WrapperComponent = ({ isCarousel, children }) =>
+  isCarousel ? (
+    <Carousel>{children}</Carousel>
+  ) : (
+    <Grid
+      style={{
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+        gridGap: "2rem",
+      }}
+    >
+      {children}
+    </Grid>
+  )
+
 const Index = ({ isCarousel, isHomepage }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -33,23 +47,6 @@ const Index = ({ isCarousel, isHomepage }) => {
       }
     }
   `)
-
-  const WrapperComponent = ({ isCarousel, children }) => {
-    if (isCarousel) {
-      return <Carousel>{children}</Carousel>
-    } else {
-      return (
-        <Grid
-          style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gridGap: "2rem",
-          }}
-        >
-          {children}
-        </Grid>
-      )
-    }
-  }
 
   return (
     <>
