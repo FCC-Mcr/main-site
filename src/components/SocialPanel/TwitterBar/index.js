@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "../../Card"
+import Button from "../../Button"
 
 import twitterLogo from "../../../icons/twitter.svg"
 
@@ -7,9 +8,9 @@ import styles from "./twitterBar.module.scss"
 
 const TwitterBar = () => (
   <Card className={styles.twitter}>
-    <img src={twitterLogo} alt="twitter logo" />
+    <img data-testid="twitterLogo" src={twitterLogo} alt="twitter logo" />
     <a href="https://twitter.com/FreeCodeCampMCR">
-      <button>Follow us on Twitter →</button>
+      <Button text="Follow us on Twitter →" color="#1b92db" />
     </a>
   </Card>
 )
