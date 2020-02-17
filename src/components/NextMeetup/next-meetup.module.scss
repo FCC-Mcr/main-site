@@ -1,3 +1,5 @@
+@import "../../styles/utility/responds-to.scss";
+
 .next-meetup {
   padding: 6rem 0rem;
   display: flex;
@@ -11,6 +13,13 @@
     text-align: center;
   }
 
+  @include responds-to("sm", "max") {
+    padding: 3rem 0rem 5rem 0rem;
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
   div {
     display: flex;
     justify-content: center;
@@ -22,6 +31,12 @@
       flex: 0 0 auto;
       font-size: 1.5rem;
       font-weight: 600;
+      color: var(--grey-color);
+
+      @include responds-to("sm", "max") {
+        font-size: 1rem;
+        margin: 0 1rem 0 0;
+      }
 
       &:last-of-type {
         flex: 0 1 auto;

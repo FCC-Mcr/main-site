@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/"
 import SEO from "../components/SEO/"
 
-import Header from "../components/Hero"
+import Hero from "../components/Hero"
 import NextMeetup from "../components/NextMeetup"
 import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"
@@ -20,7 +20,7 @@ import Contributing from "../components/Contributing"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Header />
+    <Hero />
     <NextMeetup />
     <Organisers />
     <Flex>

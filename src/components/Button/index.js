@@ -16,6 +16,7 @@ const Index = ({
     }}
     onClick={onClick}
     disabled={isDisabled ? true : false}
+    data-testid="button"
   >
     {text}
   </button>
