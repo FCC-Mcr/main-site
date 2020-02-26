@@ -12,8 +12,8 @@ $nav-spacing: 2rem;
 
 .header {
   display: flex;
+  background: transparent;
   align-items: center;
-  background: rgba(255, 255, 255, 0.9);
   color: $accent;
   height: $header-height;
   justify-content: space-between;
@@ -23,6 +23,7 @@ $nav-spacing: 2rem;
   top: 0;
   left: 0;
   right: 0;
+  transition: all 250ms ease-in-out;
   @include responds-to("sm", "max") {
     padding: 0 1rem;
   }
@@ -38,6 +39,10 @@ $nav-spacing: 2rem;
       height: 2rem;
     }
   }
+}
+
+.header-background {
+  background: #ffffff;
 }
 
 nav {

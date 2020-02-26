@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import MobileMenu from "../MobileMenu"
 
 // icons
@@ -27,17 +27,37 @@ const MainNav = () => (
   </nav>
 )
 
-const Header = ({ siteTitle }) => (
-  <>
-    <header className={`${styles.header}  u-shadow--1`}>
-      <Link to="/" className={styles.title} aria-label="Home">
-        {/* need to bring in icon */}
-        <img className={styles.logo} src={logo} alt="" />
-      </Link>
-      <MainNav />
-    </header>
-  </>
-)
+const Header = ({ siteTitle }) => {
+  const [backgroundColor, setBackgroundColor] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 40 ? setBackgroundColor(true) : setBackgroundColor(false)
+    }
+
+    document.addEventListener("scroll", handleScroll)
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  return (
+    <>
+      <header
+        className={`${styles.header} ${
+          backgroundColor ? `${styles.headerBackground} shadow-smallest` : ""
+        }`}
+      >
+        <Link to="/" className={styles.title} aria-label="Home">
+          {/* need to bring in icon */}
+          <img className={styles.logo} src={logo} alt="" />
+        </Link>
+        <MainNav />
+      </header>
+    </>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
