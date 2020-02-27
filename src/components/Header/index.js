@@ -8,7 +8,7 @@ import logo from "../../icons/logo.svg"
 import styles from "./header.module.scss"
 
 const activeStyles = {
-  textDecoration: "underline",
+  borderBottom: "2px solid var(--primary-color)",
 }
 
 const NavLink = ({ children, to }) => (

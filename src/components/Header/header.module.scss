@@ -51,8 +51,10 @@ nav {
     font-weight: 600;
     margin-right: $nav-spacing;
     text-decoration: none;
+    line-height: 1.4;
+    border-bottom: 2px solid transparent;
     &:hover {
-      text-decoration: underline;
+      border-bottom: 2px solid var(--primary-color);
     }
   }
   :last-child {
