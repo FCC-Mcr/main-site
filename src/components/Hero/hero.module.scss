@@ -1,11 +1,47 @@
+@import "../../styles/utility/responds-to.scss";
+
 .hero {
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: -2.499rem;
   padding-top: 130px;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    flex: 1 1 150px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(
+      180deg,
+      rgba(13, 242, 17, 0.3) 0%,
+      rgba(56, 99, 57, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 2rem;
+    @include responds-to("sm", "max") {
+      display: none;
+    }
+  }
 
   h1 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
+    margin-right: 6rem;
+    @include responds-to("md", "max") {
+      font-size: 2.6rem;
+    }
   }
 }

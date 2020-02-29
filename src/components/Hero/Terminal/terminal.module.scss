@@ -1,0 +1,73 @@
+.terminal {
+  width: 450px;
+  border-radius: 3px;
+  background: #ffffff;
+  animation: terminalFloat 3s ease-in-out infinite;
+  margin-bottom: 2rem;
+}
+
+@keyframes terminalFloat {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.body {
+  ul {
+    list-style-type: none;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+      monospace;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    margin: 0;
+    white-space: pre-wrap;
+    padding: 1.5rem 2rem;
+
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eaeaea;
+
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    &:nth-child(1) {
+      background: #ff5f57;
+    }
+
+    &:nth-child(2) {
+      background: #28c840;
+      margin-left: 0.5rem;
+    }
+
+    &:nth-child(3) {
+      background: #ffbd2f;
+      margin-left: 0.5rem;
+    }
+  }
+}
