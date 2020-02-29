@@ -1,9 +1,9 @@
 @import "./responds-to.scss";
 
 .xx-large-text {
-  font-size: 4.5rem;
+  font-size: 4rem;
   @include responds-to("sm", "max") {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 }
 

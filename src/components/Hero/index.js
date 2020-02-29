@@ -1,19 +1,22 @@
 import React from "react"
 import Center from "../Center"
-
+import Terminal from "./Terminal"
 import styles from "./hero.module.scss"
+import Button from "../Button"
 
 const Hero = () => (
-  <Center maxWidth="var(--content-width)" className={styles.hero}>
-    <h1 className="xx-large-text">FreeCodeCamp Manchester</h1>
-    <p>
-      Welcome to FreeCodeCamp Manchester! We are mentors, coders and learners
-      from Manchester, Greater Manchester and its surrounding areas and one part
-      of the global FreeCodeCamp Community. We hold Study Groups twice a month
-      for our members to meet in person, code together and get help and advice
-      from Organisers and Mentors - Keep an eye on the events for further
-      information and we hope to see you around!
-    </p>
+  <Center maxWidth="1100px" className={styles.hero}>
+    <div>
+      <h1 className="xx-large-text">FreeCodeCamp Manchester</h1>
+      <a href="https://www.freecodecamp.org/">
+        <Button
+          color="var(--white-color)"
+          backgroundColor="var(--primary-color)"
+          text="Start your journey →"
+        />
+      </a>
+    </div>
+    <Terminal />
   </Center>
 )
 

@@ -6,10 +6,10 @@ const typography = new Typography({
   headerLineHeight: 1.4,
   scaleRatio: 2.8,
   headerFontFamily: ["Inter"],
-  headerColor: "#2c2c2c",
+  headerColor: "var(--black-color)",
   headerWeight: 800,
   bodyFontFamily: ["Inter"],
-  bodyColor: "#2c2c2c",
+  bodyColor: "var(--black-color)",
   bodyWeight: 500,
   blockMarginBottom: "1rem",
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
@@ -17,7 +17,7 @@ const typography = new Typography({
       fontFamily: "Inter",
       fontStyle: "normal",
       fontWeight: 600,
-      color: "#2c2c2c",
+      color: "var(--black-color)",
     },
     h1: {
       marginBottom: "1.5rem",
@@ -29,8 +29,7 @@ const typography = new Typography({
       fontKerning: "auto",
     },
     a: {
-      color: "#2c2c2c",
-      // textDecoration: "none",
+      color: "var(--black-color)",
     },
   }),
 })
