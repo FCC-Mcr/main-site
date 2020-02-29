@@ -113,7 +113,7 @@ export const query = graphql`
         start: { ne: null }
         end: { ne: null }
       }
-      limit: 3
+      limit: 2
     ) {
       edges {
         node {
