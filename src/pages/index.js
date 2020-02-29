@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/"
 import SEO from "../components/SEO/"
 
-import Header from "../components/Header"
+import Hero from "../components/Hero"
 import NextMeetup from "../components/NextMeetup"
 import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"
@@ -20,7 +20,7 @@ import Contributing from "../components/Contributing"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Header />
+    <Hero />
     <NextMeetup />
     <Organisers />
     <Flex>
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
         style={{
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
-          flex: "1 1 400px",
+          flex: "1 1 300px",
           paddingRight: "var(--blog-conditional-padding)",
         }}
       >
@@ -42,17 +42,13 @@ const IndexPage = ({ data }) => (
         >
           Blog
         </h2>
-        <Blogposts
-          data={data.allMarkdownRemark.edges}
-          isHomepage
-          title="Blogposts"
-        />
+        <Blogposts data={data.allMarkdownRemark.edges} />
       </Grid>
       <Grid
         style={{
           gridTemplateColumns: "auto",
           gridAutoRows: "max-content",
-          flex: "1 1 300px",
+          flex: "1 1 400px",
         }}
       >
         <h2
@@ -75,7 +71,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/blog/.*.md$/" } }
-      limit: 3
+      limit: 2
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
@@ -92,6 +88,19 @@ export const query = graphql`
             author
             isExternal
             externalLink
+            featuredImage {
+              childImageSharp {
+                sizes(
+                  maxWidth: 720
+                  maxHeight: 360
+                  quality: 90
+                  toFormat: JPG
+                  cropFocus: CENTER
+                ) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
           }
         }
       }
@@ -104,7 +113,7 @@ export const query = graphql`
         start: { ne: null }
         end: { ne: null }
       }
-      limit: 2
+      limit: 3
     ) {
       edges {
         node {

@@ -9,7 +9,7 @@ $main-max-width: 1200px;
   > article {
     padding: 2.499rem 0rem;
     @include responds-to("sm", "max") {
-      padding: 5rem 0rem;
+      padding: 2rem 0rem;
     }
   }
 }
