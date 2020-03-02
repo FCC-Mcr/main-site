@@ -4,7 +4,7 @@
   > div {
     display: flex;
     flex-direction: column;
-    flex: 1 1 250px;
+    flex: 1 1 450px;
 
     &:first-of-type {
       width: 30%;
@@ -13,7 +13,7 @@
 
     &:last-of-type {
       width: 70%;
-      flex: 2 1 250px;
+      flex: 1 1 250px;
     }
   }
 }
