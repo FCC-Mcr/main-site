@@ -1,0 +1,19 @@
+.blog-section {
+  width: 100%;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 450px;
+
+    &:first-of-type {
+      width: 30%;
+      padding-right: var(--blog-conditional-padding);
+    }
+
+    &:last-of-type {
+      width: 70%;
+      flex: 1 1 250px;
+    }
+  }
+}

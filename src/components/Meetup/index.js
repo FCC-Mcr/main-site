@@ -36,18 +36,17 @@ const Index = ({ node }) => {
       }
     })
 
-  // remove any <br> tags at the beginning of the string
+  // remove any tags in the string
   node.excerpt = node.excerpt
-    .replace(/<br\s*\/?>/gi, " ")
-    .replace(/<b>|<\/b>/gm, "")
-    .replace(/<a\s+/gi, `<a rel="noopener" `)
+    .replace(/(<([^>]+)>)/gi, " ")
+    .replace(/<a.*?<\/a>/gi, "")
+    .replace(/&nbsp;/, " ")
 
   const MeetupLink = () => {
     if (Object.entries(eventLink).length !== 0) {
       let { color, title, url } = eventLink
       return (
         <a href={url} className={styles.link}>
-          {/* <img src={eventbriteLogo} alt="" /> */}
           <Logo name={title} />
           <Button color={color} text={`${title} →`} />
         </a>
@@ -75,7 +74,7 @@ const Index = ({ node }) => {
         <img src={location} alt="location icon" />
         <span className={styles.location}>{node.location}</span>
       </div>
-      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      <p>{node.excerpt}</p>
       <div className={styles.link}>
         <MeetupLink />
       </div>
