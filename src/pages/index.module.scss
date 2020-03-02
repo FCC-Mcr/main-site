@@ -4,15 +4,16 @@
   > div {
     display: flex;
     flex-direction: column;
-    flex: 1 1 300px;
+    flex: 1 1 250px;
 
     &:first-of-type {
-      width: 40%;
+      width: 30%;
       padding-right: var(--blog-conditional-padding);
     }
 
     &:last-of-type {
-      width: 60%;
+      width: 70%;
+      flex: 2 1 250px;
     }
   }
 }
