@@ -23,7 +23,12 @@ const index = () => {
           <li>
             $ <b>Twice</b> a month we meet in person to learn and code together
           </li>
-          <li>$ Keep an eye on the events for further information!! 👀</li>
+          <li>
+            $ Keep an eye on the events for further information!!{" "}
+            <span role="img" aria-label="looking eyes emoji">
+              👀
+            </span>
+          </li>
         </ul>
       </div>
     </div>

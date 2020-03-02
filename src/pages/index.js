@@ -9,13 +9,14 @@ import Hero from "../components/Hero"
 import NextMeetup from "../components/NextMeetup"
 import Organisers from "../components/Organisers"
 import Flex from "../components/Flex"
-import Grid from "../components/Grid"
 import Location from "../components/Location"
 import SocialPanel from "../components/SocialPanel"
 import UpcomingMeetups from "../components/UpcomingMeetups"
 import LearningResources from "../components/LearningResources"
 import Blogposts from "../components/Blogposts"
 import Contributing from "../components/Contributing"
+
+import styles from "./index.module.scss"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -27,15 +28,8 @@ const IndexPage = ({ data }) => (
       <Location />
       <SocialPanel />
     </Flex>
-    <Flex>
-      <Grid
-        style={{
-          gridTemplateColumns: "auto",
-          gridAutoRows: "max-content",
-          flex: "1 1 300px",
-          paddingRight: "var(--blog-conditional-padding)",
-        }}
-      >
+    <Flex className={styles.blogSection}>
+      <div>
         <h2
           className="large-text"
           style={{ marginBottom: "var(--title-spacing)" }}
@@ -43,14 +37,8 @@ const IndexPage = ({ data }) => (
           Blog
         </h2>
         <Blogposts data={data.allMarkdownRemark.edges} />
-      </Grid>
-      <Grid
-        style={{
-          gridTemplateColumns: "auto",
-          gridAutoRows: "max-content",
-          flex: "1 1 400px",
-        }}
-      >
+      </div>
+      <div>
         <h2
           className="large-text"
           style={{ marginBottom: "var(--title-spacing)" }}
@@ -58,7 +46,7 @@ const IndexPage = ({ data }) => (
           Other Meetups
         </h2>
         <UpcomingMeetups data={data.allMeetup.edges} />
-      </Grid>
+      </div>
     </Flex>
     <LearningResources isCarousel isHomepage />
     <Contributing />
@@ -118,7 +106,7 @@ export const query = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 480)
           description
           title
           location

@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect } from "react"
 import MobileMenu from "../MobileMenu"
 
 // icons
